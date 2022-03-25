@@ -1,0 +1,12 @@
+.dropdown-menu{
+    display: block;
+    visibility: hidden;
+    transition: all 0.2s linear;
+    opacity: 0;
+    transform: translateY(1rem);
+}
+.nav-dropdown:hover .dropdown-menu{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
