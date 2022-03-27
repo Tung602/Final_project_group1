@@ -1,0 +1,353 @@
+@import "./mixin";
+
+// =============== Header ================
+body {
+  position: relative;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.menu-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  background-color: $clr-white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: translateX(-100%);
+  transition: all 0.3s linear;
+  z-index: 3;
+}
+.menu-aside-account {
+  display: flex;
+  padding: 2rem;
+}
+.menu-aside-cart {
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+.menu-aside-nav {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.menu-link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 2rem 2rem;
+  font-size: 1.8rem;
+}
+.menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: $clr-primary-2;
+  transition: all 0.2s linear;
+}
+.menu-link:hover::after {
+  width: 100%;
+}
+.menu-action {
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.menu-btn {
+  padding: 1rem 2rem;
+  letter-spacing: 0.2rem;
+}
+.header-container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+.navbar {
+  max-width: 1200px;
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  &-nav {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    & .nav-item:nth-child(3) {
+      cursor: pointer;
+      position: relative;
+    }
+  }
+}
+.navbar-toggler {
+  display: none;
+  border: 1px solid $clr-primary-1;
+  border-radius: none;
+  background-color: $clr-white;
+  font-size: 2.5rem;
+  padding: 0.5rem 1.2rem;
+}
+.navbar-toggler:hover {
+  background-color: $clr-primary-4;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+.nav-item {
+  position: relative;
+  padding: 0.5rem 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: $clr-primary-1;
+}
+.nav-item-after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: $clr-primary-2;
+  transition: all 0.2s linear;
+}
+.nav-item-active {
+  width: 100%;
+}
+.nav-item:hover .nav-item-after {
+  width: 100%;
+}
+.navbar-account {
+  display: flex;
+  gap: 4rem;
+  padding-right: 2rem;
+  align-items: center;
+  font-size: 1.7rem;
+}
+.dropdown-menu {
+  position: absolute;
+  width: 14rem;
+  top: 100%;
+  left: 0;
+  font-size: 1.5rem;
+  color: $clr-white;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all 0.2s linear;
+  transform: translateY(2rem);
+}
+.dropdown-item {
+  padding: 1rem 1rem;
+  background-color: $clr-primary-1;
+}
+.dropdown-item:hover {
+  opacity: 0.9;
+}
+.nav-item:nth-child(3):hover .dropdown-menu {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+.account-item {
+  position: relative;
+  padding: 1rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+.navbar-search:hover .search-form {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.search-form {
+  position: absolute;
+  display: flex;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transform: translateY(1rem);
+  transition: all 0.2s linear;
+}
+.search-input {
+  border-radius: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  color: $clr-primary-6;
+  padding: 1.2rem 6rem 1.2rem 1.4rem;
+  border: 1px solid $clr-primary-7;
+  outline: 3px solid transparent;
+  transition: all 0.2s linear;
+}
+.search-input:focus {
+  border-color: #85b7fe;
+  outline-color: #c1d7fb;
+}
+.search-btn {
+  position: absolute;
+  right: 0;
+  font-size: 1.6rem;
+  border: none;
+  padding: 1rem 1.4rem;
+}
+.user-action {
+  position: absolute;
+  top: 100%;
+  left: -1rem;
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transform: translateY(1rem);
+  transition: all 0.2s linear;
+}
+.user-link {
+  background-color: $clr-primary-1;
+  padding: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.user-link:hover {
+  opacity: 0.9;
+}
+.navbar-user:hover .user-action {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.navbar-cart-container {
+  position: absolute;
+  width: 40rem;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: all 0.2s linear;
+}
+.navbar-cart:hover .navbar-cart-container {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+.navbar-cart-status {
+  width: 100%;
+  padding: 2rem 2rem;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
+  position: relative;
+}
+.navbar-cart-status::after {
+  content: "";
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba($color: #000000, $alpha: 0.1);
+}
+.navbar-cart-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.2s linear;
+  padding: 1.5rem;
+}
+.navbar-cart-img {
+  width: 7rem;
+}
+.navbar-cart-desc {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.navbar-cart-price {
+  color: $clr-primary-2;
+}
+.navbar-cart-btn {
+  margin: 2rem 0;
+}
+.navbar-cart-item:hover {
+  background-color: $clr-primary-4;
+}
+
+// =============== Responsive Header ==================
+
+@include lg {
+  .navbar-img-logo {
+    max-width: 80%;
+  }
+  .navbar-nav {
+    gap: 2.5rem;
+  }
+  .navbar-account {
+    gap: 2rem;
+  }
+  .search-form {
+    left: auto;
+    right: -2rem;
+  }
+  .account-item {
+    font-size: 2rem;
+  }
+}
+@include md {
+  .navbar-img-logo {
+    max-width: 100%;
+  }
+  .navbar-nav {
+    display: none;
+  }
+  .navbar-account {
+    display: none;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+  .search-input {
+    width: 100%;
+  }
+  .show-modal {
+    visibility: visible;
+    opacity: 1;
+  }
+  .show-menu-aside {
+    transform: translateX(0);
+  }
+  .search-form.active {
+    box-shadow: none;
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    transform: translateY(0);
+  }
+}
+
+
+
+// ================ Footer ================

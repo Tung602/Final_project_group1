@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input {
+  line-height: normal;
+}
+label,
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+}
+body{
+    font-family: $ff-primary;
+    line-height: 1.15;
+}
