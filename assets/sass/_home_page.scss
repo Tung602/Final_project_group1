@@ -80,7 +80,7 @@ body {
 }
 .navbar {
   max-width: 1200px;
-  padding: 2rem 2rem;
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
   &-nav {
@@ -348,6 +348,115 @@ body {
   }
 }
 
-
-
 // ================ Footer ================
+.footer {
+  background-color: $clr-primary-1;
+}
+.footer-container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-main {
+  display: grid;
+  grid-template-columns: 20% auto auto 20%;
+  justify-content: space-between;
+  margin: 5rem 0;
+}
+.footer-desc {
+  font-size: 1.4rem;
+  color: $clr-primary-5;
+  margin: 3rem 0;
+  line-height: 1.8;
+}
+.footer-title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: $clr-white;
+  margin-bottom: 3rem;
+}
+.footer-link {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: $clr-primary-5;
+}
+.footer-link:hover {
+  color: $clr-white;
+}
+.footer-form {
+  display: flex;
+  border-bottom: 1px $clr-white solid;
+}
+.footer-input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  padding: 1.5rem 0;
+  font-size: 1.6rem;
+  color: $clr-primary-5;
+}
+.footer-btn {
+  font-size: 2rem;
+  color: $clr-white;
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+}
+.footer-copyright {
+  text-align: center;
+  width: 100%;
+  padding: 2rem 0;
+  font-size: 1.6rem;
+  color: $clr-primary-5;
+  position: relative;
+}
+.footer-copyright::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #292929;
+}
+// ============== Responsive Footer ===============
+@include lg {
+  .footer-main {
+    grid-template-columns: 30% auto auto;
+  }
+  .footer-newletter {
+    max-width: 50%;
+    margin: 4rem auto 0 auto;
+    text-align: center;
+    grid-column: 1/4;
+    .footer-desc {
+      margin: 0;
+    }
+  }
+}
+@include md {
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    text-align: center;
+  }
+  .footer-link {
+    display: block;
+    text-align: center;
+  }
+  .footer-newletter {
+    margin-top: 0;
+    max-width: 80%;
+  }
+}
