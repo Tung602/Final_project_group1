@@ -15,148 +15,167 @@
       src="https://kit.fontawesome.com/5140c6ff3b.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
 
   <body>
-    <!-- Modal -->
-    <div class="modal"></div>
-    <!-- Menu Aside -->
-    <div class="menu-wrapper">
-      <div class="menu-aside">
-        <div class="menu-aside-account">
-          <form action="#" class="search-form active">
-            <input type="text" placeholder="Search..." class="search-input" />
-            <button type="submit" class="search-btn btn">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </form>
-          <a href="./shopping-cart.html" class="menu-aside-cart">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </a>
-        </div>
-        <ul class="menu-aside-nav">
-          <li class="menu-item"><a href="./index.html" class="menu-link">Home</a></li>
-          <li class="menu-item"><a href="./shop.html" class="menu-link">Shop</a></li>
-          <li class="menu-item">
-            <a href="./shop-details.html" class="menu-link">Shop Details</a>
-          </li>
-          <li class="menu-item">
-            <a href="./shopping-cart.html" class="menu-link">Shopping Cart</a>
-          </li>
-          <li class="menu-item"><a href="./checkout.html" class="menu-link">Check Out</a></li>
-          <li class="menu-item"><a href="./contacts.html" class="menu-link">Contacts</a></li>
-        </ul>
-        <div class="menu-action">
-          <a href="./account.html" class="btn menu-btn">Log in</a>
-          <a href="./account.html" class="btn menu-btn">Sign in</a>
-        </div>
-      </div>
-    </div>
-    <!-- Header -->
-    <header class="header">
-      <div class="header-container">
-        <nav class="navbar">
-          <a href="./index.html" class="navbar-logo">
-            <img
-              src="./assets/img/logo.png"
-              class="navbar-img-logo"
-              alt="logo"
-            />
-          </a>
-          <button class="navbar-toggler">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a href="./index.html" class="nav-link">Home</a>
-              <div class="nav-item-after"></div>
-            </li>
-            <li class="nav-item">
-              <a href="./shop.html" class="nav-link">Shop</a>
-              <div class="nav-item-after"></div>
-            </li>
-            <li class="nav-item">
-              Pages
-              <div class="nav-item-after nav-item-active"></div>
-              <ul class="dropdown-menu">
-                <li class="dropdown-item">
-                  <a href="./shop-details.html" class="dropdown-link">Shop Details</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="./shopping-cart.html" class="dropdown-link">Shopping Cart</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="./checkout.html" class="dropdown-link">Check Out</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="./contacts.html" class="nav-link">Contacts</a>
-              <div class="nav-item-after"></div>
-            </li>
-          </ul>
-          <div class="navbar-account">
-            <div class="navbar-search account-item">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <form action="#" class="search-form">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  class="search-input"
-                />
-                <button type="submit" class="search-btn btn">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-              </form>
-            </div>
-            <div class="navbar-user account-item">
-              <i class="fa-solid fa-user"></i>
-              <div class="user-action">
-                <a href="./account.html" class="user-link">Log in</a>
-                <a href="./account.html" class="user-link">Sign in</a>
-              </div>
-            </div>
-            <div class="navbar-cart account-item">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <div class="navbar-cart-container">
-                <p class="navbar-cart-status">Recently Added Products</p>
-                <div class="navbar-cart-item">
-                  <img
-                    src="./assets/img/product/product-1.jpg"
-                    alt=""
-                    class="navbar-cart-img"
-                  />
-                  <p class="navbar-cart-desc">Diagonal Textured Cap</p>
-                  <span class="navbar-cart-price">$ 32.50</span>
-                </div>
-                <div class="navbar-cart-item">
-                  <img
-                    src="./assets/img/product/product-2.jpg"
-                    alt=""
-                    class="navbar-cart-img"
-                  />
-                  <p class="navbar-cart-desc">Diagonal Textured Cap</p>
-                  <span class="navbar-cart-price">$ 32.50</span>
-                </div>
-                <div class="navbar-cart-item">
-                  <img
-                    src="./assets/img/product/product-3.jpg"
-                    alt=""
-                    class="navbar-cart-img"
-                  />
-                  <p class="navbar-cart-desc">Diagonal Textured Cap</p>
-                  <span class="navbar-cart-price">$ 32.50</span>
-                </div>
-                <a href="./shopping-cart.html" class="btn navbar-cart-btn"
-                  >View My Shopping Cart</a
-                >
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
+   <!-- Modal -->
+   <div class="main-modal"></div>
+   <!-- Menu Aside -->
+   <div class="menu-wrapper">
+     <div class="menu-aside-main">
+       <div class="menu-aside-account">
+         <form action="#" class="search-form-main active">
+           <input
+             type="text"
+             placeholder="Search..."
+             class="search-input-main"
+           />
+           <button type="submit" class="search-btn-main main-btn">
+             <i class="fa-solid fa-magnifying-glass"></i>
+           </button>
+         </form>
+         <a href="./shopping-cart.html" class="menu-aside-cart">
+           <i class="fa-solid fa-cart-shopping"></i>
+         </a>
+       </div>
+       <ul class="menu-aside-nav">
+         <li class="menu-item">
+           <a href="./index.html" class="menu-link">Home</a>
+         </li>
+         <li class="menu-item">
+           <a href="./shop.html" class="menu-link">Shop</a>
+         </li>
+         <li class="menu-item">
+           <a href="./shop-details.html" class="menu-link">Shop Details</a>
+         </li>
+         <li class="menu-item">
+           <a href="./shopping-cart.html" class="menu-link">Shopping Cart</a>
+         </li>
+         <li class="menu-item">
+           <a href="./checkout.html" class="menu-link">Check Out</a>
+         </li>
+         <li class="menu-item">
+           <a href="./contacts.html" class="menu-link">Contacts</a>
+         </li>
+       </ul>
+       <div class="menu-action">
+         <a href="./account.html" class="main-btn menu-btn">Log in</a>
+         <a href="./account.html" class="main-btn menu-btn">Sign in</a>
+       </div>
+     </div>
+   </div>
+   <!-- Header -->
+   <header class="header">
+     <div class="header-container">
+       <nav class="main-navbar">
+         <a href="./index.html" class="navbar-logo">
+           <img
+             src="./assets/img/logo.png"
+             class="navbar-img-logo"
+             alt="logo"
+           />
+         </a>
+         <button class="main-navbar-toggler">
+           <i class="fa-solid fa-bars"></i>
+         </button>
+         <ul class="main-navbar-nav">
+           <li class="main-nav-item">
+             <a href="./index.html" class="main-nav-link"
+               >Home</a
+             >
+             <div class="main-nav-item-after"></div>
+           </li>
+           <li class="main-nav-item">
+             <a href="./shop.html" class="main-nav-link">Shop</a>
+             <div class="main-nav-item-after"></div>
+           </li>
+           <li class="main-nav-item">
+             Pages
+             <div class="main-nav-item-after nav-item-active"></div>
+             <ul class="main-dropdown-menu">
+               <li class="main-dropdown-item">
+                 <a href="./shop-details.html" class="dropdown-link"
+                   >Shop Details</a
+                 >
+               </li>
+               <li class="main-dropdown-item">
+                 <a href="./shopping-cart.html" class="dropdown-link"
+                   >Shopping Cart</a
+                 >
+               </li>
+               <li class="main-dropdown-item">
+                 <a href="./checkout.html" class="dropdown-link">Check Out</a>
+               </li>
+             </ul>
+           </li>
+           <li class="main-nav-item">
+             <a href="./contacts.html" class="main-nav-link">Contacts</a>
+             <div class="main-nav-item-after"></div>
+           </li>
+         </ul>
+         <div class="navbar-account">
+           <div class="navbar-search account-item">
+             <i class="fa-solid fa-magnifying-glass"></i>
+             <form action="#" class="search-form-main">
+               <input
+                 type="text"
+                 placeholder="Search..."
+                 class="search-input-main"
+               />
+               <button type="submit" class="search-btn-main main-btn">
+                 <i class="fa-solid fa-magnifying-glass"></i>
+               </button>
+             </form>
+           </div>
+           <div class="navbar-user account-item">
+             <i class="fa-solid fa-user"></i>
+             <div class="user-action">
+               <a href="./account.html" class="user-link">Log in</a>
+               <a href="./account.html" class="user-link">Sign in</a>
+             </div>
+           </div>
+           <div class="navbar-cart account-item">
+             <i class="fa-solid fa-cart-shopping"></i>
+             <div class="navbar-cart-container">
+               <p class="navbar-cart-status">Recently Added Products</p>
+               <div class="navbar-cart-item">
+                 <img
+                   src="./assets/img/product/product-1.jpg"
+                   alt=""
+                   class="navbar-cart-img"
+                 />
+                 <p class="navbar-cart-desc">Diagonal Textured Cap</p>
+                 <span class="navbar-cart-price">$ 32.50</span>
+               </div>
+               <div class="navbar-cart-item">
+                 <img
+                   src="./assets/img/product/product-2.jpg"
+                   alt=""
+                   class="navbar-cart-img"
+                 />
+                 <p class="navbar-cart-desc">Diagonal Textured Cap</p>
+                 <span class="navbar-cart-price">$ 32.50</span>
+               </div>
+               <div class="navbar-cart-item">
+                 <img
+                   src="./assets/img/product/product-3.jpg"
+                   alt=""
+                   class="navbar-cart-img"
+                 />
+                 <p class="navbar-cart-desc">Diagonal Textured Cap</p>
+                 <span class="navbar-cart-price">$ 32.50</span>
+               </div>
+               <a href="./shopping-cart.html" class="main-btn navbar-cart-btn"
+                 >View My Shopping Cart</a
+               >
+             </div>
+           </div>
+         </div>
+       </nav>
+     </div>
+   </header>
     <!-- Main -->
     <main class="index"></main>
     <!-- Footer -->
@@ -221,6 +240,7 @@
         </div>
       </div>
     </footer>
+    <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

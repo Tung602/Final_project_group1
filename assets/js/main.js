@@ -1,9 +1,9 @@
 // ============ Header ================
 
 // Menu aside
-let navbarToggler = document.querySelector(".navbar-toggler");
+let navbarToggler = document.querySelector(".main-navbar-toggler");
 let menuAside = document.querySelector(".menu-wrapper");
-let modal = document.querySelector(".modal");
+let modal = document.querySelector(".main-modal");
 navbarToggler.onclick = () => {
   menuAside.classList.add("show-menu-aside");
   modal.classList.add("show-modal");
@@ -15,23 +15,12 @@ modal.onclick = () => {
 
 // =============== Main ==================
 
-let collections = [
-  {
-    caption: "Summer Collection",
-    title: "Fall - Winter Collections 2030",
-    desc: "A specialist label creating luxury essentials. Ethically crafted with an unwavering commitment to exceptional quality.",
-  },
-  {
-    caption: "Autumn Collection",
-    title: "Fall - Winter Collections 2030",
-    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex laborum nostrum perspiciatis autem est ut.",
-  },
-];
 // Slider
 let heroBg = document.querySelector(".hero-bg");
 let sliderBtnNext = document.querySelector(".hero-next");
 let sliderBtnPrev = document.querySelector(".hero-prev");
 let bgCount = 0;
+let heroText = document.querySelectorAll(".hero-main");
 let heroCaption = document.querySelectorAll(".hero-caption");
 let heroTitle = document.querySelectorAll(".hero-title");
 let heroDesc = document.querySelectorAll(".hero-desc");
@@ -42,20 +31,24 @@ let setHeroBg = (value) => {
 };
 let activeHero = () => {
   if (heroBool) {
+    heroText[0].classList.remove("active");
     heroCaption[0].classList.remove("active");
     heroTitle[0].classList.remove("active");
     heroDesc[0].classList.remove("active");
     heroBtn[0].classList.remove("active");
+    heroText[1].classList.add("active");
     heroCaption[1].classList.add("active");
     heroTitle[1].classList.add("active");
     heroDesc[1].classList.add("active");
     heroBtn[1].classList.add("active");
     heroBool = false;
   } else {
+    heroText[1].classList.remove("active");
     heroCaption[1].classList.remove("active");
     heroTitle[1].classList.remove("active");
     heroDesc[1].classList.remove("active");
     heroBtn[1].classList.remove("active");
+    heroText[0].classList.add("active");
     heroCaption[0].classList.add("active");
     heroTitle[0].classList.add("active");
     heroDesc[0].classList.add("active");
@@ -63,7 +56,7 @@ let activeHero = () => {
     heroBool = true;
   }
 };
-setHeroBg(1);
+setHeroBg(0);
 sliderBtnNext.onclick = () => {
   activeHero();
   bgCount++;
@@ -77,16 +70,36 @@ sliderBtnNext.onclick = () => {
 sliderBtnPrev.onclick = () => {
   activeHero();
   bgCount--;
-  if (bgCount > 0) {
+  if (bgCount >= 0) {
     setHeroBg(bgCount);
   } else {
     bgCount = 1;
+    setHeroBg(bgCount);
   }
 };
 
 window.onload = () => {
+  heroText[0].classList.add("active");
   heroCaption[0].classList.add("active");
   heroTitle[0].classList.add("active");
   heroDesc[0].classList.add("active");
   heroBtn[0].classList.add("active");
 };
+
+// =============== Product color select ================
+
+let colorPicker = document.querySelectorAll(".color-picker");
+let productImg = document.querySelector(".product-item-img");
+let colorLabel = document.querySelectorAll(".color-picker-label");
+console.log(colorPicker);
+colorPicker.forEach((e, index) => {
+  colorPicker[index].addEventListener("change", () => {
+    colorLabel[index].classList.add("active");
+    productImg.src = `./assets/img/product/product-${index + 1}.jpg`;
+    [...colorLabel]
+      .filter((e, i) => i != index)
+      .forEach((e) => {
+        e.classList.remove("active");
+      });
+  });
+});

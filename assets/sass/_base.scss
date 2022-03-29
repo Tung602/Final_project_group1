@@ -1,4 +1,4 @@
-.btn{
+.main-btn{
     display: inline-block;
     font-size: 1.3rem;
     line-height: 1.5;
@@ -8,6 +8,10 @@
     background-color: #000;
     padding: 1.4rem 3rem;
     text-transform: uppercase;
+    border-radius: none ;
+    &:hover{
+        color: white;
+    }
 }
 .btn-secondary{
     padding: 1.4rem 3.5rem;
