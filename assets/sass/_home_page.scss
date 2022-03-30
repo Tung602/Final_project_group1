@@ -913,3 +913,252 @@ body {
     }
   }
 }
+
+// ================ Home categories section ================
+
+.home-categories {
+  max-width: 100%;
+  padding: 12rem 0;
+  background-color: $clr-primary-3;
+  & .categories-container {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+}
+.categories-text {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 50%;
+    width: 100rem;
+    background-color: white;
+    height: 30rem;
+    z-index: 1;
+  }
+}
+.categories-text h2 {
+  font-size: 3.2rem;
+  color: $clr-primary-5;
+  line-height: 2;
+  z-index: 2;
+  & span {
+    z-index: 2;
+    color: $clr-primary-1;
+    font-weight: 600;
+  }
+}
+.categories-img {
+  position: relative;
+  z-index: 2;
+  & img {
+    width: 100%;
+  }
+}
+.categories-sticker {
+  position: absolute;
+  right: 0;
+  top: -3rem;
+  background-color: $clr-primary-1;
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  & span {
+    font-size: 1.5rem;
+  }
+  & h5 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 650;
+  }
+}
+.categories-countdown {
+  & span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 550;
+    color: $clr-primary-2;
+  }
+  & h2 {
+    margin: 3rem 0;
+    font-size: 3.5rem;
+    font-weight: 650;
+  }
+  & .categories-time {
+    max-width: 100%;
+    display: flex;
+    margin-bottom: 3rem;
+    transform: translateX(-6%);
+    & .countdown-item {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      position: relative;
+      &:after {
+        content: ":";
+        position: absolute;
+        font-size: 3.5rem;
+        top: 0;
+        right: 0;
+      }
+      &:last-child {
+        &::after {
+          content: "";
+        }
+      }
+      & span {
+        color: $clr-primary-1;
+        font-size: 4rem;
+      }
+      & p {
+        font-size: 1.4rem;
+        color: $clr-primary-6;
+      }
+    }
+  }
+}
+
+//  ================ Responsive home categories ==============
+
+@include xl {
+  .categories-text {
+    & h2 {
+      font-size: 2.8rem;
+    }
+  }
+}
+@include lg {
+  .categories-text::before {
+    right: 80%;
+  }
+}
+
+// ================= Instagram section ==================
+
+.instagram-container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 10rem;
+}
+.instagram-img {
+  width: 100%;
+}
+.instagram-text {
+  padding-top: 8rem;
+  & .instagram-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+  & .instagram-desc {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: $clr-primary-6;
+    margin-bottom: 6rem;
+  }
+  & .instagram-hashtag {
+    font-size: 3rem;
+    font-weight: 600;
+    color: $clr-primary-2;
+  }
+}
+@include xl {
+  .instagram-text {
+    padding-top: 2rem;
+  }
+}
+
+// ================ News section =================
+
+.news-container {
+  max-width: $max-width;
+  margin: 5rem auto;
+}
+.news-heading {
+  text-align: center;
+  margin: 3rem 0;
+  & span {
+    font-size: 1.6rem;
+    font-weight: 550;
+    color: $clr-primary-2;
+    letter-spacing: 0.2rem;
+  }
+  & h3 {
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    font-weight: 650;
+  }
+}
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & .blog-img {
+    width: 100%;
+    & img {
+      width: 100%;
+    }
+  }
+  & .blog-text {
+    width: 80%;
+    padding: 3rem;
+    background-color: white;
+    transform: translateY(-3rem);
+    transition: all 0.3s linear;
+    & .blog-status {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.2rem;
+      line-height: 1;
+      margin-bottom: 2rem;
+    }
+    & .blog-desc {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    & .blog-link {
+      font-size: 1.4rem;
+      font-weight: 550;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 0.6rem;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $clr-primary-1;
+        transition: all 0.2s linear;
+      }
+    }
+    &:hover {
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    &:hover > .blog-link::after {
+      width: 40%;
+      background-color: $clr-primary-2;
+    }
+  }
+}
+
+//  =========== Responsive news ==============
+
+@include sm {
+  .blog-item {
+    padding: 2rem;
+  }
+}

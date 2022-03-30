@@ -1105,4 +1105,245 @@ body {
   opacity: 1;
 }
 
+.home-categories {
+  max-width: 100%;
+  padding: 12rem 0;
+  background-color: #F3F2EE;
+}
+.home-categories .categories-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categories-text {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+.categories-text::before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  width: 100rem;
+  background-color: white;
+  height: 30rem;
+  z-index: 1;
+}
+
+.categories-text h2 {
+  font-size: 3.2rem;
+  color: #B7B7B7;
+  line-height: 2;
+  z-index: 2;
+}
+.categories-text h2 span {
+  z-index: 2;
+  color: #111111;
+  font-weight: 600;
+}
+
+.categories-img {
+  position: relative;
+  z-index: 2;
+}
+.categories-img img {
+  width: 100%;
+}
+
+.categories-sticker {
+  position: absolute;
+  right: 0;
+  top: -3rem;
+  background-color: #111111;
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.categories-sticker span {
+  font-size: 1.5rem;
+}
+.categories-sticker h5 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 650;
+}
+
+.categories-countdown span {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 550;
+  color: #E53437;
+}
+.categories-countdown h2 {
+  margin: 3rem 0;
+  font-size: 3.5rem;
+  font-weight: 650;
+}
+.categories-countdown .categories-time {
+  max-width: 100%;
+  display: flex;
+  margin-bottom: 3rem;
+  transform: translateX(-6%);
+}
+.categories-countdown .categories-time .countdown-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+.categories-countdown .categories-time .countdown-item:after {
+  content: ":";
+  position: absolute;
+  font-size: 3.5rem;
+  top: 0;
+  right: 0;
+}
+.categories-countdown .categories-time .countdown-item:last-child::after {
+  content: "";
+}
+.categories-countdown .categories-time .countdown-item span {
+  color: #111111;
+  font-size: 4rem;
+}
+.categories-countdown .categories-time .countdown-item p {
+  font-size: 1.4rem;
+  color: #3D3D3D;
+}
+
+@media screen and (max-width: 1199px) {
+  .categories-text h2 {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .categories-text::before {
+    right: 80%;
+  }
+}
+.instagram-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 10rem;
+}
+
+.instagram-img {
+  width: 100%;
+}
+
+.instagram-text {
+  padding-top: 8rem;
+}
+.instagram-text .instagram-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+.instagram-text .instagram-desc {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #3D3D3D;
+  margin-bottom: 6rem;
+}
+.instagram-text .instagram-hashtag {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #E53437;
+}
+
+@media screen and (max-width: 1199px) {
+  .instagram-text {
+    padding-top: 2rem;
+  }
+}
+.news-container {
+  max-width: 1200px;
+  margin: 5rem auto;
+}
+
+.news-heading {
+  text-align: center;
+  margin: 3rem 0;
+}
+.news-heading span {
+  font-size: 1.6rem;
+  font-weight: 550;
+  color: #E53437;
+  letter-spacing: 0.2rem;
+}
+.news-heading h3 {
+  margin-top: 2rem;
+  font-size: 3.5rem;
+  font-weight: 650;
+}
+
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blog-item .blog-img {
+  width: 100%;
+}
+.blog-item .blog-img img {
+  width: 100%;
+}
+.blog-item .blog-text {
+  width: 80%;
+  padding: 3rem;
+  background-color: white;
+  transform: translateY(-3rem);
+  transition: all 0.3s linear;
+}
+.blog-item .blog-text .blog-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+.blog-item .blog-text .blog-desc {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.blog-item .blog-text .blog-link {
+  font-size: 1.4rem;
+  font-weight: 550;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.6rem;
+}
+.blog-item .blog-text .blog-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #111111;
+  transition: all 0.2s linear;
+}
+.blog-item .blog-text:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.blog-item .blog-text:hover > .blog-link::after {
+  width: 40%;
+  background-color: #E53437;
+}
+
+@media screen and (max-width: 575px) {
+  .blog-item {
+    padding: 2rem;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
