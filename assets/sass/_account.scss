@@ -1,0 +1,130 @@
+@import "./mixin";
+
+.account-container {
+  max-width: $max-width;
+  margin: 5rem auto;
+  margin-bottom: 15rem;
+}
+.log-in-container {
+  display: flex;
+  flex-direction: column;
+}
+.log-in-title,
+.sign-up-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+.log-in-form,
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.form-input-main {
+  position: relative;
+  & input {
+    width: 100%;
+    border: 1px solid $clr-primary-7;
+    padding: 1.2rem 1.4rem;
+    color: $clr-primary-6;
+    font-size: 1.4rem;
+    transition: 0.2s ease;
+  }
+  & label {
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: $clr-primary-5;
+    pointer-events: none;
+    user-select: none;
+    transition: all 0.2s ease;
+  }
+  & input:focus {
+    border-color: $clr-primary-6;
+  }
+  & input:not(:placeholder-shown) + label,
+  & input:focus + label {
+    color: $clr-primary-6;
+    top: 0;
+    padding: 0 0.5rem;
+    background-color: white;
+  }
+}
+.log-in-forgot-password {
+  align-self: flex-end;
+  color: $clr-primary-2;
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  text-decoration: underline;
+  &:hover {
+    color: $clr-primary-2;
+  }
+}
+.verified-terms {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  color: $clr-primary-2;
+  & input {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.log-in-btn,
+.sign-up-btn {
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.crossbar-account {
+  position: relative;
+}
+.crossbar-account::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  background-color: $clr-primary-5;
+  height: 100%;
+}
+
+// ============ Breadcrumb section ===========
+
+.breadcrumb-option {
+  background-color: $clr-primary-3;
+  padding: 3rem 0;
+  & .container {
+    max-width: $max-width;
+  }
+  & .breadcrumb-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+.breadcrumb-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.breadcrumb-link {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  & a {
+    transition: 0.2s linear;
+    &:hover {
+      color: $clr-primary-2;
+    }
+  }
+  & span {
+    color: $clr-primary-5;
+  }
+}
