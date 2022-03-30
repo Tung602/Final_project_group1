@@ -71,16 +71,6 @@ body {
   color: white;
 }
 
-.btn-secondary {
-  padding: 1.4rem 3.5rem;
-  letter-spacing: 0.2rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  background-color: #fff;
-  color: #111111;
-  border: 2px solid #3D3D3D;
-}
-
 body {
   position: relative;
 }
