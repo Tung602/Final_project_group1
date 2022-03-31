@@ -751,7 +751,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .hero-bg {
-    max-height: 60rem;
+    max-height: 64rem;
     background-position: left center;
   }
 
@@ -1335,6 +1335,129 @@ body {
     padding: 2rem;
   }
 }
+.path {
+  font-family: "Nunito Sans", sans-serif;
+  width: 100%;
+  background-color: #F3F2EE;
+  height: 14rem;
+}
+.path-content {
+  width: 120rem;
+  margin: 0px auto;
+  padding: 4rem 0;
+}
+.path-content-name {
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+}
+.path-content-1 {
+  font-size: 1.5rem;
+}
+.path-content-1::after {
+  content: " > ";
+}
+.path-content-2 {
+  font-size: 1.5rem;
+  color: #B7B7B7;
+}
+
+.shop {
+  width: 100%;
+  padding: 10rem 0;
+}
+.shop-search-input {
+  padding: 1.2rem 3rem;
+  color: #F3F2EE;
+  border: none;
+  font-size: 1.4rem;
+}
+.shop-search-input:placeholder-shown {
+  padding-left: 1.7rem;
+}
+
+.searchbtn {
+  background-color: transparent;
+  border: none;
+  margin-right: 1.7rem;
+}
+
+.search-container {
+  border: solid 1px #B7B7B7;
+  display: inline-block;
+  margin-bottom: 4rem;
+}
+
+.shop-detail-information-card-name {
+  width: 100%;
+  text-align: start;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin: 2rem 0;
+}
+.shop-detail-information-card-name > i {
+  padding-right: 1rem;
+  float: right;
+}
+
+.shop-detail-information-card-item {
+  font-size: 1.5rem;
+}
+.shop-detail-information-card-item > li {
+  padding: 0.7rem 0;
+  color: #B7B7B7;
+}
+.shop-detail-information-card-item-tag {
+  display: inline-block;
+  flex-wrap: wrap;
+  background-color: #F2F4FA;
+  padding: 0.5rem 2rem;
+  color: #111111;
+  font-weight: bold;
+}
+.shop-detail-information-card-item-tag:hover {
+  transition: all 0.5s;
+  background-color: #111111;
+  color: #F3F2EE;
+}
+
+.tag {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.item-results {
+  font-size: 1.5rem;
+}
+
+.shop-sorted {
+  align-self: center;
+  display: inline-block;
+}
+
+.sorted {
+  font-size: 1.5rem;
+}
+
+.sorted-item {
+  display: inline-block;
+}
+.sorted-item-menu {
+  background-color: #fff;
+  font-size: 1.5rem;
+  color: #111111;
+  border: none;
+}
+
+.filter {
+  font-size: 1.5rem;
+}
+
+.item-header {
+  padding-bottom: 10rem;
+}
+
 .breadcrumb-option {
   background: #F3F2EE;
   padding: 4rem 0;
