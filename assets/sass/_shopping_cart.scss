@@ -1,0 +1,207 @@
+@import "./variable";
+.breadcrumb-option {
+    background: $clr-primary-3;
+    padding: 4rem 0;
+}
+.breadcrumb-text h4{
+    font-size: 2.5rem;
+    color: $clr-primary-1;
+    font-weight: 70rem;
+    margin-bottom: 0.8rem;
+}
+.breadcrumb-links a {
+    font-size: 1.5rem;
+    color: $clr-primary-1;
+    margin-right: 0.8rem;
+    display: inline-block;
+    position: relative;
+}
+.breadcrumb-links span{
+    font-size: 1.5rem;
+    color: $clr-primary-5;
+    display: inline-block;
+}
+.shopping-cart{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    margin: auto;
+}
+.shopping-cart-table table{
+    width: 100%;
+}
+.shopping-cart-table{
+    margin-bottom: 3rem;
+    & table thead tr th {
+            margin-left: 20rem;
+            color: $clr-primary-1;
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    & table tbody tr{
+        border-bottom: 0.1rem solid $clr-primary-7;
+        & td{
+            padding-bottom: 3rem;
+            padding-top: 3rem;
+        }
+    }
+}
+
+.product-cart-item{
+    width: 40rem;
+    & img {
+        max-width: 10rem;
+    }
+}
+.product-cart-item-pic{
+    float: left;
+    margin-right: 3rem;
+    display: flex;
+    & .product-cart-item-text{
+        overflow: hidden;
+        padding-top: 2rem;
+        padding-left: 2rem;
+        & h6{
+            color: $clr-primary-1;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        & h5{
+            color: $clr-picker-1;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+}
+.quantity-item{
+    width: 17.5rem;
+}
+.pro-qty-2 {
+    width: 8rem;
+    & .qtybtn {
+        font-size: 1.6rem;
+        color: $clr-primary-5;
+        width: 1rem;
+        cursor: pointer;
+    }
+    & input {
+        width: 5rem;
+        border: none;
+        text-align: center;
+        color: $clr-primary-1;
+        font-size: 1.6rem;
+    }
+}
+.cart-price {
+    color: $clr-primary-1;
+    font-size: 1.8rem;
+    font-weight: 700;
+    width: 14rem;
+}
+.cart-close i {
+    font-size: 1.8rem;
+    color: $clr-primary-1;
+    height: 4rem;
+    width: 4rem;
+    background: $clr-primary-3;
+    border-radius: 50%;
+    line-height: 4rem;
+    text-align: center;
+}
+.continue-btn a {
+    color: $clr-primary-1;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    border: 0.1rem solid $clr-primary-7;
+    padding: 1.4rem 3.5rem;
+    display: inline-block;
+}
+.update-btn {
+    text-align: right;
+    & a{
+        color: $clr-primary-7;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        border: 0.1rem solid $clr-primary-1;
+        padding: 1.4rem 3.5rem;
+        display: inline-block;
+        background-color: $clr-picker-1;
+    }
+}
+.cart-discount {
+    margin-bottom: 6rem;
+    & h6{
+        font-size: 1.6rem;
+        color: $clr-primary-1;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 3.5rem;
+    }
+    & form{
+        position: relative;
+        & input {
+            font-size: 1.4rem;
+            color: $clr-primary-5;
+            height: 5rem;
+            width: 100%;
+            border: 0.1rem solid $clr-primary-7;
+            padding-left: 2rem;
+        }
+        & button {
+            font-size: 1.4rem;
+            color: $clr-white;
+            font-weight: 700;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            background: $clr-primary-1;
+            padding: 0 3rem;
+            border: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+        }
+    }
+}
+.cart-total {
+    background: $clr-primary-3;
+    padding: 3.5rem 4rem 4rem;
+    & h6 {
+        font-size: 1.6rem;
+        color: $clr-primary-1;
+        text-transform: uppercase;
+        margin-bottom: 1.2rem;
+    }
+    & ul {
+        margin-bottom: 2.5rem;
+        & li{
+            list-style: none;
+            font-size: 1.6rem;
+            color: $clr-primary-6;
+            line-height: 4rem;
+            overflow: hidden;
+            & span{
+                font-weight: 700;
+                color: $clr-primary-2;
+                float: right;
+            }
+        }
+    }
+    & .primary-btn {
+        display: block;
+        padding: 1.2rem 1rem;
+        text-align: center;
+        letter-spacing: 0.2rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $clr-white;
+        background: $clr-primary-1;
+    }
+}
+
+

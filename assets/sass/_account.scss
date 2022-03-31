@@ -97,34 +97,37 @@
 
 // ============ Breadcrumb section ===========
 
-.breadcrumb-option {
-  background-color: $clr-primary-3;
-  padding: 3rem 0;
-  & .container {
-    max-width: $max-width;
-  }
-  & .breadcrumb-text {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-}
-.breadcrumb-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-.breadcrumb-link {
-  font-size: 1.4rem;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  & a {
-    transition: 0.2s linear;
-    &:hover {
-      color: $clr-primary-2;
+.account-main{
+  & .breadcrumb-option {
+    background-color: $clr-primary-3;
+    padding: 3rem 0;
+    & .container {
+      max-width: $max-width;
+    }
+    & .breadcrumb-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
   }
-  & span {
-    color: $clr-primary-5;
+  & .breadcrumb-title {
+    font-size: 2.5rem;
+    font-weight: 700;
   }
+  & .breadcrumb-link {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    & a {
+      transition: 0.2s linear;
+      &:hover {
+        color: $clr-primary-2;
+      }
+    }
+    & span {
+      color: $clr-primary-5;
+    }
+  }
+  
 }
