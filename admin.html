@@ -15,192 +15,167 @@
       src="https://kit.fontawesome.com/5140c6ff3b.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
 
   <body>
-     <!-- Modal -->
-     <div class="main-modal"></div>
-     <!-- Menu Aside -->
-     <div class="menu-wrapper">
-       <div class="container-fluid">
-         <div class="row">
-           <div class="col p-0">
-             <div class="menu-aside-main">
-               <div class="menu-aside-account">
-                 <form action="#" class="search-form-main active">
-                   <input
-                     type="text"
-                     placeholder="Search..."
-                     class="search-input-main"
-                   />
-                   <button type="submit" class="search-btn-main main-btn">
-                     <i class="fa-solid fa-magnifying-glass"></i>
-                   </button>
-                 </form>
-                 <a href="./shopping-cart.html" class="menu-aside-cart">
-                   <i class="fa-solid fa-cart-shopping"></i>
-                 </a>
-               </div>
-               <ul class="menu-aside-nav">
-                 <li class="menu-item">
-                   <a href="./index.html" class="menu-link">Home</a>
-                 </li>
-                 <li class="menu-item">
-                   <a href="./shop.html" class="menu-link">Shop</a>
-                 </li>
-                 <li class="menu-item">
-                   <a href="./shop-details.html" class="menu-link"
-                     >Shop Details</a
-                   >
-                 </li>
-                 <li class="menu-item">
-                   <a href="./shopping-cart.html" class="menu-link"
-                     >Shopping Cart</a
-                   >
-                 </li>
-                 <li class="menu-item">
-                   <a href="./checkout.html" class="menu-link">Check Out</a>
-                 </li>
-                 <li class="menu-item">
-                   <a href="./contacts.html" class="menu-link">Contacts</a>
-                 </li>
-               </ul>
-               <div class="menu-action">
-                 <a href="./account.html" class="main-btn menu-btn">Log in</a>
-                 <a href="./account.html" class="main-btn menu-btn">Sign in</a>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-     <!-- Header -->
-     <header class="header">
-       <div class="container-fluid">
-         <div class="row">
-           <div class="col p-0">
-             <div class="header-container">
-               <nav class="main-navbar">
-                 <a href="./index.html" class="navbar-logo">
-                   <img
-                     src="./assets/img/logo.png"
-                     class="navbar-img-logo"
-                     alt="logo"
-                   />
-                 </a>
-                 <button class="main-navbar-toggler">
-                   <i class="fa-solid fa-bars"></i>
-                 </button>
-                 <ul class="main-navbar-nav">
-                   <li class="main-nav-item">
-                     <a href="./index.html" class="main-nav-link"
-                       >Home</a
-                     >
-                     <div class="main-nav-item-after"></div>
-                   </li>
-                   <li class="main-nav-item">
-                     <a href="./shop.html" class="main-nav-link">Shop</a>
-                     <div class="main-nav-item-after"></div>
-                   </li>
-                   <li class="main-nav-item">
-                     Pages
-                     <div class="main-nav-item-after"></div>
-                     <ul class="main-dropdown-menu">
-                       <li class="main-dropdown-item">
-                         <a href="./shop-details.html" class="dropdown-link"
-                           >Shop Details</a
-                         >
-                       </li>
-                       <li class="main-dropdown-item">
-                         <a href="./shopping-cart.html" class="dropdown-link"
-                           >Shopping Cart</a
-                         >
-                       </li>
-                       <li class="main-dropdown-item">
-                         <a href="./checkout.html" class="dropdown-link"
-                           >Check Out</a
-                         >
-                       </li>
-                     </ul>
-                   </li>
-                   <li class="main-nav-item">
-                     <a href="./contacts.html" class="main-nav-link">Contacts</a>
-                     <div class="main-nav-item-after"></div>
-                   </li>
-                 </ul>
-                 <div class="navbar-account">
-                   <div class="navbar-search account-item">
-                     <i class="fa-solid fa-magnifying-glass"></i>
-                     <form action="#" class="search-form-main">
-                       <input
-                         type="text"
-                         placeholder="Search..."
-                         class="search-input-main"
-                       />
-                       <button type="submit" class="search-btn-main main-btn">
-                         <i class="fa-solid fa-magnifying-glass"></i>
-                       </button>
-                     </form>
-                   </div>
-                   <div class="navbar-user account-item">
-                     <i class="fa-solid fa-user"></i>
-                     <div class="user-action">
-                       <a href="./account.html" class="user-link">Log in</a>
-                       <a href="./account.html" class="user-link">Sign in</a>
-                     </div>
-                   </div>
-                   <div class="navbar-cart account-item">
-                     <i class="fa-solid fa-cart-shopping"></i>
-                     <div class="navbar-cart-container">
-                       <p class="navbar-cart-status">Recently Added Products</p>
-                       <div class="navbar-cart-item">
-                         <img
-                           src="./assets/img/product/product-1.jpg"
-                           alt=""
-                           class="navbar-cart-img"
-                         />
-                         <p class="navbar-cart-desc">Diagonal Textured Cap</p>
-                         <span class="navbar-cart-price">$ 32.50</span>
-                       </div>
-                       <div class="navbar-cart-item">
-                         <img
-                           src="./assets/img/product/product-2.jpg"
-                           alt=""
-                           class="navbar-cart-img"
-                         />
-                         <p class="navbar-cart-desc">Diagonal Textured Cap</p>
-                         <span class="navbar-cart-price">$ 32.50</span>
-                       </div>
-                       <div class="navbar-cart-item">
-                         <img
-                           src="./assets/img/product/product-3.jpg"
-                           alt=""
-                           class="navbar-cart-img"
-                         />
-                         <p class="navbar-cart-desc">Diagonal Textured Cap</p>
-                         <span class="navbar-cart-price">$ 32.50</span>
-                       </div>
-                       <a
-                         href="./shopping-cart.html"
-                         class="main-btn navbar-cart-btn"
-                         >View My Shopping Cart</a
-                       >
-                     </div>
-                   </div>
-                 </div>
-               </nav>
-             </div>
-           </div>
-         </div>
-       </div>
-     </header>
+    <!-- Modal -->
+    <div class="main-modal"></div>
+    <!-- Menu Aside -->
+    <header class="admin-header">
+      <div class="admin-header-container">
+        <a href="./index.html" class="escape-link">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          Go to the website
+        </a>
+        <div class="admin-infor">
+          <img src="./assets/img/admin.jpg" alt="" class="rounded-circle" />
+          <span class="admin-name">Đức Thiện</span>
+          <div class="dropdown-menu-admin">
+            <ul class="dropdown-list">
+              <li class="dropdown-item-admin">
+                <a href="#" class="dropdown-link">Settings</a>
+              </li>
+              <li class="dropdown-item-admin">
+                <a href="#" class="dropdown-link">Profile</a>
+              </li>
+              <li class="dropdown-item-admin">
+                <a href="#" class="dropdown-link">Log out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- Main -->
-    <main class="index"></main>
+    <main class="admin-main">
+      <div class="d-flex flex-column flex-shrink-0 p-0 admin-sidebars">
+        <a href="./admin.html" class="admin-icon">
+          <span class="admin-heading">
+            <i class="fa-solid fa-house"></i>
+            Administration</span
+          >
+        </a>
+        <ul class="nav nav-pills flex-column mb-auto admin-sidebars-menu">
+          <li class="nav-item">
+            <button class="admin-nav-btn main-btn active">
+              <i class="fa-solid fa-shirt"></i>
+              Products
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="admin-nav-btn main-btn">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Orders
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="admin-nav-btn main-btn">
+              <i class="fa-solid fa-users"></i>
+              Users
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="nothing" id="products">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+          tempore, at tenetur cupiditate non quidem illum id minus corporis
+          dolorem, commodi adipisci. Necessitatibus minima dolorum maiores
+          autem? Dignissimos in exercitationem, odit perspiciatis possimus
+          aliquid ullam repudiandae veniam unde consectetur non ipsum, delectus
+          libero voluptatem vel, nihil dolore aperiam tempora maxime.
+          Exercitationem ducimus laboriosam delectus voluptates consectetur
+          omnis, dolores repellat dolorem facilis beatae facere iste molestiae
+          animi sapiente necessitatibus tenetur at suscipit reiciendis? Ratione,
+          perferendis pariatur! Natus placeat et rerum non ex suscipit vel
+          commodi quas magnam maxime autem tempora ipsum reiciendis provident
+          nihil beatae, sed possimus sapiente fugiat earum! Tempore, eos id
+          maxime vitae quos sint eveniet quo repellat saepe vero explicabo,
+          suscipit aut animi officiis nisi cupiditate reprehenderit dolor ad?
+          Assumenda incidunt iure, nulla voluptates dicta eveniet ipsa, magni
+          molestiae suscipit at sunt aut quas. Quaerat voluptatem cupiditate
+          asperiores distinctio exercitationem error totam eos voluptate
+          explicabo libero. Ex, dolorem architecto explicabo quaerat est sed
+          quam ut rem perspiciatis quo sapiente. Aperiam quas inventore
+          perspiciatis nesciunt blanditiis perferendis pariatur tempora itaque
+          unde, similique porro dolorum ut velit nemo iusto voluptatibus quasi
+          quibusdam? Perferendis dolor voluptas doloremque illum enim minus
+          consectetur provident distinctio. Corporis sit alias sapiente quo a
+          officiis minus excepturi perferendis possimus neque nemo, eos
+          repudiandae, ex, praesentium sequi! Illum nisi dolor eaque cumque,
+          commodi explicabo sed labore earum unde praesentium consequuntur
+          consequatur id laboriosam tempore architecto, eveniet quam cum.
+          Inventore quasi doloribus doloremque ullam provident, nisi iste
+          reiciendis? Atque excepturi iure explicabo facere nisi molestiae!
+          Eaque earum ducimus inventore quibusdam repellendus quidem modi
+          aliquam, ipsum officiis voluptates sequi illo hic dolor, quaerat quae
+          deleniti rerum dolorum natus, expedita repudiandae quis minima
+          corrupti nemo. Delectus quod laboriosam, praesentium tenetur
+          voluptatibus expedita aperiam iusto tempore labore explicabo tempora
+          eos quia dolorum deserunt voluptas facere vel id? Voluptate officia
+          fuga quia?
+        </h1>
+      </div>
+      <div class="nothing" id="orders">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+          pariatur reprehenderit ipsum dolore non veniam debitis, animi rem
+          praesentium repellendus, expedita quas porro omnis aspernatur! At
+          amet, nesciunt voluptatem quod alias assumenda qui, vitae ex
+          perspiciatis doloremque, omnis dolores maiores incidunt praesentium
+          placeat rem perferendis consectetur quisquam recusandae accusantium
+          magnam voluptates? Voluptas ut exercitationem provident enim pariatur
+          in modi accusantium quasi recusandae? Est, omnis cupiditate corporis
+          error debitis eius blanditiis culpa iure, quia voluptatem modi aut
+          expedita consequuntur! Temporibus quo dolores asperiores ratione. Enim
+          sunt aperiam deserunt labore veritatis commodi quasi ea odio,
+          voluptates placeat. Ducimus repudiandae unde architecto dignissimos.
+        </h1>
+      </div>
+      <div class="nothing" id="users">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et qui quod,
+          numquam voluptatem mollitia excepturi, vitae unde libero architecto
+          repudiandae temporibus nam accusamus ullam expedita minima commodi
+          necessitatibus blanditiis itaque? Velit quae nisi, officia quibusdam
+          explicabo consequuntur amet soluta esse dolorum, illo culpa facilis
+          itaque? Ipsum iure adipisci laborum, illo assumenda dolore enim
+          expedita deleniti quod, esse explicabo necessitatibus. Recusandae
+          obcaecati optio animi ullam! A, necessitatibus molestias. Commodi
+          ipsum tempora recusandae eum, dolorem nisi laborum aliquid praesentium
+          deleniti esse deserunt distinctio animi non nemo voluptatem impedit,
+          sapiente, est corporis a laudantium repellendus! Aliquid, consectetur
+          natus! Repudiandae consectetur placeat error quas harum facilis quod
+          quis nisi laboriosam accusantium. Reprehenderit nihil id dicta cumque?
+          Aperiam sed tempora excepturi minus sunt ea ducimus voluptas unde
+          suscipit beatae, blanditiis fugit et reprehenderit repudiandae
+          doloremque deserunt eius aliquam error iure culpa aspernatur
+          exercitationem praesentium! Rerum excepturi sequi facilis, labore
+          ducimus porro temporibus dicta dolorum cumque modi, accusamus id,
+          recusandae ut harum debitis repudiandae. Consectetur iste corrupti
+          nemo repudiandae eligendi quod aspernatur eaque perspiciatis autem
+          maiores, distinctio ullam praesentium consequatur sapiente earum
+          pariatur voluptate quo laboriosam. Quas deleniti aut cumque soluta
+          facilis expedita veritatis excepturi deserunt quasi qui impedit,
+          itaque laudantium suscipit adipisci unde, ad magni.
+        </h1>
+      </div>
+    </main>
     <!-- Footer -->
     <footer class="footer"></footer>
-    <script src="./assets/js/bootstrap.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

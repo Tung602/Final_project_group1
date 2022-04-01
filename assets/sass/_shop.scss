@@ -24,8 +24,8 @@
   }
 }
 .shop {
-  width: 100%;
-  padding: 10rem 0;
+  max-width: $max-width;
+  margin: 10rem auto;
   &-search-input {
     padding: 1.2rem 3rem;
     color: $clr-primary-3;
