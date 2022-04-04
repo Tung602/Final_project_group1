@@ -2,7 +2,7 @@
 html{
     font-family: $ff-primary;
 }
-.path{
+.shop-path{
     font-family: $ff-primary;
     width: 100%;
     background-color: $clr-primary-3;
@@ -112,4 +112,15 @@ html{
 }
 .item-header{
     padding-bottom: 10rem;
+}
+.size{
+    background-color: transparent;
+    font-size: 1.5rem;
+    padding: 1rem 2.5rem;
+    margin: 1rem 0.5rem;
+    color: $clr-primary-1;
+    &:hover{
+        background-color: transparent;
+        color: $clr-primary-1;
+    }
 }

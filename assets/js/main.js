@@ -103,3 +103,10 @@ colorPicker.forEach((e, index) => {
       });
   });
 });
+
+// =============== choose picture(shop-detail) ================
+function changeImage(a) {
+  document.getElementById('img').src = a;
+}
+
+// =============== choose content(shop-detail) ================
