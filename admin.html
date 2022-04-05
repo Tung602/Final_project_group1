@@ -26,8 +26,315 @@
 
   <body>
     <!-- Modal -->
-    <div class="main-modal"></div>
-    <!-- Menu Aside -->
+    <div
+      class="modal fade"
+      id="addProductModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fs-1" id="staticBackdropLabel">
+              Add product
+            </h5>
+            <button
+              type="button"
+              class="btn-close fs-3"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body add-product-form">
+            <div class="container-fluid">
+              <div class="row my-5">
+                <div class="col">
+                  <div class="product-form-title">
+                    <div class="mb-3">
+                      <label
+                        for="exampleFormControlInput1"
+                        class="form-label fs-2"
+                        >Title</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control fs-4"
+                        id="exampleFormControlInput1"
+                        placeholder="Name product"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label
+                        for="exampleFormControlTextarea1"
+                        class="form-label fs-2"
+                        >Description</label
+                      >
+                      <textarea
+                        class="form-control fs-4"
+                        id="exampleFormControlTextarea1"
+                        rows="4"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-5">
+                <div class="col">
+                  <div class="product-form-media">
+                    <label for="formFileMultiple" class="form-label fs-2"
+                      >Media</label
+                    >
+                    <input
+                      class="form-control add-product__input-file fs-4"
+                      type="file"
+                      id="formFileMultiple"
+                      multiple
+                    />
+                    <div class="product-preview">
+                      <span class="product-preview__default-text"
+                        >Preview Image</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row p-3 mx-0 my-5 add-product-pricing">
+                <div class="col-sm-6 pe-sm-5">
+                  <div class="mb-3">
+                    <label
+                      for="exampleFormControlInput1"
+                      class="form-label fs-2"
+                      >Price</label
+                    >
+                    <div class="input-group">
+                      <span class="input-group-text fs-3">$</span>
+                      <input
+                        type="text"
+                        class="form-control fs-4"
+                        id="exampleFormControlInput1"
+                        placeholder="US$"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mb-3">
+                    <label
+                      for="exampleFormControlInput1"
+                      class="form-label fs-2"
+                      >Compare at price</label
+                    >
+                    <div class="input-group">
+                      <span class="input-group-text fs-3">$</span>
+                      <input
+                        type="text"
+                        class="form-control fs-4"
+                        id="exampleFormControlInput1"
+                        placeholder="US$"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row add-product-sizing my-5 mx-0 p-3">
+                <div class="col-12 mb-4">
+                  <span class="form-label fs-2">Sizing:</span>
+                </div>
+                <div class="col-12">
+                  <div class="add-product-checkbox">
+                    <label class="checkbox checkbox-label">
+                      <input type="checkbox" />
+                      XS
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input type="checkbox" />
+                      S
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input type="checkbox" />
+                      M
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input type="checkbox" />
+                      XL
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input type="checkbox" />
+                      2XL
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input type="checkbox" />
+                      XXL
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input type="checkbox" />
+                      3XL
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input type="checkbox" />
+                      4XL
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-5 mx-0 p-3 add-product-color">
+                <div class="col-12">
+                  <span class="form-label fs-2">Color</span>
+                </div>
+                <div class="col-12">
+                  <div class="add-product__color-variant my-5">
+                    <div class="mt-3 row d-flex">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control fs-3"
+                          id="inputColorName"
+                          placeholder="Color name"
+                        />
+                        <input
+                          type="color"
+                          class="form-control form-control-color fs-3"
+                          id="exampleColorInput"
+                          value="#563d7c"
+                          title="Choose your color"
+                        />
+                      </div>
+                      <div class="col-12 mt-4">
+                        <input
+                          class="form-control add-product__input-file fs-4"
+                          type="file"
+                          id="formFileMultiple"
+                          multiple
+                        />
+                        <div class="product-preview">
+                          <span class="product-preview__default-text"
+                            >Preview Variant</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-dark fs-4">Add color</button>
+                </div>
+              </div>
+              <div class="row my-5 mx-0 p-3 add-product-other">
+                <span class="form-label fs-2">Other information</span>
+                <div class="col-12 my-2">
+                  <label for="inputBrand" class="form-label fs-3">Branding</label>
+                  <input type="text" class="form-control fs-3" id="inputBrand">
+                </div>
+                <div class="col-12 my-2">
+                  <label for="inputCategory" class="form-label fs-3">Category</label>
+                  <input type="text" class="form-control fs-3" id="inputCategory">
+                </div>
+                <div class="col-12 my-2">
+                  <label for="inputTag" class="form-label fs-3">Tags</label>
+                  <input type="text" class="form-control fs-3" id="inputTag">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary fs-3"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary fs-3">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Edit product -->
+    <div
+      class="modal fade"
+      id="editProductModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fs-2" id="staticBackdropLabel">
+              Edit product
+            </h5>
+            <button
+              type="button"
+              class="btn-close fs-4"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ Header ============= -->
     <header class="admin-header">
       <div class="admin-header-container">
         <a href="./index.html" class="escape-link">
@@ -89,7 +396,13 @@
             <div class="col">
               <div class="products-heading">
                 <h2 class="products-title">Products</h2>
-                <button class="products-add-btn main-btn">Add product</button>
+                <button
+                  class="products-add-btn main-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#addProductModal"
+                >
+                  Add product
+                </button>
               </div>
             </div>
           </div>
@@ -171,7 +484,12 @@
                     </td>
                     <td class="product-action">
                       <div class="product-action-btn">
-                        <button class="product-edit-btn" type="button">
+                        <button
+                          class="product-edit-btn"
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#editProductModal"
+                        >
                           <i class="fa-regular fa-pen-to-square"></i>
                         </button>
                         <button class="product-delete-btn" type="button">
