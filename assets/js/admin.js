@@ -1,7 +1,7 @@
 // =============== Admin ===============
 
 let tabLinks = document.getElementsByClassName("admin-nav-btn");
-let tabContent = document.getElementsByClassName("nothing");
+let tabContent = document.getElementsByClassName("main-content");
 for(let i=0;i<tabLinks.length;i++){
   tabLinks[i].onclick = () =>{
     for(let j=0;j<tabContent.length;j++){

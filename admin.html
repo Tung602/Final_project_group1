@@ -83,47 +83,180 @@
           </li>
         </ul>
       </div>
-      <div class="nothing" id="products">
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-          tempore, at tenetur cupiditate non quidem illum id minus corporis
-          dolorem, commodi adipisci. Necessitatibus minima dolorum maiores
-          autem? Dignissimos in exercitationem, odit perspiciatis possimus
-          aliquid ullam repudiandae veniam unde consectetur non ipsum, delectus
-          libero voluptatem vel, nihil dolore aperiam tempora maxime.
-          Exercitationem ducimus laboriosam delectus voluptates consectetur
-          omnis, dolores repellat dolorem facilis beatae facere iste molestiae
-          animi sapiente necessitatibus tenetur at suscipit reiciendis? Ratione,
-          perferendis pariatur! Natus placeat et rerum non ex suscipit vel
-          commodi quas magnam maxime autem tempora ipsum reiciendis provident
-          nihil beatae, sed possimus sapiente fugiat earum! Tempore, eos id
-          maxime vitae quos sint eveniet quo repellat saepe vero explicabo,
-          suscipit aut animi officiis nisi cupiditate reprehenderit dolor ad?
-          Assumenda incidunt iure, nulla voluptates dicta eveniet ipsa, magni
-          molestiae suscipit at sunt aut quas. Quaerat voluptatem cupiditate
-          asperiores distinctio exercitationem error totam eos voluptate
-          explicabo libero. Ex, dolorem architecto explicabo quaerat est sed
-          quam ut rem perspiciatis quo sapiente. Aperiam quas inventore
-          perspiciatis nesciunt blanditiis perferendis pariatur tempora itaque
-          unde, similique porro dolorum ut velit nemo iusto voluptatibus quasi
-          quibusdam? Perferendis dolor voluptas doloremque illum enim minus
-          consectetur provident distinctio. Corporis sit alias sapiente quo a
-          officiis minus excepturi perferendis possimus neque nemo, eos
-          repudiandae, ex, praesentium sequi! Illum nisi dolor eaque cumque,
-          commodi explicabo sed labore earum unde praesentium consequuntur
-          consequatur id laboriosam tempore architecto, eveniet quam cum.
-          Inventore quasi doloribus doloremque ullam provident, nisi iste
-          reiciendis? Atque excepturi iure explicabo facere nisi molestiae!
-          Eaque earum ducimus inventore quibusdam repellendus quidem modi
-          aliquam, ipsum officiis voluptates sequi illo hic dolor, quaerat quae
-          deleniti rerum dolorum natus, expedita repudiandae quis minima
-          corrupti nemo. Delectus quod laboriosam, praesentium tenetur
-          voluptatibus expedita aperiam iusto tempore labore explicabo tempora
-          eos quia dolorum deserunt voluptas facere vel id? Voluptate officia
-          fuga quia?
-        </h1>
+      <div class="main-content" id="products">
+        <div class="container-fluid">
+          <div class="row p-2">
+            <div class="col">
+              <div class="products-heading">
+                <h2 class="products-title">Products</h2>
+                <button class="products-add-btn main-btn">Add product</button>
+              </div>
+            </div>
+          </div>
+          <div class="row p-0 p-sm-2">
+            <div class="col p-0 p-sm-2">
+              <div class="product-task">
+                <form action="#" class="product-search search-form-main">
+                  <input
+                    type="text"
+                    placeholder="search..."
+                    class="product-search-input search-input-main"
+                  />
+                  <button
+                    type="button"
+                    class="main-btn product-search-btn search-btn-main"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+                <div class="product-multiple-action">
+                  <div class="product-multiple-active">
+                    <label class="checkbox checkbox-label">
+                      <input type="checkbox" />
+                      Active
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                  </div>
+                  <button class="main-btn product-delete-all">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row p-0 p-sm-2">
+            <div class="col p-0 p-sm-2">
+              <div class="products-table">
+                <table>
+                  <tr>
+                    <th>
+                      <label class="checkbox checkbox-label">
+                        <input type="checkbox" />
+                        <svg viewBox="0 0 21 21">
+                          <path
+                            d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                          ></path>
+                        </svg>
+                      </label>
+                    </th>
+                    <th>Product</th>
+                    <th>Status</th>
+                    <th class="text-center">Action</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="checkbox checkbox-label">
+                        <input type="checkbox" />
+                        <svg viewBox="0 0 21 21">
+                          <path
+                            d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                          ></path>
+                        </svg>
+                      </label>
+                    </td>
+                    <td>
+                      <div class="product-infor">
+                        <img
+                          src="./assets/img/product/product-1.jpg"
+                          alt=""
+                          class="product-img"
+                        />
+                        <span class="product-name">T-shirt</span>
+                      </div>
+                    </td>
+                    <td class="product-status-td">
+                      <span class="product-status">active</span>
+                    </td>
+                    <td class="product-action">
+                      <div class="product-action-btn">
+                        <button class="product-edit-btn" type="button">
+                          <i class="fa-regular fa-pen-to-square"></i>
+                        </button>
+                        <button class="product-delete-btn" type="button">
+                          <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="checkbox checkbox-label">
+                        <input type="checkbox" />
+                        <svg viewBox="0 0 21 21">
+                          <path
+                            d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                          ></path>
+                        </svg>
+                      </label>
+                    </td>
+                    <td>
+                      <div class="product-infor">
+                        <img
+                          src="./assets/img/product/product-1.jpg"
+                          alt=""
+                          class="product-img"
+                        />
+                        <span class="product-name">T-shirt</span>
+                      </div>
+                    </td>
+                    <td class="product-status-td">
+                      <span class="product-status">active</span>
+                    </td>
+                    <td class="product-action">
+                      <div class="product-action-btn">
+                        <button class="product-edit-btn" type="button">
+                          <i class="fa-regular fa-pen-to-square"></i>
+                        </button>
+                        <button class="product-delete-btn" type="button">
+                          <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="checkbox checkbox-label">
+                        <input type="checkbox" />
+                        <svg viewBox="0 0 21 21">
+                          <path
+                            d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                          ></path>
+                        </svg>
+                      </label>
+                    </td>
+                    <td>
+                      <div class="product-infor">
+                        <img
+                          src="./assets/img/product/product-1.jpg"
+                          alt=""
+                          class="product-img"
+                        />
+                        <span class="product-name">T-shirt</span>
+                      </div>
+                    </td>
+                    <td class="product-status-td">
+                      <span class="product-status">active</span>
+                    </td>
+                    <td class="product-action">
+                      <div class="product-action-btn">
+                        <button class="product-edit-btn" type="button">
+                          <i class="fa-regular fa-pen-to-square"></i>
+                        </button>
+                        <button class="product-delete-btn" type="button">
+                          <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="nothing" id="orders">
+      <div class="main-content" id="orders">
         <h1>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
           pariatur reprehenderit ipsum dolore non veniam debitis, animi rem
@@ -139,7 +272,7 @@
           voluptates placeat. Ducimus repudiandae unde architecto dignissimos.
         </h1>
       </div>
-      <div class="nothing" id="users">
+      <div class="main-content" id="users">
         <h1>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Et qui quod,
           numquam voluptatem mollitia excepturi, vitae unde libero architecto

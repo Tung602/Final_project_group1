@@ -28,56 +28,52 @@
     gap: 1rem;
     font-size: 1.5rem;
     color: $clr-primary-1;
+    transition: all 0.2s linear;
     cursor: pointer;
     img {
       width: 4rem;
     }
     .dropdown-menu-admin {
       position: absolute;
-      color: white;
+      color: $clr-primary-1;
       top: 6.5rem;
       right: -1rem;
       opacity: 0;
       visibility: hidden;
       transition: all 0.2s linear;
+      z-index: 5;
       .dropdown-list {
         position: relative;
         margin: 0;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border: #d4d5d5 solid 1px;
         .dropdown-item-admin {
           padding: 1.2rem 2rem;
           font-size: 1.6rem;
           letter-spacing: 0.2rem;
-          background-color: $clr-primary-1;
+          background-color: white;
           transition: all 0.2s linear;
           &:first-child {
             padding-top: 1.8rem;
-            border-top-right-radius: 0.75rem;
-            border-top-left-radius: 0.75rem;
-            &::before {
-              content: "";
-              position: absolute;
-              top: -1.2rem;
-              right: 1.5rem;
-              border-bottom: 1.2rem solid $clr-primary-1;
-              border-left: 1rem solid transparent;
-              border-right: 1rem solid transparent;
-            }
           }
           &:last-child {
             padding-bottom: 1.8rem;
-            border-bottom-right-radius: 0.75rem;
-            border-bottom-left-radius: 0.75rem;
           }
           &:hover {
-            opacity: 0.9;
+            background-color: #f1f5f8;
           }
         }
       }
+    }
+    &:hover {
+      color: $clr-primary-2;
     }
     &:hover .dropdown-menu-admin {
       visibility: visible;
       opacity: 1;
       top: 5.5rem;
+      z-index: 5;
+
     }
     &::after {
       content: "";
@@ -96,9 +92,9 @@
 .admin-heading {
   font-size: 2.5rem;
   display: flex;
+  align-items: center;
   width: 100%;
   height: 6.8rem;
-  align-items: center;
   border-bottom: 1px solid #efefef;
   padding: 2rem;
   font-weight: 500;
@@ -164,13 +160,141 @@
 .user-avatar {
   width: 5rem;
 }
-.nothing {
+.main-content {
   margin-left: 28rem;
   margin-top: 6.8rem;
   background-color: #f9fafb;
   height: 100vh;
-  padding: 4rem;
+  padding: 1rem;
   transition: all 0.2s linear;
+}
+
+// ============== Products ==============
+
+#products {
+  .products-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    .products-title {
+      font-size: 2.5rem;
+      font-weight: 650;
+    }
+    .products-add-btn {
+      border: none;
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      letter-spacing: 0.1rem;
+      border-radius: 1.25rem;
+      padding: 1rem 1.5rem;
+      border: 1px solid transparent;
+      transition: all 0.2s linear;
+      &:hover {
+        background-color: white;
+        color: $clr-primary-1;
+        border-color: #d4d5d5;
+      }
+    }
+  }
+  .products-table {
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+    table {
+      width: 100%;
+      button {
+        border: none;
+        font-size: 2rem;
+        background-color: transparent;
+      }
+      input {
+        cursor: pointer;
+      }
+    }
+    th {
+      font-size: 2rem;
+      font-weight: 550;
+      text-align: start;
+    }
+    th,
+    td {
+      padding: 1rem;
+      border: 1px solid #d4d5d5;
+    }
+    th:first-of-type {
+      width: 3rem;
+    }
+    .product-img {
+      width: 6rem;
+    }
+    .product-infor {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+      .product-name {
+        font-size: 1.6rem;
+      }
+    }
+    .product-action {
+      width: 8rem;
+    }
+    .product-action-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .product-status {
+      font-size: 1.5rem;
+      background-color: #adff02;
+      padding: 0.2rem 0.8rem;
+      border-radius: 1.25rem;
+    }
+  }
+}
+
+// ================ taskbar =================
+
+.product-task {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  z-index: 4;
+  padding: 0 2rem;
+  .product-search {
+    position: static;
+    transform: translate(0);
+    visibility: visible;
+    opacity: 1;
+    height: 4.6rem;
+    box-shadow: none;
+    z-index: 0 !important;
+  }
+  .product-search-btn {
+    top: 1px;
+    right: 1px;
+  }
+  .product-multiple-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    .product-multiple-active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.2rem;
+      font-size: 1.5rem;
+    }
+    .product-delete-all {
+      padding: 1rem 1.5rem;
+      text-transform: capitalize;
+      border: none;
+      border-radius: 1.25rem;
+    }
+  }
 }
 
 //  =================== Responsive ===============
@@ -189,8 +313,29 @@
   }
   .admin-header-container {
     left: 7rem;
+    padding: 0 1.5rem;
   }
-  .nothing {
+  .main-content {
     margin-left: 7rem;
+  }
+}
+@include sm {
+  #products {
+    .products-table {
+      th {
+        font-size: 1.6rem;
+      }
+      th,
+      td {
+        padding: 0.5rem;
+      }
+      .product-action {
+        width: 6rem;
+      }
+    }
+  }
+  .product-task {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
