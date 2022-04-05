@@ -61,6 +61,48 @@ inputFileAddProduct.addEventListener("change", function () {
     }
   } else {
     previewDefaultTextAddProduct.style.display = "block";
-    previewContainerAddProduct.innerHTML = '<span class="product-preview__default-text">Preview Image</span>';
+    previewContainerAddProduct.innerHTML =
+      '<span class="product-preview__default-text">Preview Image</span>';
   }
 });
+
+// add color in add product
+
+const addColorContainer = document.querySelector(".add-product__color-variant");
+const addColorBtn = document.querySelector(".add-color-btn");
+const addColorElement = document.createElement("div");
+const addColorHTML = `<div class="m-4 row d-flex add-product__color-item">
+<div class="input-group">
+  <input
+    type="text"
+    class="form-control fs-3"
+    id="inputColorName"
+    placeholder="Color name"
+  />
+  <input
+    type="color"
+    class="form-control form-control-color fs-3"
+    id="exampleColorInput"
+    value="#563d7c"
+    title="Choose your color"
+  />
+</div>
+<div class="col-12 mt-4">
+  <input
+    class="form-control add-product__input-file fs-4"
+    type="file"
+    id="formFileMultiple"
+    multiple
+  />
+  <div class="product-preview">
+    <span class="product-preview__default-text"
+      >Preview Variant</span
+    >
+  </div>
+</div>
+</div>`;
+addColorBtn.onclick = () => {
+  addColorContainer.appendChild(addColorElement);
+  addColorElement.outerHTML = addColorHTML;
+  console.log(`a`);
+}
