@@ -38,6 +38,7 @@
     }
 }
 .shop-detail-content{
+    font-family: $ff-primary;
     &-name{
         text-align: center;
         &>h4{
@@ -130,4 +131,51 @@
            }
         }
     }
+    &-paragraph{
+        margin-bottom: 2rem;
+        border-bottom: solid 1px $clr-primary-5;
+        &-tablinks{
+            border: none;
+            background-color: white;
+            margin: 0 4rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: $clr-primary-5;
+        }
+        &-tablinks{
+
+        }
+        &-tabcontent{
+            display: none;
+            & p{
+                color: $clr-primary-1;
+                font-size: 1.5rem;
+            }
+            &-something{
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+            & h5{
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+        &-related-product{
+            &>p{
+                margin: 0 auto;
+            }
+        }
+    }
+}
+.appear{
+    display: block;
+}
+.lineRed{
+    border: none;
+    border-bottom: solid 2px $clr-primary-2;
+    background-color: white;
+    margin: 0 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $clr-primary-5;
 }

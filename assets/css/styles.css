@@ -1516,6 +1516,9 @@ html {
   color: #B7B7B7;
 }
 
+.shop-detail-content {
+  font-family: "Nunito Sans", sans-serif;
+}
 .shop-detail-content-name {
   text-align: center;
 }
@@ -1607,6 +1610,47 @@ html {
 }
 .shop-detail-content-categories > p > span {
   color: #111111;
+}
+.shop-detail-content-paragraph {
+  margin-bottom: 2rem;
+  border-bottom: solid 1px #B7B7B7;
+}
+.shop-detail-content-paragraph-tablinks {
+  border: none;
+  background-color: white;
+  margin: 0 4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #B7B7B7;
+}
+.shop-detail-content-paragraph-tabcontent {
+  display: none;
+}
+.shop-detail-content-paragraph-tabcontent p {
+  color: #111111;
+  font-size: 1.5rem;
+}
+.shop-detail-content-paragraph-tabcontent-something {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.shop-detail-content-paragraph-tabcontent h5 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.appear {
+  display: block;
+}
+
+.lineRed {
+  border: none;
+  border-bottom: solid 2px #E53437;
+  background-color: white;
+  margin: 0 4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #B7B7B7;
 }
 
 .account-container {
