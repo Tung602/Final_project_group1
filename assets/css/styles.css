@@ -1410,28 +1410,38 @@ body {
     padding: 2rem;
   }
 }
-.path {
+.shop-path {
   font-family: "Nunito Sans", sans-serif;
   width: 100%;
   background-color: #F3F2EE;
   height: 14rem;
 }
-.path-content {
-  width: 120rem;
+.shop-path-content {
+  max-width: 1200px;
   margin: 0px auto;
   padding: 4rem 0;
 }
-.path-content-name {
+.shop-path-content-name {
   font-size: 2.5rem;
   padding: 0.5rem 0;
 }
-.path-content-1 {
+.shop-path-content-1 {
   font-size: 1.5rem;
 }
-.path-content-1::after {
+.shop-path-content-1::after {
   content: " > ";
 }
-.path-content-2 {
+.shop-path-content-2 {
+  font-size: 1.5rem;
+  color: #B7B7B7;
+}
+.shop-path-1 {
+  font-size: 1.5rem;
+}
+.shop-path-1::after {
+  content: " > ";
+}
+.shop-path-2 {
   font-size: 1.5rem;
   color: #B7B7B7;
 }
@@ -1455,7 +1465,7 @@ body {
   display: inline-block;
   margin-bottom: 4rem;
 }
-.shop .searchbtn {
+.shop .shop-search-btn {
   position: absolute;
   right: 0;
   top: 50%;
@@ -1485,7 +1495,15 @@ body {
 }
 .shop-detail-information-card-item > li {
   padding: 0.7rem 0;
+}
+.shop-detail-information-card-item .filter-btn {
+  border: none;
+  background-color: transparent;
   color: #B7B7B7;
+  transition: all 0.2s linear;
+}
+.shop-detail-information-card-item .filter-btn:hover {
+  color: #111111;
 }
 .shop-detail-information-card-item-tag {
   display: inline-block;
@@ -1494,11 +1512,7 @@ body {
   padding: 0.5rem 2rem;
   color: #111111;
   font-weight: bold;
-}
-.shop-detail-information-card-item-tag:hover {
-  transition: all 0.5s;
-  background-color: #111111;
-  color: #F3F2EE;
+  border: none;
 }
 
 .tag {
@@ -1534,7 +1548,208 @@ body {
 }
 
 .item-header {
-  padding-bottom: 10rem;
+  padding-bottom: 6rem;
+}
+
+.size {
+  background-color: transparent;
+  font-size: 1.5rem;
+  padding: 0.8rem 2.5rem;
+  margin: 1rem 0.5rem;
+  color: #111111;
+}
+.size:hover {
+  background-color: transparent;
+  color: #111111;
+}
+
+.shop-detail li a {
+  transition: color 0.2s linear;
+}
+.shop-detail li:hover {
+  color: #111111;
+}
+
+.shop-detail-items {
+  background-color: #F3F2EE;
+  width: 100%;
+  padding: 2rem;
+}
+.shop-detail-items-display-left {
+  padding-top: 3rem;
+}
+.shop-detail-items-display-left img {
+  margin: 2rem auto;
+}
+.shop-detail-items-display-left img:hover {
+  cursor: pointer;
+}
+.shop-detail-items-display-right > img {
+  display: block;
+  margin: 0 auto;
+}
+
+.photo {
+  background-color: transparent;
+  border: none;
+}
+.photo:hover {
+  background-color: transparent;
+}
+
+.shop-detail-path {
+  text-align: center;
+  padding: 3rem 0;
+}
+.shop-detail-path-distant > a {
+  font-size: 1.5rem;
+}
+.shop-detail-path-distant > a::after {
+  content: " > ";
+}
+.shop-detail-path-distant > span {
+  font-size: 1.5rem;
+  color: #B7B7B7;
+}
+
+.shop-detail-content {
+  font-family: "Nunito Sans", sans-serif;
+}
+.shop-detail-content-name {
+  text-align: center;
+}
+.shop-detail-content-name > h4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.shop-detail-content-name > i {
+  color: #F1AF4D;
+  font-size: 1.5rem;
+}
+.shop-detail-content-name > span {
+  font-size: 1.5rem;
+}
+.shop-detail-content-name > h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 2rem 0;
+}
+.shop-detail-content-name > h3 > span {
+  font-size: 2rem;
+  padding: 0 2rem;
+  font-weight: normal;
+  color: #B7B7B7;
+  text-decoration-line: line-through;
+}
+.shop-detail-content-name > p {
+  font-size: 1.5rem;
+}
+.shop-detail-content-size {
+  display: inline-block;
+  margin-right: 4rem;
+}
+.shop-detail-content-size > span {
+  font-size: 1.5rem;
+}
+.shop-detail-content-size > .shop-detail-information-card-item {
+  display: inline-block;
+}
+.shop-detail-content-color {
+  display: inline-block;
+}
+.shop-detail-content-color > span {
+  font-size: 1.5rem;
+}
+.shop-detail-content-quantity {
+  margin-bottom: 1rem;
+}
+.shop-detail-content-quantity > input[type=number] {
+  width: 10rem;
+  border: solid 1px #B7B7B7;
+  padding: 1.5rem 0 1.5rem 2rem;
+  margin-right: 3rem;
+  font-size: 1.5rem;
+}
+.shop-detail-content-quantity > input[type=number]::-webkit-inner-spin-button {
+  opacity: 1;
+  cursor: pointer;
+}
+.shop-detail-content-quantity > input[type=submit] {
+  background-color: #111111;
+  color: #F3F2EE;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  padding: 2rem 3rem;
+}
+.shop-detail-content-checkout {
+  padding: 3rem;
+}
+.shop-detail-content-checkout > h2 {
+  width: 40rem;
+  line-height: 0.1em;
+  border-bottom: 1px solid #B7B7B7;
+  margin: 0 auto;
+}
+.shop-detail-content-checkout > h2 > span {
+  padding: 0 2rem;
+  background-color: white;
+}
+.shop-detail-content-checkout > img {
+  padding: 3rem 0;
+}
+.shop-detail-content-categories {
+  font-size: 1.5rem;
+}
+.shop-detail-content-categories > p {
+  color: #B7B7B7;
+}
+.shop-detail-content-categories > p > span {
+  color: #111111;
+}
+.shop-detail-content-paragraph {
+  margin-bottom: 2rem;
+  border-bottom: solid 1px #B7B7B7;
+}
+.shop-detail-content-paragraph-tablinks {
+  border: none;
+  background-color: white;
+  margin: 0 4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #B7B7B7;
+}
+.shop-detail-content-paragraph-tabcontent {
+  display: none;
+}
+.shop-detail-content-paragraph-tabcontent p {
+  color: #111111;
+  font-size: 1.5rem;
+}
+.shop-detail-content-paragraph-tabcontent-something {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.shop-detail-content-paragraph-tabcontent h5 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.shop-detail-content-paragraph-related-product > p {
+  margin: 0 auto;
+}
+
+.appear {
+  display: block;
+}
+
+.lineRed {
+  border: none;
+  border-bottom: solid 2px #E53437;
+  background-color: white;
+  margin: 0 4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #B7B7B7;
 }
 
 .breadcrumb-option {

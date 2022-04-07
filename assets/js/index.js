@@ -1,18 +1,3 @@
-// ============ Header ================
-
-// Menu aside
-let navbarToggler = document.querySelector(".main-navbar-toggler");
-let menuAside = document.querySelector(".menu-wrapper");
-let modal = document.querySelector(".main-modal");
-navbarToggler.onclick = () => {
-  menuAside.classList.add("show-menu-aside");
-  modal.classList.add("show-modal");
-};
-modal.onclick = () => {
-  menuAside.classList.remove("show-menu-aside");
-  modal.classList.remove("show-modal");
-};
-
 // =============== Main ==================
 
 // Slider
@@ -86,20 +71,3 @@ window.onload = () => {
   heroBtn[0].classList.add("active");
 };
 
-// =============== Product color select ================
-
-let colorPicker = document.querySelectorAll(".color-picker");
-let productImg = document.querySelector(".product-item-img");
-let colorLabel = document.querySelectorAll(".color-picker-label");
-console.log(colorPicker);
-colorPicker.forEach((e, index) => {
-  colorPicker[index].addEventListener("change", () => {
-    colorLabel[index].classList.add("active");
-    productImg.src = `./assets/img/product/product-${index + 1}.jpg`;
-    [...colorLabel]
-      .filter((e, i) => i != index)
-      .forEach((e) => {
-        e.classList.remove("active");
-      });
-  });
-});

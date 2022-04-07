@@ -200,13 +200,14 @@
     <main>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-12 p-0">
-              <div class="path px-5">
-                <div class="path-content p-md-4">
-                    <h4 class="path-content-name">Shop</h4>
-                    <a href="./index.html" class="path-content-1">Home</a>
-                    <span class="path-content-2">shop</span>
+            <div class="col p-0">
+              <div class="shop-path">
+                <div class="shop-path-content px-4">
+                    <h4 class="shop-path-content-name">Shop</h4>
+                    <a href="./index.html" class="shop-path-content-1">Home</a>
+                    <span class="shop-path-content-2">shop</span>
                 </div>
+              </div>
             </div>
             </div>
           </div>
@@ -216,63 +217,54 @@
             <div class="row g-5">
               <div class="shop-detail p-5 px-md-4 py-md-2 col-sm-12 col-lg-3">
                 <form class="search-container">
-                  <input type="text" placeholder="Search..." name="shop-search" class="shop-search-input" size="25">
-                  <button type="submit" class="searchbtn"><i class="fa-solid fa-magnifying-glass"></i></i></button>
+                  <input type="text" placeholder="Search..." name="shop-search" class="shop-search-input">
+                  <button type="button" class="shop-search-btn"><i class="fa-solid fa-magnifying-glass"></i></i></button>
                 </form>
                 <div class="shop-detail-information">
                   <div class="shop-detail-information-card">
                     <button class="shop-detail-information-card-name">CATEGORIES</i></button>
-                    <ul class="shop-detail-information-card-item">
-                      <li><a href="#">Men</a></li>
-                      <li><a href="#">Women</a></li>
-                      <li><a href="#">Bags</a></li>
-                      <li><a href="#">Clothing</a></li>
-                      <li><a href="#">Shoes</a></li>
-                      <li><a href="#">Accessories</a></li>
-                      <li><a href="#">Kids</a></li>
+                    <ul class="shop-detail-information-card-item shop-categories-list">
                     </ul>
                     <hr>
                   </div>
                   <div class="shop-detail-information-card">
                     <button class="shop-detail-information-card-name">BRANDING</i></button>
-                    <ul class="shop-detail-information-card-item">
-                      <li><a href="#">Louis Vuitton</a></li>
-                      <li><a href="#">Chanel</a></li>
-                      <li><a href="#">Hermes</a></li>
-                      <li><a href="#">Gucci</a></li>
-                    </ul>
-                    <hr>
-                  </div>
-                  <div class="shop-detail-information-card">
-                    <button class="shop-detail-information-card-name">CATEGORIES</i></button>
-                    <ul class="shop-detail-information-card-item">
-                      <li><a href="#">$0.00 - $50.00</a></li>
-                      <li><a href="#">$50.00 - $100.00</a></li>
-                      <li><a href="#">$100.00 - $150.00</a></li>
-                      <li><a href="#">$150.00 - $200.00</a></li>
-                      <li><a href="#">$200.00 - $250.00</a></li>
-                      <li><button">250.00+</a></li>
+                    <ul class="shop-detail-information-card-item shop-branding-list">
                     </ul>
                     <hr>
                   </div>
                   <div class="shop-detail-information-card">
                     <button class="shop-detail-information-card-name">SIZE</button>
-                    <form action="" class="shop-detail-information-card-item">
-                      <input type="radio">
-                      <input type="radio">
-                    </form>
+                      <form action="" class="shop-detail-information-card-item">
+                        <input type="radio" class="btn-check" name="options" id="XS">
+                        <label class="btn btn-secondary size" for="XS">XS</label>
+                        
+                        <input type="radio" class="btn-check" name="options" id="S">
+                        <label class="btn btn-secondary size" for="S">S</label>
+                        
+                        <input type="radio" class="btn-check" name="options" id="M">
+                        <label class="btn btn-secondary size" for="M">M</label>
+                        
+                        <input type="radio" class="btn-check" name="options" id="XL">
+                        <label class="btn btn-secondary size" for="XL">XL</label>
+
+                        <input type="radio" class="btn-check" name="options" id="2XL">
+                        <label class="btn btn-secondary size" for="2XL">2XL</label>
+
+                        <input type="radio" class="btn-check" name="options" id="XXL">
+                        <label class="btn btn-secondary size" for="XXL">XXL</label>
+
+                        <input type="radio" class="btn-check" name="options" id="3XL">
+                        <label class="btn btn-secondary size" for="3XL">3XL</label>
+
+                        <input type="radio" class="btn-check" name="options" id="4XL">
+                        <label class="btn btn-secondary size" for="4XL">4XL</label>
+                      </form>
                     <hr>
                   </div>
                   <div class="shop-detail-information-card">
                     <button class="shop-detail-information-card-name">TAGS</i></button>
-                    <ul class="shop-detail-information-card-item" style="display:inline-block; width: 100%; flex-wrap: wrap;">
-                      <li class="tag"><a href="#" class="shop-detail-information-card-item-tag">PRODUCT</a></li>
-                      <li class="tag"><a href="#" class="shop-detail-information-card-item-tag">BAG</a></li>
-                      <li class="tag"><a href="#" class="shop-detail-information-card-item-tag">SHOES</a></li>
-                      <li class="tag"><a href="#" class="shop-detail-information-card-item-tag">FASHIO</a></li>
-                      <li class="tag"><a href="#" class="shop-detail-information-card-item-tag">CLOTHING</a></li>
-                      <li class="tag"><a href="#" class="shop-detail-information-card-item-tag">HATS</a></li>
-                      <li class="tag"><a href="#" class="shop-detail-information-card-item-tag">ACCESSORIES</a></li>
+                    <ul class="shop-detail-information-card-item shop-tags-list" style="display:inline-block; width: 100%; flex-wrap: wrap;">
                     </ul>
                     <hr>
                   </div>
@@ -280,11 +272,11 @@
               </div>
               <div id="container" class="col-lg-9">
                 <div class="item-header">
-                  <div class="row justify-content-between">
-                    <div class="item-results col-4 ">
-                      Showing 1–12 of 126 results
+                  <div class="row align-item-center py-4 g-5 px-5 px-sm-0">
+                    <div class="item-results col-12 col-sm-6 d-flex justify-content-start">
+                      <span class="products-quanlity"></span>
                     </div>
-                    <div class="sorted col-5 align">
+                    <div class="sorted col-12 col-sm-6 d-flex justify-content-start justify-content-sm-end">
                       <div class="shop-sorted">
                         <span id="sorted" style="display: inline-block">Sort by Price:</span>
                         <div class="dropdown sorted-item">
@@ -292,754 +284,23 @@
                             Low To High
                           </button>
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item filter" href="#">Low To High</a></li>
-                            <li><a class="dropdown-item filter" href="#">$0 - $55</a></li>
-                            <li><a class="dropdown-item filter" href="#">$55 - $100</a></li>
+                            <li><button class="dropdown-item filter price-low-to-high">Low to High</button></li>
+                            <li><button class="dropdown-item filter price-0_50">$0 - $50</button></li>
+                            <li><button class="dropdown-item filter price-50_100">$50 - $100</button></li>
+                            <li><button class="dropdown-item filter price-100_150">$100 - $150</button></li>
+                            <li><button class="dropdown-item filter price-150_200">$150 - $200</button></li>
+                            <li><button class="dropdown-item filter price-200">$200+</button></li>
                           </ul>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="row g-5" >
-                  <div class="col-sm-6 col-lg-4">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-4">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="row g-5 px-5 px-sm-0 products-container" >
                 </div>
-
               </div>
               </div>
             </div>
-          </div>
         </div>
     </main>
     <!-- Footer -->
@@ -1101,6 +362,7 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/base.js"></script>
+    <script src="./assets/js/shop.js"></script>
   </body>
 </html>

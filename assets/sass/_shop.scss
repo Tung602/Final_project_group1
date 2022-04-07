@@ -1,10 +1,10 @@
-.path {
+.shop-path {
   font-family: $ff-primary;
   width: 100%;
   background-color: $clr-primary-3;
   height: 14rem;
   &-content {
-    width: 120rem;
+    max-width: $max-width;
     margin: 0px auto;
     padding: 4rem 0;
     &-name {
@@ -22,6 +22,16 @@
       color: $clr-primary-5;
     }
   }
+  &-1 {
+    font-size: 1.5rem;
+    &::after {
+      content: " > ";
+    }
+  }
+  &-2 {
+    font-size: 1.5rem;
+    color: $clr-primary-5;
+  }
 }
 .shop {
   max-width: $max-width;
@@ -33,7 +43,7 @@
     color: $clr-primary-1;
     border: none;
     font-size: 1.4rem;
-  } 
+  }
   .search-container {
     width: 100%;
     position: relative;
@@ -41,7 +51,7 @@
     display: inline-block;
     margin-bottom: 4rem;
   }
-  .searchbtn {
+  .shop-search-btn {
     position: absolute;
     right: 0;
     top: 50%;
@@ -69,7 +79,15 @@
   font-size: 1.5rem;
   & > li {
     padding: 0.7rem 0;
+  }
+  .filter-btn {
+    border: none;
+    background-color: transparent;
     color: $clr-primary-5;
+    transition: all 0.2s linear;
+  }
+  .filter-btn:hover {
+    color: $clr-primary-1;
   }
   &-tag {
     display: inline-block;
@@ -78,11 +96,7 @@
     padding: 0.5rem 2rem;
     color: $clr-primary-1;
     font-weight: bold;
-    &:hover {
-      transition: all 0.5s;
-      background-color: $clr-primary-1;
-      color: $clr-primary-3;
-    }
+    border: none;
   }
 }
 .tag {
@@ -112,5 +126,27 @@
   font-size: 1.5rem;
 }
 .item-header {
-  padding-bottom: 10rem;
+  padding-bottom: 6rem;
+}
+
+.size {
+  background-color: transparent;
+  font-size: 1.5rem;
+  padding: 0.8rem 2.5rem;
+  margin: 1rem 0.5rem;
+  color: $clr-primary-1;
+  &:hover {
+    background-color: transparent;
+    color: $clr-primary-1;
+  }
+}
+.shop-detail {
+  li {
+    a {
+      transition: color 0.2s linear;
+    }
+  }
+  li:hover {
+    color: $clr-primary-1;
+  }
 }
