@@ -1441,25 +1441,29 @@ body {
   margin: 10rem auto;
 }
 .shop-search-input {
-  padding: 1.2rem 3rem;
-  color: #F3F2EE;
+  width: 100%;
+  padding: 1.2rem 2rem;
+  padding-right: 4rem;
+  color: #111111;
   border: none;
   font-size: 1.4rem;
 }
-.shop-search-input:placeholder-shown {
-  padding-left: 1.7rem;
-}
-
-.searchbtn {
-  background-color: transparent;
-  border: none;
-  margin-right: 1.7rem;
-}
-
-.search-container {
+.shop .search-container {
+  width: 100%;
+  position: relative;
   border: solid 1px #B7B7B7;
   display: inline-block;
   margin-bottom: 4rem;
+}
+.shop .searchbtn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  background-color: transparent;
+  border: none;
+  margin-right: 1.7rem;
 }
 
 .shop-detail-information-card-name {
