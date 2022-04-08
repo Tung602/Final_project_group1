@@ -14,7 +14,7 @@
 //       active: true,
 //       branding: "Gucci",
 //       categories: ["men", "women", "clothing"],
-//       tags: ["hot trend"],
+//       tags: ["hot trend", "Thắng cặc"],
 //     },
 //     {
 //       id: 2,
@@ -41,7 +41,7 @@
 //       sizing: ["XS", "S", "M"],
 //       active: true,
 //       branding: "Gucci",
-//       categories: ["men", "women", "clothing"],
+//       categories: ["men", "women", "clothing", "shoes"],
 //       tags: ["hot trend"],
 //     },
 //     {
@@ -68,6 +68,29 @@
 
 const data = JSON.parse(window.localStorage.getItem("data"));
 let productsQuanlity = document.querySelector(".products-quanlity");
+
+let renderNavbarCart = function (cart) {
+  let navbarCartContainer = document.querySelector(".navbar-cart-content");
+  if (data.cart.length != 0) {
+    navbarCartContainer.innerHTML = "";
+  }
+  data.products
+    .filter((e) => cart.includes(e.id))
+    .forEach((product) => {
+      let navbarCartItem = document.createElement("div");
+      navbarCartContainer.appendChild(navbarCartItem);
+      navbarCartItem.outerHTML = `<div class="navbar-cart-item">
+                                <img
+                                  src="${product.media[0]}"
+                                  alt=""
+                                  class="navbar-cart-img"
+                                />
+                                <p class="navbar-cart-desc">${product.name}</p>
+                                <span class="navbar-cart-price">$ ${product.price}</span>
+                              </div>`;
+    });
+};
+renderNavbarCart(data.cart);
 
 let renderProducts = function (products) {
   productsQuanlity.innerHTML = `Showing ${products.length} results`;
@@ -175,8 +198,12 @@ let renderProducts = function (products) {
     // ============= Product add to cart ===============
     let addCartBtn = document.querySelector(`.product-add.id-${product.id}`);
     addCartBtn.onclick = () => {
-      data.cart.push(product.id);
+      if (!data.cart.includes(product.id)) {
+        data.cart.push(product.id);
+      }
       window.localStorage.setItem("data", JSON.stringify(data));
+      renderNavbarCart(data.cart);
+      window.alert("added to cart");
     };
   });
 };

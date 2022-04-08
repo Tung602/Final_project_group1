@@ -249,13 +249,13 @@ body {
 .navbar-cart-container {
   position: absolute;
   width: 40rem;
+  height: 46rem;
   top: 100%;
   right: 0;
   background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   visibility: hidden;
   opacity: 0;
@@ -285,10 +285,14 @@ body {
   height: 1px;
   background-color: rgba($color: #000000, $alpha: 0.1);
 }
+.navbar-cart-content {
+  width: 100%;
+  overflow: auto;
+  flex: 1;
+}
 .navbar-cart-item {
   width: 100%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   transition: all 0.2s linear;
   padding: 1.5rem;
@@ -298,10 +302,14 @@ body {
 }
 .navbar-cart-desc {
   font-size: 1.5rem;
-  text-align: center;
+  margin: 0;
+  padding-left: 1rem;
+  flex: 1;
 }
 .navbar-cart-price {
   color: $clr-primary-2;
+  font-size: 2rem;
+  justify-self: flex-end;
 }
 .navbar-cart-btn {
   margin: 2rem 0;

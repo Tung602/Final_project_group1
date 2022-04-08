@@ -158,32 +158,8 @@
                     <i class="fa-solid fa-cart-shopping"></i>
                     <div class="navbar-cart-container">
                       <p class="navbar-cart-status">Recently Added Products</p>
-                      <div class="navbar-cart-item">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          alt=""
-                          class="navbar-cart-img"
-                        />
-                        <p class="navbar-cart-desc">Diagonal Textured Cap</p>
-                        <span class="navbar-cart-price">$ 32.50</span>
-                      </div>
-                      <div class="navbar-cart-item">
-                        <img
-                          src="./assets/img/product/product-2.jpg"
-                          alt=""
-                          class="navbar-cart-img"
-                        />
-                        <p class="navbar-cart-desc">Diagonal Textured Cap</p>
-                        <span class="navbar-cart-price">$ 32.50</span>
-                      </div>
-                      <div class="navbar-cart-item">
-                        <img
-                          src="./assets/img/product/product-3.jpg"
-                          alt=""
-                          class="navbar-cart-img"
-                        />
-                        <p class="navbar-cart-desc">Diagonal Textured Cap</p>
-                        <span class="navbar-cart-price">$ 32.50</span>
+                      <div class="navbar-cart-content">
+                        <p class="fs-3 h-100 text-center p-0 m-0 align-items-center d-flex justify-content-center">Empty</p>
                       </div>
                       <a
                         href="./shopping-cart.html"
@@ -202,7 +178,7 @@
     <!-- Main -->
     <main class="shopping">
       <section class="breadcrumb-option">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
               <div class="breadcrumb-text">
@@ -222,20 +198,20 @@
         </div>
       </section>
       <section class="shopping-cart">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
+        <div class="container shopping-cart-container">
+          <div class="row g-5">
+            <div class="col-lg-8 px-4">
               <div class="shopping-cart-table">
                 <table>
                   <thead>
                     <tr>
                       <th>Product</th>
-                      <th>Quantity</th>
-                      <th>Total</th>
+                      <th class="text-center">Quantity</th>
+                      <th class="text-center">Total</th>
                       <th></th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="shopping-cart__content">
                     <tr>
                       <td class="product-cart-item">
                         <div class="product-cart-item-pic">
@@ -243,125 +219,51 @@
                             src="./assets/img/product/product-2.jpg"
                             alt=""
                           />
-                          <div class="product-cart-item-text">
-                            <h6>T-shirt Contrast Pocket</h6>
-                            <h5>$98.49</h5>
-                          </div>
+                        </div>
+                        <div class="product-cart-item-text">
+                          <h6 class="product-cart-name">
+                            T-shirt Contrast Pocket
+                          </h6>
+                          <h5 class="product-cart-price">$98.49</h5>
                         </div>
                       </td>
-                      <td class="quantity-item">
+                      <td class="quantity-item text-center mx-sm-5">
                         <div class="quantity">
                           <div class="pro-qty-2">
-                            <span class="fa fa-angle-left dec qtybtn"></span>
-                            <input type="text" value="1" />
-                            <span class="fa fa-angle-right inc qtybtn"></span>
+                            <button
+                              class="fa fa-angle-left dec qtybtn cart-more-btn"
+                            ></button>
+                            <input
+                              type="text"
+                              value="1"
+                              class="product-quantity"
+                            />
+                            <button
+                              class="fa fa-angle-right inc qtybtn cart-less-btn"
+                            ></button>
                           </div>
                         </div>
                       </td>
-                      <td class="cart-price">$ 30.00</td>
-                      <td class="cart-close">
-                        <i class="fa fa-close"></i>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="product-cart-item">
-                        <div class="product-cart-item-pic">
-                          <img
-                            src="./assets/img/product/product-4.jpg"
-                            alt=""
-                          />
-                          <div class="product-cart-item-text">
-                            <h6>T-shirt Contrast Pocket</h6>
-                            <h5>$98.49</h5>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="quantity-item">
-                        <div class="quantity">
-                          <div class="pro-qty-2">
-                            <span class="fa fa-angle-left dec qtybtn"></span>
-                            <input type="text" value="1" />
-                            <span class="fa fa-angle-right inc qtybtn"></span>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="cart-price">$ 30.00</td>
-                      <td class="cart-close">
-                        <i class="fa fa-close"></i>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="product-cart-item">
-                        <div class="product-cart-item-pic">
-                          <img
-                            src="./assets/img/product/product-1.jpg"
-                            alt=""
-                          />
-                          <div class="product-cart-item-text">
-                            <h6>T-shirt Contrast Pocket</h6>
-                            <h5>$98.49</h5>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="quantity-item">
-                        <div class="quantity">
-                          <div class="pro-qty-2">
-                            <span class="fa fa-angle-left dec qtybtn"></span>
-                            <input type="text" value="1" />
-                            <span class="fa fa-angle-right inc qtybtn"></span>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="cart-price">$ 30.00</td>
-                      <td class="cart-close">
-                        <i class="fa fa-close"></i>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="product-cart-item">
-                        <div class="product-cart-item-pic">
-                          <img
-                            src="./assets/img/product/product-3.jpg"
-                            alt=""
-                          />
-                          <div class="product-cart-item-text">
-                            <h6>T-shirt Contrast Pocket</h6>
-                            <h5>$98.49</h5>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="quantity-item">
-                        <div class="quantity">
-                          <div class="pro-qty-2">
-                            <span class="fa fa-angle-left dec qtybtn"></span>
-                            <input type="text" value="1" />
-                            <span class="fa fa-angle-right inc qtybtn"></span>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="cart-price">$ 30.00</td>
-                      <td class="cart-close">
-                        <i class="fa fa-close"></i>
+                      <td class="cart-total-price text-center">$ 30.00</td>
+                      <td class="cart-close text-center">
+                        <button class="cart-close-btn">
+                          <i class="fa fa-close"></i>
+                        </button>
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col text-center pt-5 mt-5">
                   <div class="continue-btn">
-                    <a href="#">Continue Shopping</a>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                  <div class="update-btn">
-                    <a href="#"> <i class="fa fa-spinner"></i> Update Cart </a>
+                    <a href="./shop.html">Continue Shopping</a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-4">
-              <div class="cart-discount">
+              <div class="cart-discount mt-5 mt-lg-0">
                 <h6>Discount Codes</h6>
                 <form action="#">
                   <input type="text" placeholder="Coupon Code" />
@@ -372,15 +274,13 @@
                 <h6>Cart Total</h6>
                 <ul>
                   <li>
-                    Subtotal
-                    <span>$ 169.50</span>
-                  </li>
-                  <li>
                     Total
-                    <span>$ 169.50</span>
+                    <span class="cart-final-price">$ 0</span>
                   </li>
                 </ul>
-                <a href="#" class="primary-btn">Proceed to checkout</a>
+                <a href="./checkout.html" class="primary-btn"
+                  >Proceed to checkout</a
+                >
               </div>
             </div>
           </div>
