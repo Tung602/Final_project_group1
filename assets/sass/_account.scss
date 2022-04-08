@@ -22,38 +22,6 @@
   flex-direction: column;
   gap: 3rem;
 }
-.form-input-main {
-  position: relative;
-  & input {
-    width: 100%;
-    border: 1px solid $clr-primary-7;
-    padding: 1.2rem 1.4rem;
-    color: $clr-primary-6;
-    font-size: 1.4rem;
-    transition: 0.2s ease;
-  }
-  & label {
-    position: absolute;
-    left: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.4rem;
-    color: $clr-primary-5;
-    pointer-events: none;
-    user-select: none;
-    transition: all 0.2s ease;
-  }
-  & input:focus {
-    border-color: $clr-primary-6;
-  }
-  & input:not(:placeholder-shown) + label,
-  & input:focus + label {
-    color: $clr-primary-6;
-    top: 0;
-    padding: 0 0.5rem;
-    background-color: white;
-  }
-}
 .log-in-forgot-password {
   align-self: flex-end;
   color: $clr-primary-2;

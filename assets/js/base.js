@@ -60,8 +60,9 @@
 //     },
 //   ],
 //   cart: [],
+//   orders: [],
+//   ordered: [],
 //   productDetail: null,
-
 // }
 
 // window.localStorage.setItem("data", JSON.stringify(initData));

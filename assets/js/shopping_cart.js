@@ -1,4 +1,5 @@
 let shoppingCartContainer = document.querySelector(".shopping-cart__content");
+let proceedToCheckoutBtn = document.querySelector(".proceed-to-checkout");
 
 let renderShoppingCart = function (cart) {
   shoppingCartContainer.innerHTML = "";
@@ -37,6 +38,16 @@ let renderShoppingCart = function (cart) {
                                         </td>
                                     </tr>`;
   });
+  let cartTotalPriceAll = document.querySelectorAll(".cart-total-price");
+  let cartFinalPriceMethod = () => {
+    let total = 0;
+    cartTotalPriceAll.forEach((e) => {
+      total += Number.parseInt(
+        e.innerHTML.substring(e.innerHTML.indexOf(" ") + 1)
+      );
+    });
+    return total;
+  };
   data.products
     .filter((e) => cart.includes(e.id))
     .forEach((product) => {
@@ -51,16 +62,6 @@ let renderShoppingCart = function (cart) {
       let cartCloseBtn = document.querySelector(
         `.cart-close-btn.id-${product.id}`
       );
-      let cartTotalPriceAll = document.querySelectorAll(".cart-total-price");
-      let cartFinalPriceMethod = () => {
-        let total = 0;
-        cartTotalPriceAll.forEach((e) => {
-          total += Number.parseInt(
-            e.innerHTML.substring(e.innerHTML.indexOf(" ") + 1)
-          );
-        });
-        return total;
-      };
       cartFinalPrice.innerHTML = `$ ${cartFinalPriceMethod()}`;
       cartMoreBtn.addEventListener("click", (e) => {
         productQuantity.value = Number.parseInt(productQuantity.value) + 1;
@@ -91,5 +92,38 @@ let renderShoppingCart = function (cart) {
         cartFinalPrice.innerHTML = `$ ${cartFinalPriceMethod()}`;
       });
     });
+  proceedToCheckoutBtn.addEventListener("click", (event) => {
+    if (cart.length == 0) {
+      event.preventDefault();
+      alert("Không có sản phẩm nào trong giỏ hàng");
+    } else {
+      let order = {};
+      let products = data.products
+        .filter((e) => cart.includes(e.id))
+        .map((product) => {
+          let productQuantity = document.querySelector(
+            `.product-quantity.id-${product.id}`
+          );
+          let cartPriceTotal = document.querySelector(
+            `#cart-price-total-id-${product.id}`
+          );
+          return {
+            id: product.id,
+            name: product.name,
+            quantity: productQuantity.value,
+            totalPrice: Number.parseInt(
+              cartPriceTotal.innerHTML.substring(
+                cartPriceTotal.innerHTML.indexOf(" ") + 1
+              )
+            ),
+          };
+        });
+      order.products = products;
+      order.active = false;
+      order.totalPrice = cartFinalPriceMethod();
+      data.orders.push(order);
+      window.localStorage.setItem("data", JSON.stringify(data));
+    }
+  });
 };
 renderShoppingCart(data.cart);
