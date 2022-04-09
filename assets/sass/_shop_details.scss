@@ -39,6 +39,7 @@
 }
 .shop-detail-content{
     font-family: $ff-primary;
+    padding: 10rem 0;
     &-name{
         text-align: center;
         &>h4{
@@ -124,6 +125,7 @@
     }
     &-categories{
         font-size: 1.5rem;
+        padding-bottom: 5rem;
         &>p{
            color: $clr-primary-5; 
            &>span{
@@ -142,9 +144,6 @@
             font-weight: bold;
             color: $clr-primary-5;
         }
-        &-tablinks{
-
-        }
         &-tabcontent{
             display: none;
             & p{
@@ -160,10 +159,14 @@
                 font-weight: bold;
             }
         }
-        &-related-product{
-            &>p{
-                margin: 0 auto;
-            }
+
+    }
+    &-related-product{
+        margin: 5rem auto;
+        text-align: center;
+        &>p{
+            font-size: 2.5rem;
+            font-weight: bold;
         }
     }
 }
@@ -178,4 +181,15 @@
     font-size: 2rem;
     font-weight: bold;
     color: $clr-primary-5;
+}
+.item-size{
+    background-color: transparent;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin: 1rem 0.5rem;
+    color: $clr-primary-1;
+    &:hover{
+        background-color: transparent;
+        color: $clr-primary-1;
+    }
 }
