@@ -1792,6 +1792,7 @@ p {
 
 .shop-detail-content {
   font-family: "Nunito Sans", sans-serif;
+  padding: 10rem 0;
 }
 .shop-detail-content-name {
   text-align: center;
@@ -1824,7 +1825,7 @@ p {
 }
 .shop-detail-content-size {
   display: inline-block;
-  margin-right: 4rem;
+  margin-bottom: 2rem;
 }
 .shop-detail-content-size > span {
   font-size: 1.5rem;
@@ -1839,13 +1840,17 @@ p {
   font-size: 1.5rem;
 }
 .shop-detail-content-quantity {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .shop-detail-content-quantity > input[type=number] {
   width: 10rem;
   border: solid 1px #B7B7B7;
   padding: 1.5rem 0 1.5rem 2rem;
-  margin-right: 3rem;
   font-size: 1.5rem;
 }
 .shop-detail-content-quantity > input[type=number]::-webkit-inner-spin-button {
@@ -1860,11 +1865,8 @@ p {
   border: none;
   padding: 2rem 3rem;
 }
-.shop-detail-content-checkout {
-  padding: 3rem;
-}
 .shop-detail-content-checkout > h2 {
-  width: 40rem;
+  width: 100%;
   line-height: 0.1em;
   border-bottom: 1px solid #B7B7B7;
   margin: 0 auto;
@@ -1878,6 +1880,7 @@ p {
 }
 .shop-detail-content-categories {
   font-size: 1.5rem;
+  padding-bottom: 5rem;
 }
 .shop-detail-content-categories > p {
   color: #B7B7B7;
@@ -1886,7 +1889,10 @@ p {
   color: #111111;
 }
 .shop-detail-content-paragraph {
-  margin-bottom: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 3rem;
   border-bottom: solid 1px #B7B7B7;
 }
 .shop-detail-content-paragraph-tablinks {
@@ -1912,8 +1918,14 @@ p {
   font-size: 2rem;
   font-weight: bold;
 }
-.shop-detail-content-paragraph-related-product > p {
-  margin: 0 auto;
+.shop-detail-content-related-product {
+  width: 1200px;
+  margin: 5rem auto;
+}
+.shop-detail-content-related-product > p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .appear {
@@ -1928,6 +1940,18 @@ p {
   font-size: 2rem;
   font-weight: bold;
   color: #B7B7B7;
+}
+
+.item-size {
+  background-color: transparent;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  margin: 1rem 0.5rem;
+  color: #111111;
+}
+.item-size:hover {
+  background-color: transparent;
+  color: #111111;
 }
 
 .breadcrumb-option {

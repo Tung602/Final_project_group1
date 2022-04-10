@@ -1,5 +1,7 @@
 // =============== Admin ===============
 
+const { Button } = require("bootstrap");
+
 let tabLinks = document.getElementsByClassName("admin-nav-btn");
 let tabContent = document.getElementsByClassName("main-content");
 for (let i = 0; i < tabLinks.length; i++) {

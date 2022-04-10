@@ -26,6 +26,7 @@
 .shop-detail-path{
     text-align: center;
     padding: 3rem 0;
+
     &-distant>a{
         font-size: 1.5rem;
         &::after{
@@ -39,6 +40,7 @@
 }
 .shop-detail-content{
     font-family: $ff-primary;
+    padding: 10rem 0;
     &-name{
         text-align: center;
         &>h4{
@@ -70,7 +72,7 @@
     }
     &-size{
         display: inline-block;
-        margin-right: 4rem;
+        margin-bottom: 2rem;
         &>span{
             font-size: 1.5rem;
         }
@@ -85,12 +87,16 @@
         }
     }
     &-quantity{
-        margin-bottom: 1rem;
+        margin-bottom: 3rem;
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         &>input[type=number]{
             width: 10rem;
             border: solid 1px $clr-primary-5;
             padding: 1.5rem 0 1.5rem 2rem;
-            margin-right: 3rem;
             font-size: 1.5rem;
         }
         &>input[type=number]::-webkit-inner-spin-button{  
@@ -107,9 +113,8 @@
         }
     }
     &-checkout{
-        padding: 3rem;
         &>h2{
-            width: 40rem;
+            width: 100%;
             line-height: 0.1em;
             border-bottom: 1px solid $clr-primary-5;
             margin: 0 auto;
@@ -124,6 +129,7 @@
     }
     &-categories{
         font-size: 1.5rem;
+        padding-bottom: 5rem;
         &>p{
            color: $clr-primary-5; 
            &>span{
@@ -132,7 +138,10 @@
         }
     }
     &-paragraph{
-        margin-bottom: 2rem;
+        display: flex;
+        gap: 1.5rem;
+        padding-bottom: 1.5rem;
+        margin-bottom: 3rem;
         border-bottom: solid 1px $clr-primary-5;
         &-tablinks{
             border: none;
@@ -141,9 +150,6 @@
             font-size: 2rem;
             font-weight: bold;
             color: $clr-primary-5;
-        }
-        &-tablinks{
-
         }
         &-tabcontent{
             display: none;
@@ -160,10 +166,15 @@
                 font-weight: bold;
             }
         }
-        &-related-product{
-            &>p{
-                margin: 0 auto;
-            }
+
+    }
+    &-related-product{
+        width: $max-width;
+        margin: 5rem auto;
+        &>p{
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
         }
     }
 }
@@ -178,4 +189,15 @@
     font-size: 2rem;
     font-weight: bold;
     color: $clr-primary-5;
+}
+.item-size{
+    background-color: transparent;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin: 1rem 0.5rem;
+    color: $clr-primary-1;
+    &:hover{
+        background-color: transparent;
+        color: $clr-primary-1;
+    }
 }
