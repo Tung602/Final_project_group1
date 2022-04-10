@@ -1,18 +1,19 @@
 //  =========== Render products from local storage =========
-let productsContainer = document.querySelector(".products-container");
 let categoriesContainer = document.querySelector(".shop-categories-list");
 let brandingContainer = document.querySelector(".shop-branding-list");
 let tagsContainer = document.querySelector(".shop-tags-list");
 let shopSearchInput = document.querySelector(".shop-search-input");
 let shopSearchButton = document.querySelector(".shop-search-btn");
-renderProducts(data.products);
+var alertPlaceholder = document.getElementById("liveAlertPlaceholder");
+
+renderProducts(data.products, 4);
 
 let searchProducts = function (products) {
   shopSearchButton.addEventListener("click", (event) => {
     if (products.find((e) => e.name === shopSearchInput.value)) {
       renderProducts([products.find((e) => e.name === shopSearchInput.value)]);
     } else {
-      renderProducts([]);
+      renderProducts([], 4);
     }
   });
 };
@@ -26,7 +27,8 @@ let filterProductsBySize = function (products) {
     e.addEventListener("click", (event) => {
       event.preventDefault();
       renderProducts(
-        products.filter((product) => product.sizing.includes(event.target.id))
+        products.filter((product) => product.sizing.includes(event.target.id)),
+        4
       );
     });
   });
@@ -34,6 +36,7 @@ let filterProductsBySize = function (products) {
 
 // Hàm lọc sản phẩm theo giá
 let filterProductsByPrice = function (products) {
+  let productPriceShow = document.querySelector(".sorted-item-menu");
   let productPriceLowToHigh = document.querySelector(".price-low-to-high");
   let productPrice_0_50 = document.querySelector(".price-0_50");
   let productPrice_50_100 = document.querySelector(".price-50_100");
@@ -41,22 +44,46 @@ let filterProductsByPrice = function (products) {
   let productPrice_150_200 = document.querySelector(".price-150_200");
   let productPrice_200 = document.querySelector(".price-200");
   productPriceLowToHigh.addEventListener("click", (event) => {
-    renderProducts(products.concat().sort((a, b) => a.price - b.price));
+    renderProducts(
+      products.concat().sort((a, b) => a.price - b.price),
+      4
+    );
+    productPriceShow.innerHTML = "Low To High";
   });
   productPrice_0_50.addEventListener("click", (event) => {
-    renderProducts(products.filter((e) => e.price >= 0 && e.price < 50));
+    renderProducts(
+      products.filter((e) => e.price >= 0 && e.price < 50),
+      4
+    );
+    productPriceShow.innerHTML = "$0 - $50";
   });
   productPrice_50_100.addEventListener("click", (event) => {
-    renderProducts(products.filter((e) => e.price >= 50 && e.price < 100));
+    renderProducts(
+      products.filter((e) => e.price >= 50 && e.price < 100),
+      4
+    );
+    productPriceShow.innerHTML = "$50 - $100";
   });
   productPrice_100_150.addEventListener("click", (event) => {
-    renderProducts(products.filter((e) => e.price >= 100 && e.price < 150));
+    renderProducts(
+      products.filter((e) => e.price >= 100 && e.price < 150),
+      4
+    );
+    productPriceShow.innerHTML = "$100 - $150";
   });
   productPrice_150_200.addEventListener("click", (event) => {
-    renderProducts(products.filter((e) => e.price >= 150 && e.price < 200));
+    renderProducts(
+      products.filter((e) => e.price >= 150 && e.price < 200),
+      4
+    );
+    productPriceShow.innerHTML = "$150 - $200";
   });
   productPrice_200.addEventListener("click", (event) => {
-    renderProducts(products.filter((e) => e.price >= 200));
+    renderProducts(
+      products.filter((e) => e.price >= 200),
+      4
+    );
+    productPriceShow.innerHTML = "$200+";
   });
 };
 
@@ -85,7 +112,8 @@ let renderCategoriesFilter = function (products) {
       renderProducts(
         products.filter((product) =>
           product.categories.includes(event.target.id)
-        )
+        ),
+        4
       );
     });
   });
@@ -114,7 +142,8 @@ let renderTagsFilter = function (products) {
   tagsBtn.forEach((e) => {
     e.addEventListener("click", (event) => {
       renderProducts(
-        products.filter((product) => product.tags.includes(event.target.id))
+        products.filter((product) => product.tags.includes(event.target.id)),
+        4
       );
     });
   });
@@ -142,7 +171,8 @@ let renderBrandingFilter = function (products) {
   brandBtn.forEach((e) => {
     e.addEventListener("click", (event) => {
       renderProducts(
-        products.filter((product) => product.branding === event.target.id)
+        products.filter((product) => product.branding === event.target.id),
+        4
       );
     });
   });

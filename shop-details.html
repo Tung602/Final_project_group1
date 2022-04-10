@@ -25,6 +25,20 @@
   </head>
 
   <body>
+    <!-- Alert -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+      </symbol>
+      <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+      </symbol>
+      <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+      </symbol>
+    </svg>
+    <div id="liveAlertPlaceholder"></div>
+
     <!-- Modal -->
     <div class="main-modal"></div>
     <!-- Menu Aside -->
@@ -145,45 +159,38 @@
     </header>
     <!-- Main -->
     <main class="shop-detail">
-      <div class="shop-detail-items">
-        <div class="container">
-          <div class="row justify-content-center shop-detail-path">
-            <div class="col-4 shop-detail-path-distant">
-              <a href="./index.html">Home</a>
-              <a href="./shop.html">Shop</a>
-              <span>Product Details</span>
-            </div>
-          </div>
+      <section class="breadcrumb-option">
+        <div class="container-fluid">
           <div class="row">
-            <div class="shop-detail-items-display-left col-md-2">
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-sm-4 col-md-12">
-                    <img
-                      src="./assets/img/shop-details/thumb-1.png"
-                      alt="Hình ảnh 1"
-                      onclick="changeImage('./assets/img/products/product-1/img-2.avif')"
-                    />
-                  </div>
-                  <div class="col-sm-4 col-md-12">
-                    <img
-                      src="./assets/img/shop-details/thumb-2.png"
-                      alt="Hình ảnh 2"
-                      onclick="changeImage('./assets/img/shop-details/product-big-3.png')"
-                    />
-                  </div>
-                  <div class="col-sm-4 col-md-12">
-                    <img
-                      src="./assets/img/shop-details/thumb-3.png"
-                      alt="Hình ảnh 3"
-                      onclick="changeImage('./assets/img/shop-details/product-big.png')"
-                    />
-                  </div>
+            <div class="col-lg-12">
+              <div class="breadcrumb-text shop-detail-breadcrumb">
+                <h4>Shop Details</h4>
+                <div class="breadcrumb-links">
+                  <a href="./index.html">Home</a>
+                  <i class="fa-solid fa-angle-right"></i>
+                  <a></a>
+                  <a href="./shop.html">Shop</a>
+                  <i class="fa-solid fa-angle-right"></i>
+                  <a></a>
+                  <span>Shop Details</span>
                 </div>
               </div>
             </div>
-            <div class="shop-detail-items-display-right col-sm-9 col-md-9">
-              <img id="img" src="./assets/img/shop-details/product-big-2.png" />
+          </div>
+        </div>
+      </section>
+      <div class="shop-detail-items p-3 p-lg-5">
+          <div class="row shop-detail-img-main">
+            <div class="shop-detail-img-colection">
+              <!-- Js render -->
+            </div>
+            <div
+              class="shop-detail-items-display-right col-12 col-sm-9 col-md-9"
+            >
+              <img
+                id="shop-detail-img-big"
+                src="./assets/img/shop-details/product-big-2.png"
+              />
             </div>
           </div>
         </div>
@@ -192,64 +199,29 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="shop-detail-content-name col-10 col-md-8">
-              <h4>Hooded thermal anorak</h4>
+              <h4 class="shop-detail-product-name">Hooded thermal anorak</h4>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
               <i class="fa-regular fa-star"></i>
-              <span>- 5 reviews</span>
-              <h3>$270.00<span>70.00</span></h3>
-              <p>
-                Coat with quilted lining and an adjustable hood. Featuring long
-                sleeves with adjustable cuff tabs, adjustable asymmetric hem
-                with elastic side tabs and a front zip fastening with placket.
-              </p>
+              <span> 5 reviews</span>
+              <h3 class="shop-detail-product-price">$270.00<span class="shop-detail-product-compare-price">70.00</span></h3>
               <div class="shop-detail--content-option">
                 <div class="shop-detail-content-size">
-                  <span>Size:</span>
-                  <form action="" class="shop-detail-information-card-item">
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="options"
-                      id="option1"
-                    />
-                    <label class="btn btn-secondary item-size" for="option1"
-                      >XS</label
-                    >
-
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="options"
-                      id="option2"
-                    />
-                    <label class="btn btn-secondary item-size" for="option2"
-                      >S</label
-                    >
-
-                    <input type="radio" class="btn-check" name="options"
-                    id="option3"">
-                    <label class="btn btn-secondary item-size" for="option3"
-                      >M</label
-                    >
-
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="options"
-                      id="option4"
-                    />
-                    <label class="btn btn-secondary item-size" for="option4"
-                      >XL</label
-                    >
+                  <span>Size</span>
+                  <form action="" class="shop-detail-sizing-option">
+                    <!-- JS render -->
                   </form>
+                  <span class="shop-detail-size-alert">Please choose a size</span>
                 </div>
+                <div class="shop-detail-color-container">
+                  <select name="colorSelect" id="shop-detail-color-select">
+                  </select>
+                  <div class="shop-detail-color-represent"></div>
+                </div>
+                <button type="button" class="shop-detail-add-btn main-btn">Add to cart</button>
               </div>
-              <form class="shop-detail-content-quantity">
-                <input type="submit" value="ADD TO CART" />
-              </form>
               <div class="shop-detail-content-checkout p-0 p-md-5">
                 <h2><span>Guaranteed Safe Checkout</span></h2>
                 <img
@@ -258,9 +230,8 @@
                 />
               </div>
               <div class="shop-detail-content-categories">
-                <p>SKU: <span>3812912</span></p>
-                <p>Categries: <span>Clothes</span></p>
-                <p>Tag: <span>Clothes, Skin, Body</span></p>
+                <p>Categries: <span class="shop-detail-product-categories">Clothes</span></p>
+                <p>Tag: <span class="shop-detail-product-tags">Clothes, Skin, Body</span></p>
               </div>
             </div>
             <div class="shop-detail-content-information col-11">
@@ -296,45 +267,11 @@
                 id="Description"
                 class="shop-detail-content-paragraph-tabcontent appear"
               >
-                <p class="shop-detail-content-paragraph-tabcontent-something">
-                  Nam tempus turpis at metus scelerisque placerat nulla
-                  deumantos solicitud felis. Pellentesque diam dolor, elementum
-                  etos lobortis des mollis ut risus. Sedcus faucibus an
-                  sullamcorper mattis drostique des commodo pharetras loremos.
-                </p>
                 <div class="shop-detail-content-paragraph-tabcontent-item">
                   <h5>Products Infomation</h5>
-                  <p>
-                    A Pocket PC is a handheld computer, which features many of
-                    the same capabilities as a modern PC. These handy little
-                    devices allow individuals to retrieve and store e-mail
-                    messages, create a contact file, coordinate appointments,
-                    surf the internet, exchange text messages and more. Every
-                    product that is labeled as a Pocket PC must be accompanied
-                    with specific software to operate the unit and must feature
-                    a touchscreen and touchpad.
-                  </p>
-                  <p>
-                    As is the case with any new technology product, the cost of
-                    a Pocket PC was substantial during it’s early release. For
-                    approximately $700.00, consumers could purchase one of
-                    top-of-the-line Pocket PCs in 2003. These days, customers
-                    are finding that prices have become much more reasonable now
-                    that the newness is wearing off. For approximately $350.00,
-                    a new Pocket PC can now be purchased.
+                  <p class="shop-detail-product-description">
                   </p>
                 </div>
-                <h5>Material used</h5>
-                <p>
-                  Polyester is deemed lower quality due to its none natural
-                  quality’s. Made from synthetic materials, not natural like
-                  wool. Polyester suits become creased easily and are known for
-                  not being breathable. Polyester suits tend to have a shine to
-                  them compared to wool and cotton suits, this can make the suit
-                  look cheap. The texture of velvet is luxurious and breathable.
-                  Velvet is a great choice for dinner party jacket and can be
-                  worn all year round.
-                </p>
               </div>
               <div
                 id="Customer-Previews(5)"
@@ -422,251 +359,8 @@
             <div class="shop-detail-content-related-product">
               <p>Related Product</p>
               <div class="container-fluid p-3">
-                <div class="row g-5">
-                  <div class="col-sm-6 col-lg-3">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-3">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-3">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-3">
-                    <div class="product-item">
-                      <div class="product-item-header">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          class="product-item-img"
-                          alt=""
-                        />
-                        <span class="product-item-status">new</span>
-                        <div class="product-item-action">
-                          <button class="product-like">
-                            <i class="fa-regular fa-heart"></i>
-                          </button>
-                          <a href="./shop-details.html" class="product-infor"
-                            ><i class="fa-solid fa-magnifying-glass"></i
-                          ></a>
-                        </div>
-                      </div>
-                      <div class="product-item-text">
-                        <button class="product-add">+ Add To Cart</button>
-                        <p class="product-desc">Lorem ipsum dolor sit.</p>
-                        <div class="product-rate">
-                          <i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i
-                          ><i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="product-price">$67.24</span>
-                        <div class="product-color">
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                          <label
-                            for="colorPicker"
-                            class="color-picker-label"
-                          ></label>
-                          <input
-                            class="color-picker"
-                            name="colorPicker"
-                            type="radio"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="row g-5 products-container">
+                  <!-- JS render -->
                 </div>
               </div>
             </div>

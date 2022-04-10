@@ -16,9 +16,31 @@
 //         "./assets/img/products/product-1/img-4.avif",
 //       ],
 //       sizing: ["XS", "S", "M"],
+//       colors: [
+//         {
+//           name: "Red",
+//           rgb: "#212222",
+//           colorMedia: [
+//             "./assets/img/products/product-2/img-1.avif",
+//             "./assets/img/products/product-2/img-2.avif",
+//             "./assets/img/products/product-2/img-3.avif",
+//             "./assets/img/products/product-2/img-4.avif",
+//           ],
+//         },
+//         {
+//           name: "Red",
+//           rgb: "red",
+//           colorMedia: [
+//             "./assets/img/products/product-2/img-1.avif",
+//             "./assets/img/products/product-2/img-2.avif",
+//             "./assets/img/products/product-2/img-3.avif",
+//             "./assets/img/products/product-2/img-4.avif",
+//           ],
+//         },
+//       ],
 //       active: true,
 //       branding: "Gucci",
-//       categories: ["men", "women", "clothing"],
+//       categories: ["Men"],
 //       tags: ["hot trend", "Best Sellers", "New Arrivals", "Hot Sales"],
 //     },
 //     {
@@ -35,9 +57,21 @@
 //         "./assets/img/products/product-2/img-4.avif",
 //       ],
 //       sizing: ["M"],
+//       colors: [
+//         {
+//           name: "Red",
+//           rgb: "#212222",
+//           colorMedia: [
+//             "./assets/img/products/product-2/img-1.avif",
+//             "./assets/img/products/product-2/img-2.avif",
+//             "./assets/img/products/product-2/img-3.avif",
+//             "./assets/img/products/product-2/img-4.avif",
+//           ],
+//         },
+//       ],
 //       active: true,
 //       branding: "Đôn trề",
-//       categories: ["men", "women", "bag"],
+//       categories: ["Men", "T-shirt"],
 //       tags: ["bag", "Best Sellers"],
 //     },
 //     {
@@ -54,9 +88,21 @@
 //         "./assets/img/products/product-3/img-4.avif",
 //       ],
 //       sizing: ["XS", "S", "M"],
+//       colors: [
+//         {
+//           name: "Red",
+//           rgb: "#212222",
+//           colorMedia: [
+//             "./assets/img/products/product-2/img-1.avif",
+//             "./assets/img/products/product-2/img-2.avif",
+//             "./assets/img/products/product-2/img-3.avif",
+//             "./assets/img/products/product-2/img-4.avif",
+//           ],
+//         },
+//       ],
 //       active: true,
 //       branding: "Gucci",
-//       categories: ["men", "women", "clothing", "shoes"],
+//       categories: ["Men", "T-shirt"],
 //       tags: ["hot trend", "Best Sellers", "Hot Sales"],
 //     },
 //     {
@@ -73,9 +119,21 @@
 //         "./assets/img/products/product-4/img-4.avif",
 //       ],
 //       sizing: ["XS", "S", "M"],
+//       colors: [
+//         {
+//           name: "Red",
+//           rgb: "#212222",
+//           colorMedia: [
+//             "./assets/img/products/product-2/img-1.avif",
+//             "./assets/img/products/product-2/img-2.avif",
+//             "./assets/img/products/product-2/img-3.avif",
+//             "./assets/img/products/product-2/img-4.avif",
+//           ],
+//         },
+//       ],
 //       active: true,
 //       branding: "Gucci",
-//       categories: ["women", "clothing"],
+//       categories: ["Men", "T-shirt"],
 //       tags: ["hot trend", "New Arrivals", "Hot Sales"],
 //     },
 //     {
@@ -92,9 +150,21 @@
 //         "./assets/img/products/product-5/img-4.avif",
 //       ],
 //       sizing: ["XS", "S", "M"],
+//       colors: [
+//         {
+//           name: "Red",
+//           rgb: "#212222",
+//           colorMedia: [
+//             "./assets/img/products/product-2/img-1.avif",
+//             "./assets/img/products/product-2/img-2.avif",
+//             "./assets/img/products/product-2/img-3.avif",
+//             "./assets/img/products/product-2/img-4.avif",
+//           ],
+//         },
+//       ],
 //       active: true,
 //       branding: "Gucci",
-//       categories: ["women", "clothing"],
+//       categories: ["Men", "T-shirt"],
 //       tags: ["hot trend", "New Arrivals", "Hot Sales"],
 //     },
 //     {
@@ -111,6 +181,18 @@
 //         "./assets/img/products/product-6/img-4.avif",
 //       ],
 //       sizing: ["XS", "S", "M"],
+//       colors: [
+//         {
+//           name: "Red",
+//           rgb: "#212222",
+//           colorMedia: [
+//             "./assets/img/products/product-2/img-1.avif",
+//             "./assets/img/products/product-2/img-2.avif",
+//             "./assets/img/products/product-2/img-3.avif",
+//             "./assets/img/products/product-2/img-4.avif",
+//           ],
+//         },
+//       ],
 //       active: true,
 //       branding: "Gucci",
 //       categories: ["women", "clothing"],
@@ -130,6 +212,18 @@
 //         "./assets/img/products/product-7/img-4.avif",
 //       ],
 //       sizing: ["XS", "S", "M"],
+//       colors: [
+//         {
+//           name: "Red",
+//           rgb: "#212222",
+//           colorMedia: [
+//             "./assets/img/products/product-2/img-1.avif",
+//             "./assets/img/products/product-2/img-2.avif",
+//             "./assets/img/products/product-2/img-3.avif",
+//             "./assets/img/products/product-2/img-4.avif",
+//           ],
+//         },
+//       ],
 //       active: true,
 //       branding: "Gucci",
 //       categories: ["women", "clothing"],
@@ -149,6 +243,18 @@
 //         "./assets/img/products/product-8/img-4.avif",
 //       ],
 //       sizing: ["XS", "S", "M"],
+//       colors: [
+//         {
+//           name: "Red",
+//           rgb: "#212222",
+//           colorMedia: [
+//             "./assets/img/products/product-2/img-1.avif",
+//             "./assets/img/products/product-2/img-2.avif",
+//             "./assets/img/products/product-2/img-3.avif",
+//             "./assets/img/products/product-2/img-4.avif",
+//           ],
+//         },
+//       ],
 //       active: true,
 //       branding: "Gucci",
 //       categories: ["women", "clothing"],
@@ -168,6 +274,18 @@
 //         "./assets/img/products/product-9/img-4.avif",
 //       ],
 //       sizing: ["XS", "S", "M"],
+//       colors: [
+//         {
+//           name: "Red",
+//           rgb: "#212222",
+//           colorMedia: [
+//             "./assets/img/products/product-2/img-1.avif",
+//             "./assets/img/products/product-2/img-2.avif",
+//             "./assets/img/products/product-2/img-3.avif",
+//             "./assets/img/products/product-2/img-4.avif",
+//           ],
+//         },
+//       ],
 //       active: true,
 //       branding: "Gucci",
 //       categories: ["women", "clothing"],
@@ -187,6 +305,18 @@
 //         "./assets/img/products/product-10/img-4.avif",
 //       ],
 //       sizing: ["XS", "S", "M"],
+//       colors: [
+//         {
+//           name: "Red",
+//           rgb: "#212222",
+//           colorMedia: [
+//             "./assets/img/products/product-2/img-1.avif",
+//             "./assets/img/products/product-2/img-2.avif",
+//             "./assets/img/products/product-2/img-3.avif",
+//             "./assets/img/products/product-2/img-4.avif",
+//           ],
+//         },
+//       ],
 //       active: true,
 //       branding: "Gucci",
 //       categories: ["women", "clothing"],
@@ -206,6 +336,18 @@
 //         "./assets/img/products/product-11/img-4.avif",
 //       ],
 //       sizing: ["XS", "S", "M"],
+//       colors: [
+//         {
+//           name: "Red",
+//           rgb: "#212222",
+//           colorMedia: [
+//             "./assets/img/products/product-2/img-1.avif",
+//             "./assets/img/products/product-2/img-2.avif",
+//             "./assets/img/products/product-2/img-3.avif",
+//             "./assets/img/products/product-2/img-4.avif",
+//           ],
+//         },
+//       ],
 //       active: true,
 //       branding: "Gucci",
 //       categories: ["women", "clothing"],
@@ -225,6 +367,7 @@
 //         "./assets/img/products/product-12/img-4.avif",
 //       ],
 //       sizing: ["XS", "S", "M"],
+//       colors: [],
 //       active: true,
 //       branding: "Gucci",
 //       categories: ["women", "clothing"],
@@ -239,39 +382,65 @@
 
 // window.localStorage.setItem("data", JSON.stringify(initData));
 
+// ============ Base JS ===============
+
 const data = JSON.parse(window.localStorage.getItem("data"));
 let productsQuanlity = document.querySelector(".products-quanlity");
+
+function alert(message, type) {
+  var wrapper = document.createElement("div");
+  let href =
+    (type === "success" && "#check-circle-fill") ||
+    ((type === "warning" || type === "danger") && "#exclamation-triangle-fill");
+  wrapper.innerHTML = `<div class="alert alert-${type} d-flex align-items-center" role="alert">
+  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="${
+    type[0].toUpperCase() + type.slice(1)
+  }:"><use xlink:href="${href}"/></svg>
+  <div>
+    ${message}
+  </div>
+</div>`;
+  document.querySelector("#liveAlertPlaceholder").append(wrapper);
+  setTimeout(() => {
+    wrapper.classList.add("alert-fadeout");
+  }, 4000);
+  setTimeout(() => {
+    wrapper.style.display = "none";
+  }, 5000);
+}
 
 let renderNavbarCart = function (cart) {
   let navbarCartContainer = document.querySelector(".navbar-cart-content");
   if (data.cart.length != 0) {
     navbarCartContainer.innerHTML = "";
   }
-  data.products
-    .filter((e) => cart.includes(e.id))
-    .forEach((product) => {
-      let navbarCartItem = document.createElement("div");
-      navbarCartContainer.appendChild(navbarCartItem);
-      navbarCartItem.outerHTML = `<div class="navbar-cart-item">
+  data.cart.forEach((cart) => {
+    let colorVariant =
+      cart.color ? ` | Color: ${cart.color.name}` : "";
+    let product = data.products.find((e) => e.id === cart.id);
+    let navbarCartItem = document.createElement("div");
+    navbarCartContainer.appendChild(navbarCartItem);
+    navbarCartItem.outerHTML = `<div class="navbar-cart-item">
                                 <img
                                   src="${product.media[0]}"
                                   alt=""
                                   class="navbar-cart-img"
                                 />
-                                <p class="navbar-cart-desc">${product.name}</p>
+                                <p class="navbar-cart-desc">${product.name}</br>Size: ${cart.size}${colorVariant}</p>
                                 <span class="navbar-cart-price">$ ${product.price}</span>
                               </div>`;
-    });
+  });
 };
 renderNavbarCart(data.cart);
 
-let renderProducts = function (products) {
-  productsQuanlity.innerHTML = `Showing ${products.length} results`;
+let renderProducts = function (products, size) {
+  let productsContainer = document.querySelector(".products-container");
+  // productsQuanlity.innerHTML = `Showing ${products.length} results`;
   productsContainer.innerHTML = "";
   products.forEach((product) => {
     let item = document.createElement("div");
     productsContainer.appendChild(item);
-    item.outerHTML = `<div class="product-item col-sm-6 col-lg-4">
+    item.outerHTML = `<div class="product-item col-sm-6 col-lg-${size}">
                           <div class="product-item-header">
                               <img
                               src="${product.media[0]}"
@@ -371,12 +540,21 @@ let renderProducts = function (products) {
     // ============= Product add to cart ===============
     let addCartBtn = document.querySelector(`.product-add.id-${product.id}`);
     addCartBtn.onclick = () => {
-      if (!data.cart.includes(product.id)) {
-        data.cart.push(product.id);
+      let cartItem = {
+        id: product.id,
+        size: product.sizing[0],
+        color: product.colors[0],
+      };
+      if (
+        data.cart.every((e) => JSON.stringify(e) !== JSON.stringify(cartItem))
+      ) {
+        data.cart.push(cartItem);
+        alert("Added to cart", "success");
+      } else {
+        alert("Already added!", "warning");
       }
       window.localStorage.setItem("data", JSON.stringify(data));
       renderNavbarCart(data.cart);
-      window.alert("added to cart");
     };
   });
 };

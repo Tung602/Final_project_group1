@@ -14,8 +14,9 @@ let checkoutPayment = document.querySelectorAll(".checkout-payment-method");
 let renderCheckoutProducts = function (order) {
   order.products.forEach((product) => {
     let checkoutProductItem = document.createElement("li");
+    let colorVariant = product.color ? ` | Color: ${product.color}` : ``;
     checkoutProductsContainer.appendChild(checkoutProductItem);
-    checkoutProductItem.innerHTML = `${product.name} (${product.quantity})
+    checkoutProductItem.innerHTML = `${product.name}</br>Quantity: ${product.quantity} | Size: ${product.size} ${colorVariant}
                                             <span>$ ${product.totalPrice}</span>`;
   });
   let checkoutTotalAllPrice = document.createElement("li");
@@ -27,7 +28,7 @@ let renderCheckoutProducts = function (order) {
 };
 renderCheckoutProducts(data.orders[data.orders.length - 1]);
 checkoutPlaceOrder.addEventListener("click", (event) => {
-  window.alert("Bạn đã đặt hàng thành công");
+  alert("Bạn đã đặt hàng thành công", "success");
   let order = {};
   order.products = data.orders[0].products;
   order.firstName = checkoutFirstName.value;
@@ -48,6 +49,10 @@ checkoutPlaceOrder.addEventListener("click", (event) => {
   }
   data.ordered.push(order);
   window.localStorage.setItem("data", JSON.stringify(data));
+  setTimeout(() => {
+    event.target.href = "./index.html";
+    event.target.click();
+  }, 2000)
 });
 
 window.addEventListener("beforeunload", (event) => {

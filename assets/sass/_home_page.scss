@@ -248,7 +248,7 @@ body {
 }
 .navbar-cart-container {
   position: absolute;
-  width: 40rem;
+  width: 45rem;
   height: 46rem;
   top: 100%;
   right: 0;
@@ -784,6 +784,7 @@ body {
 }
 .product-item-status {
   position: absolute;
+  color: $clr-primary-2;
   left: 0;
   top: 2rem;
   font-size: 1.2rem;

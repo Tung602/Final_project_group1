@@ -96,15 +96,12 @@
   }
 }
 
-
 //  ============== modal =============
 
-.show-fluid-modal{
-    visibility: visible !important;
-    opacity: 1 !important;
+.show-fluid-modal {
+  visibility: visible !important;
+  opacity: 1 !important;
 }
-
-
 
 //  =========== Form input ============
 .form-input-main {
@@ -138,4 +135,22 @@
     padding: 0 0.5rem;
     background-color: white;
   }
+}
+.alert-fadeout {
+  transition: all 0.2s linear;
+  animation: fadeOut 1s forwards;
+}
+@keyframes fadeOut {
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+#liveAlertPlaceholder {
+  position: fixed;
+  right: 1rem;
+  top: 2rem;
+  width: 25rem;
+  font-size: 1.4rem;
+  z-index: 99;
 }
