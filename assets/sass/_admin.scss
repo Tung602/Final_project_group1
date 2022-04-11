@@ -332,7 +332,6 @@
 }
 .product-preview {
   display: flex;
-  // justify-content: center;
   align-items: center;
   gap: 1rem;
   width: 100%;
@@ -379,8 +378,8 @@
   border-radius: 0.25rem;
   background-color: white;
 }
-#inputColorName {
-  width: 80%;
+.input-color-name {
+  width: 80% !important;
 }
 .add-product__color-item {
   border: 1px solid #d4d5d5;
@@ -391,6 +390,85 @@
   border: 1px solid #d4d5d5;
   border-radius: 0.25rem;
   background-color: white;
+}
+.product-current-media {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 25rem;
+  padding: 1rem;
+  border: #dddddd solid 2px;
+  border-radius: 0.25rem;
+  margin: 1.2rem 0;
+  overflow-x: auto;
+}
+.product-current-media-item {
+  max-width: 100%;
+  height: 100%;
+  position: relative;
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+    background-color: $clr-primary-1;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid white;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s linear;
+  }
+  &:hover > button {
+    opacity: 1;
+    visibility: visible;
+  }
+  img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    border: 1px solid #85b7fe;
+    outline: 3px solid #c1d7fb;
+  }
+}
+.edit-product-current-color{
+  padding: 1rem;
+  border: #dddddd solid 2px;
+  border-radius: 0.25rem;
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  height: 6.5rem;
+}
+.edit-current-color-item {
+  width: 20rem;
+  position: relative;
+  border-radius: .25rem;
+  border: 1px solid #85b7fe;
+  outline: 3px solid #c1d7fb;
+  margin: 0 !important;
+  button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+    background-color: $clr-primary-1;
+    border-radius: 50% !important;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid white;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s linear;
+  }
+  &:hover>button {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 //  =================== Responsive ===============
 

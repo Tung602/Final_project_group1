@@ -75,11 +75,13 @@
               <div class="row">
                 <div class="col-lg-6 shopping-cart-modal-img">
                   <img
+                    class="shopping-cart-edit-img"
                     src="./assets/img/products/product-1/img-1.avif"
                     alt="Image"
                   />
                 </div>
-                <div class="col-lg-6 shopping-cart-modal-content">
+                <div class="col-lg-6 shopping-cart-modal-content d-flex justify-content-center flex-column">
+                  <p class="text-center fs-3 mb-0">Color</p>
                   <div class="shop-detail-color-container">
                     <select
                       name="colorSelect"
@@ -87,9 +89,9 @@
                     ></select>
                     <div class="shop-detail-color-represent"></div>
                   </div>
-                  <div class="shop-detail-content-size">
-                    <span>Size</span>
-                    <form action="" class="shop-detail-sizing-option">
+                  <div class="shop-detail-content-size my-5">
+                    <p class="text-center fs-3">Size</p>
+                    <form action="" class="shop-detail-sizing-option d-flex flex-wrap">
                       <!-- JS render -->
                     </form>
                     <span class="shop-detail-size-alert"
@@ -103,12 +105,12 @@
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-secondary fs-3 btn-close-shopping-cart-edit"
               data-bs-dismiss="modal"
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <a href="./shopping-cart.html" type="button" class="btn btn-primary fs-3 shopping-cart-save-change-btn">Save changes</a>
           </div>
         </div>
       </div>
@@ -212,11 +214,7 @@
                     <div class="navbar-cart-container">
                       <p class="navbar-cart-status">Recently Added Products</p>
                       <div class="navbar-cart-content">
-                        <p
-                          class="fs-3 h-100 text-center p-0 m-0 align-items-center d-flex justify-content-center"
-                        >
-                          No Products Yet
-                        </p>
+                        <!-- JS render -->
                       </div>
                       <a
                         href="./shopping-cart.html"

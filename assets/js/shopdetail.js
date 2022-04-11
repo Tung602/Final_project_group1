@@ -25,8 +25,11 @@ function openParagraph(evt, p) {
 
 //  ================ Render img colection ================
 
-let renderImgColection = function (productId) {
-  let product = data.products.find((e) => e.id === productId);
+// ================ Render product information ===============
+
+let renderProductInfor = (productId) => {
+  // Render Image
+  let product = data.initProducts.find((e) => e.id === productId);
   document.getElementById("shop-detail-img-big").src = `${product.media[0]}`;
   let imgColectionContainer = document.querySelector(
     ".shop-detail-img-colection"
@@ -42,13 +45,6 @@ let renderImgColection = function (productId) {
                                   />
                                 </div>`;
   });
-};
-renderImgColection(data.productDetail);
-
-// ================ Render product information ===============
-
-let renderProductInfor = (productId) => {
-  let product = data.products.find((e) => e.id === productId);
   document.querySelector(".shop-detail-product-name").innerHTML = product.name;
   document.querySelector(
     ".shop-detail-product-price"
@@ -84,15 +80,30 @@ let renderProductInfor = (productId) => {
       productColorContainer.appendChild(productColor);
       productColor.outerHTML = `<option value="${color.rgb}" class="shop-detail-color-item">${color.name}</option>`;
     });
+    productColorRepresent.style.backgroundColor = `${productColorContainer.value}`;
+    productColorContainer.onchange = () => {
+      productColorRepresent.style.backgroundColor = `${productColorContainer.value}`;
+      imgColectionContainer.innerHTML = "";
+      product.colors
+        .find((e) => e.rgb === productColorContainer.value)
+        .colorMedia.forEach((image, index, array) => {
+          changeImage(array[0]);
+          let imgColectionItem = document.createElement("div");
+          imgColectionContainer.appendChild(imgColectionItem);
+          imgColectionItem.outerHTML = `<div class="img-colection-item">
+                                      <img
+                                        src="${image}"
+                                        alt="Hình ảnh"
+                                        onclick = "changeImage('${image}')"
+                                      />
+                                    </div>`;
+        });
+    };
   }
   document.querySelector(".shop-detail-product-categories").innerHTML =
     product.categories.join(", ");
   document.querySelector(".shop-detail-product-tags").innerHTML =
     product.tags.join(", ");
-  productColorRepresent.style.backgroundColor = `${productColorContainer.value}`;
-  productColorContainer.onchange = () => {
-    productColorRepresent.style.backgroundColor = `${productColorContainer.value}`;
-  };
   let shopDetailAddBtn = document.querySelector(".shop-detail-add-btn");
   let productSize = document.getElementsByName("shopDetailSizeOptions");
   let productSizeAlert = document.querySelector(".shop-detail-size-alert");

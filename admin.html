@@ -25,18 +25,62 @@
   </head>
 
   <body>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
       <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+        />
       </symbol>
       <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+        <path
+          d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
+        />
       </symbol>
-      <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+      <symbol
+        id="exclamation-triangle-fill"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+        />
       </symbol>
     </svg>
     <!-- Modal -->
+    <!-- Button trigger modal -->
+    <div
+      class="modal fade"
+      id="comfirmDeleteProduct"
+      tabindex="-1"
+      aria-labelledby="confirmDelete"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fs-1" id="confirmDelete">Are you sure?</h5>
+          </div>
+          <div class="modal-body fs-3">Do you want to delete product?</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary fs-3 close-modal-delete"
+              data-bs-dismiss="modal"
+            >
+              No
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary fs-3 product-delete-comfirm"
+            >
+              Yes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- add product modal -->
     <div
       class="modal fade"
       id="addProductModal"
@@ -67,27 +111,25 @@
                 <div class="col">
                   <div class="product-form-title">
                     <div class="mb-3">
-                      <label
-                        for="exampleFormControlInput1"
-                        class="form-label fs-2"
+                      <label for="addProductTitleInput" class="form-label fs-2"
                         >Title</label
                       >
                       <input
                         type="text"
                         class="form-control fs-4"
-                        id="exampleFormControlInput1"
+                        id="addProductTitleInput"
                         placeholder="Name product"
                       />
                     </div>
                     <div class="mb-3">
                       <label
-                        for="exampleFormControlTextarea1"
+                        for="addProductDescriptionInput"
                         class="form-label fs-2"
                         >Description</label
                       >
                       <textarea
                         class="form-control fs-4"
-                        id="exampleFormControlTextarea1"
+                        id="addProductDescriptionInput"
                         rows="4"
                       ></textarea>
                     </div>
@@ -97,13 +139,13 @@
               <div class="row my-5">
                 <div class="col">
                   <div class="product-form-media">
-                    <label for="formFileMultiple" class="form-label fs-2"
+                    <label for="addProductMediaInput" class="form-label fs-2"
                       >Media</label
                     >
                     <input
                       class="form-control add-product__input-file fs-4"
                       type="file"
-                      id="formFileMultiple"
+                      id="addProductMediaInput"
                       multiple
                     />
                     <div class="product-preview">
@@ -117,9 +159,7 @@
               <div class="row p-3 mx-0 my-5 add-product-pricing">
                 <div class="col-sm-6 pe-sm-5">
                   <div class="mb-3">
-                    <label
-                      for="exampleFormControlInput1"
-                      class="form-label fs-2"
+                    <label for="addProductPriceInput" class="form-label fs-2"
                       >Price</label
                     >
                     <div class="input-group">
@@ -127,7 +167,7 @@
                       <input
                         type="text"
                         class="form-control fs-4"
-                        id="exampleFormControlInput1"
+                        id="addProductPriceInput"
                         placeholder="US$"
                       />
                     </div>
@@ -136,7 +176,7 @@
                 <div class="col-sm-6">
                   <div class="mb-3">
                     <label
-                      for="exampleFormControlInput1"
+                      for="addProductPriceCompareInput"
                       class="form-label fs-2"
                       >Compare at price</label
                     >
@@ -145,7 +185,7 @@
                       <input
                         type="text"
                         class="form-control fs-4"
-                        id="exampleFormControlInput1"
+                        id="addProductPriceCompareInput"
                         placeholder="US$"
                       />
                     </div>
@@ -159,7 +199,11 @@
                 <div class="col-12">
                   <div class="add-product-checkbox">
                     <label class="checkbox checkbox-label">
-                      <input type="checkbox" />
+                      <input
+                        type="checkbox"
+                        name="addProductSizeInput"
+                        value="XS"
+                      />
                       XS
                       <svg viewBox="0 0 21 21">
                         <path
@@ -168,7 +212,11 @@
                       </svg>
                     </label>
                     <label class="checkbox checkbox-label">
-                      <input type="checkbox" />
+                      <input
+                        type="checkbox"
+                        name="addProductSizeInput"
+                        value="S"
+                      />
                       S
                       <svg viewBox="0 0 21 21">
                         <path
@@ -177,7 +225,11 @@
                       </svg>
                     </label>
                     <label class="checkbox checkbox-label">
-                      <input type="checkbox" />
+                      <input
+                        type="checkbox"
+                        name="addProductSizeInput"
+                        value="M"
+                      />
                       M
                       <svg viewBox="0 0 21 21">
                         <path
@@ -186,7 +238,11 @@
                       </svg>
                     </label>
                     <label class="checkbox checkbox-label">
-                      <input type="checkbox" />
+                      <input
+                        type="checkbox"
+                        name="addProductSizeInput"
+                        value="XL"
+                      />
                       XL
                       <svg viewBox="0 0 21 21">
                         <path
@@ -195,7 +251,11 @@
                       </svg>
                     </label>
                     <label class="checkbox checkbox-label">
-                      <input type="checkbox" />
+                      <input
+                        type="checkbox"
+                        name="addProductSizeInput"
+                        value="2XL"
+                      />
                       2XL
                       <svg viewBox="0 0 21 21">
                         <path
@@ -204,7 +264,11 @@
                       </svg>
                     </label>
                     <label class="checkbox checkbox-label">
-                      <input type="checkbox" />
+                      <input
+                        type="checkbox"
+                        name="addProductSizeInput"
+                        value="XXL"
+                      />
                       XXL
                       <svg viewBox="0 0 21 21">
                         <path
@@ -213,7 +277,11 @@
                       </svg>
                     </label>
                     <label class="checkbox checkbox-label">
-                      <input type="checkbox" />
+                      <input
+                        type="checkbox"
+                        name="addProductSizeInput"
+                        value="3XL"
+                      />
                       3XL
                       <svg viewBox="0 0 21 21">
                         <path
@@ -222,7 +290,11 @@
                       </svg>
                     </label>
                     <label class="checkbox checkbox-label">
-                      <input type="checkbox" />
+                      <input
+                        type="checkbox"
+                        name="addProductSizeInput"
+                        value="4XL"
+                      />
                       4XL
                       <svg viewBox="0 0 21 21">
                         <path
@@ -249,28 +321,34 @@
               <div class="row my-5 mx-0 p-3 add-product-other">
                 <span class="form-label fs-2 mb-5">Other information</span>
                 <div class="col-12 my-2">
-                  <label for="inputBrand" class="form-label fs-3"
+                  <label for="addProductBrandInput" class="form-label fs-3"
                     >Branding</label
                   >
                   <input
                     type="text"
                     class="form-control fs-3"
-                    id="inputBrand"
+                    id="addProductBrandInput"
                   />
                 </div>
                 <div class="col-12 my-2">
-                  <label for="inputCategory" class="form-label fs-3"
+                  <label for="addProductCategoriesInput" class="form-label fs-3"
                     >Category</label
                   >
                   <input
                     type="text"
                     class="form-control fs-3"
-                    id="inputCategory"
+                    id="addProductCategoriesInput"
                   />
                 </div>
                 <div class="col-12 my-2">
-                  <label for="inputTag" class="form-label fs-3">Tags</label>
-                  <input type="text" class="form-control fs-3" id="inputTag" />
+                  <label for="addProductTagsInput" class="form-label fs-3"
+                    >Tags</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control fs-3"
+                    id="addProductTagsInput"
+                  />
                 </div>
               </div>
             </div>
@@ -283,12 +361,20 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary fs-3">Add</button>
+            <a
+              href="./admin.html"
+              id="addProductButton"
+              class="btn btn-primary fs-3"
+            >
+              Add
+            </a>
           </div>
         </div>
       </div>
     </div>
+
     <!-- Edit product -->
+
     <div
       class="modal fade"
       id="editProductModal"
@@ -299,30 +385,294 @@
       aria-hidden="true"
     >
       <div
-        class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered"
+        class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered"
       >
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title fs-2" id="staticBackdropLabel">
-              Edit product
+            <h5 class="modal-title fs-1" id="staticBackdropLabel">
+              Edit your product
             </h5>
             <button
               type="button"
-              class="btn-close fs-4"
+              class="btn-close fs-3"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">...</div>
+          <div class="modal-body add-product-form">
+            <div class="container-fluid">
+              <div class="row my-5">
+                <div class="col">
+                  <div class="product-form-title">
+                    <div class="mb-3">
+                      <label for="editProductTitleInput" class="form-label fs-2"
+                        >Title</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control fs-4"
+                        id="editProductTitleInput"
+                        placeholder="Name product"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label
+                        for="editProductDescriptionInput"
+                        class="form-label fs-2"
+                        >Description</label
+                      >
+                      <textarea
+                        class="form-control fs-4"
+                        id="editProductDescriptionInput"
+                        rows="4"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-5">
+                <div class="col">
+                  <div class="product-form-media">
+                    <label for="editProductMediaInput" class="form-label fs-2"
+                      >Media</label
+                    >
+                    <p>Current Media</p>
+                    <div class="product-current-media">
+                      <!-- JS render -->
+                    </div>
+                    <input
+                      class="form-control edit-product__input-file fs-4"
+                      type="file"
+                      id="editProductMediaInput"
+                      multiple
+                    />
+                    <div class="product-preview edit-product-preview">
+                      <span
+                        class="product-preview__default-text edit-product-preview__default-text"
+                        >Preview Image</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row p-3 mx-0 my-5 add-product-pricing">
+                <div class="col-sm-6 pe-sm-5">
+                  <div class="mb-3">
+                    <label for="editProductPriceInput" class="form-label fs-2"
+                      >Price</label
+                    >
+                    <div class="input-group">
+                      <span class="input-group-text fs-3">$</span>
+                      <input
+                        type="text"
+                        class="form-control fs-4"
+                        id="editProductPriceInput"
+                        placeholder="US$"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mb-3">
+                    <label
+                      for="editProductPriceCompareInput"
+                      class="form-label fs-2"
+                      >Compare at price</label
+                    >
+                    <div class="input-group">
+                      <span class="input-group-text fs-3">$</span>
+                      <input
+                        type="text"
+                        class="form-control fs-4"
+                        id="editProductPriceCompareInput"
+                        placeholder="US$"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row add-product-sizing my-5 mx-0 p-3">
+                <div class="col-12 mb-4">
+                  <span class="form-label fs-2">Sizing:</span>
+                </div>
+                <div class="col-12">
+                  <div class="add-product-checkbox">
+                    <label class="checkbox checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="editProductSizeInput"
+                        value="XS"
+                      />
+                      XS
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="editProductSizeInput"
+                        value="S"
+                      />
+                      S
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="editProductSizeInput"
+                        value="M"
+                      />
+                      M
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="editProductSizeInput"
+                        value="XL"
+                      />
+                      XL
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="editProductSizeInput"
+                        value="2XL"
+                      />
+                      2XL
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="editProductSizeInput"
+                        value="XXL"
+                      />
+                      XXL
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="editProductSizeInput"
+                        value="3XL"
+                      />
+                      3XL
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                    <label class="checkbox checkbox-label">
+                      <input
+                        type="checkbox"
+                        name="editProductSizeInput"
+                        value="4XL"
+                      />
+                      4XL
+                      <svg viewBox="0 0 21 21">
+                        <path
+                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                        ></path>
+                      </svg>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-5 mx-0 p-3 add-product-color">
+                <div class="col-12">
+                  <span class="form-label fs-2">Color</span>
+                </div>
+                <div class="col-12 mt-4 edit-product-current-color">
+                  <!-- JS render -->
+                </div>
+                <div class="col-12">
+                  <div class="edit-product__color-variant my-5">
+                    <!-- JS render -->
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-dark fs-4 edit-color-btn">
+                    Add color
+                  </button>
+                </div>
+              </div>
+              <div class="row my-5 mx-0 p-3 add-product-other">
+                <span class="form-label fs-2 mb-5">Other information</span>
+                <div class="col-12 my-2">
+                  <label for="editProductBrandInput" class="form-label fs-3"
+                    >Branding</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control fs-3"
+                    id="editProductBrandInput"
+                  />
+                </div>
+                <div class="col-12 my-2">
+                  <label
+                    for="editProductCategoriesInput"
+                    class="form-label fs-3"
+                    >Category</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control fs-3"
+                    id="editProductCategoriesInput"
+                  />
+                </div>
+                <div class="col-12 my-2">
+                  <label for="editProductTagsInput" class="form-label fs-3"
+                    >Tags</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control fs-3"
+                    id="editProductTagsInput"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-secondary fs-3"
               data-bs-dismiss="modal"
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Understood</button>
+            <a
+              href="./admin.html"
+              id="editProductUpdateBtn"
+              class="btn btn-primary fs-3"
+              >Update</a
+            >
           </div>
         </div>
       </div>
@@ -406,7 +756,7 @@
                 <form action="#" class="product-search search-form-main">
                   <input
                     type="text"
-                    placeholder="search..."
+                    placeholder="Search..."
                     class="product-search-input search-input-main"
                   />
                   <button
@@ -436,132 +786,30 @@
           <div class="row p-0 p-sm-2">
             <div class="col p-0 p-sm-2">
               <div class="products-table">
-                <table>
-                  <tr>
-                    <th>
-                      <label class="checkbox checkbox-label">
-                        <input type="checkbox" />
-                        <svg viewBox="0 0 21 21">
-                          <path
-                            d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
-                          ></path>
-                        </svg>
-                      </label>
-                    </th>
-                    <th>Product</th>
-                    <th>Status</th>
-                    <th class="text-center">Action</th>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="checkbox checkbox-label">
-                        <input type="checkbox" />
-                        <svg viewBox="0 0 21 21">
-                          <path
-                            d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
-                          ></path>
-                        </svg>
-                      </label>
-                    </td>
-                    <td>
-                      <div class="product-infor">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          alt=""
-                          class="product-img"
-                        />
-                        <span class="product-name">T-shirt</span>
-                      </div>
-                    </td>
-                    <td class="product-status-td">
-                      <span class="product-status">active</span>
-                    </td>
-                    <td class="product-action">
-                      <div class="product-action-btn">
-                        <button
-                          class="product-edit-btn"
-                          type="button"
-                          data-bs-toggle="modal"
-                          data-bs-target="#editProductModal"
-                        >
-                          <i class="fa-regular fa-pen-to-square"></i>
-                        </button>
-                        <button class="product-delete-btn" type="button">
-                          <i class="fa-regular fa-trash-can"></i>
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="checkbox checkbox-label">
-                        <input type="checkbox" />
-                        <svg viewBox="0 0 21 21">
-                          <path
-                            d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
-                          ></path>
-                        </svg>
-                      </label>
-                    </td>
-                    <td>
-                      <div class="product-infor">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          alt=""
-                          class="product-img"
-                        />
-                        <span class="product-name">T-shirt</span>
-                      </div>
-                    </td>
-                    <td class="product-status-td">
-                      <span class="product-status">active</span>
-                    </td>
-                    <td class="product-action">
-                      <div class="product-action-btn">
-                        <button class="product-edit-btn" type="button">
-                          <i class="fa-regular fa-pen-to-square"></i>
-                        </button>
-                        <button class="product-delete-btn" type="button">
-                          <i class="fa-regular fa-trash-can"></i>
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <label class="checkbox checkbox-label">
-                        <input type="checkbox" />
-                        <svg viewBox="0 0 21 21">
-                          <path
-                            d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
-                          ></path>
-                        </svg>
-                      </label>
-                    </td>
-                    <td>
-                      <div class="product-infor">
-                        <img
-                          src="./assets/img/product/product-1.jpg"
-                          alt=""
-                          class="product-img"
-                        />
-                        <span class="product-name">T-shirt</span>
-                      </div>
-                    </td>
-                    <td class="product-status-td">
-                      <span class="product-status">active</span>
-                    </td>
-                    <td class="product-action">
-                      <div class="product-action-btn">
-                        <button class="product-edit-btn" type="button">
-                          <i class="fa-regular fa-pen-to-square"></i>
-                        </button>
-                        <button class="product-delete-btn" type="button">
-                          <i class="fa-regular fa-trash-can"></i>
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
+                <table class="product-admin-container">
+                  <thead>
+                    <tr>
+                      <th>
+                        <label class="checkbox checkbox-label">
+                          <input
+                            type="checkbox"
+                            class="admin-product-select-all"
+                          />
+                          <svg viewBox="0 0 21 21">
+                            <path
+                              d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                            ></path>
+                          </svg>
+                        </label>
+                      </th>
+                      <th>Product</th>
+                      <th>Status</th>
+                      <th class="text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody class="product-admin-container-tbody">
+                    <!-- JS render -->
+                  </tbody>
                 </table>
               </div>
             </div>

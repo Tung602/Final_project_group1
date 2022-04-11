@@ -1,390 +1,390 @@
 // ================ Data =================
 
-// const initData = {
-//   products: [
-//     {
-//       id: 1,
-//       name: "Piqué Biker Jacket",
-//       description:
-//         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
-//       price: "24",
-//       comparePrice: 100,
-//       media: [
-//         "./assets/img/products/product-1/img-1.avif",
-//         "./assets/img/products/product-1/img-2.avif",
-//         "./assets/img/products/product-1/img-3.avif",
-//         "./assets/img/products/product-1/img-4.avif",
-//       ],
-//       sizing: ["XS", "S", "M"],
-//       colors: [
-//         {
-//           name: "Red",
-//           rgb: "#212222",
-//           colorMedia: [
-//             "./assets/img/products/product-2/img-1.avif",
-//             "./assets/img/products/product-2/img-2.avif",
-//             "./assets/img/products/product-2/img-3.avif",
-//             "./assets/img/products/product-2/img-4.avif",
-//           ],
-//         },
-//         {
-//           name: "Red",
-//           rgb: "red",
-//           colorMedia: [
-//             "./assets/img/products/product-2/img-1.avif",
-//             "./assets/img/products/product-2/img-2.avif",
-//             "./assets/img/products/product-2/img-3.avif",
-//             "./assets/img/products/product-2/img-4.avif",
-//           ],
-//         },
-//       ],
-//       active: true,
-//       branding: "Gucci",
-//       categories: ["Men"],
-//       tags: ["hot trend", "Best Sellers", "New Arrivals", "Hot Sales"],
-//     },
-//     {
-//       id: 2,
-//       name: "Multi-pocket Chest Bag",
-//       description:
-//         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
-//       price: 50,
-//       comparePrice: "",
-//       media: [
-//         "./assets/img/products/product-2/img-1.avif",
-//         "./assets/img/products/product-2/img-2.avif",
-//         "./assets/img/products/product-2/img-3.avif",
-//         "./assets/img/products/product-2/img-4.avif",
-//       ],
-//       sizing: ["M"],
-//       colors: [
-//         {
-//           name: "Red",
-//           rgb: "#212222",
-//           colorMedia: [
-//             "./assets/img/products/product-2/img-1.avif",
-//             "./assets/img/products/product-2/img-2.avif",
-//             "./assets/img/products/product-2/img-3.avif",
-//             "./assets/img/products/product-2/img-4.avif",
-//           ],
-//         },
-//       ],
-//       active: true,
-//       branding: "Đôn trề",
-//       categories: ["Men", "T-shirt"],
-//       tags: ["bag", "Best Sellers"],
-//     },
-//     {
-//       id: 3,
-//       name: "Basic Flowing Scarf",
-//       description:
-//         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
-//       price: 20,
-//       comparePrice: "30",
-//       media: [
-//         "./assets/img/products/product-3/img-1.avif",
-//         "./assets/img/products/product-3/img-2.avif",
-//         "./assets/img/products/product-3/img-3.avif",
-//         "./assets/img/products/product-3/img-4.avif",
-//       ],
-//       sizing: ["XS", "S", "M"],
-//       colors: [
-//         {
-//           name: "Red",
-//           rgb: "#212222",
-//           colorMedia: [
-//             "./assets/img/products/product-2/img-1.avif",
-//             "./assets/img/products/product-2/img-2.avif",
-//             "./assets/img/products/product-2/img-3.avif",
-//             "./assets/img/products/product-2/img-4.avif",
-//           ],
-//         },
-//       ],
-//       active: true,
-//       branding: "Gucci",
-//       categories: ["Men", "T-shirt"],
-//       tags: ["hot trend", "Best Sellers", "Hot Sales"],
-//     },
-//     {
-//       id: 4,
-//       name: "Piqué Biker Jacket",
-//       description:
-//         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
-//       price: 200,
-//       comparePrice: "",
-//       media: [
-//         "./assets/img/products/product-4/img-1.avif",
-//         "./assets/img/products/product-4/img-2.avif",
-//         "./assets/img/products/product-4/img-3.avif",
-//         "./assets/img/products/product-4/img-4.avif",
-//       ],
-//       sizing: ["XS", "S", "M"],
-//       colors: [
-//         {
-//           name: "Red",
-//           rgb: "#212222",
-//           colorMedia: [
-//             "./assets/img/products/product-2/img-1.avif",
-//             "./assets/img/products/product-2/img-2.avif",
-//             "./assets/img/products/product-2/img-3.avif",
-//             "./assets/img/products/product-2/img-4.avif",
-//           ],
-//         },
-//       ],
-//       active: true,
-//       branding: "Gucci",
-//       categories: ["Men", "T-shirt"],
-//       tags: ["hot trend", "New Arrivals", "Hot Sales"],
-//     },
-//     {
-//       id: 5,
-//       name: "Piqué Biker Jacket",
-//       description:
-//         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
-//       price: 200,
-//       comparePrice: "",
-//       media: [
-//         "./assets/img/products/product-5/img-1.webp",
-//         "./assets/img/products/product-5/img-2.avif",
-//         "./assets/img/products/product-5/img-3.avif",
-//         "./assets/img/products/product-5/img-4.avif",
-//       ],
-//       sizing: ["XS", "S", "M"],
-//       colors: [
-//         {
-//           name: "Red",
-//           rgb: "#212222",
-//           colorMedia: [
-//             "./assets/img/products/product-2/img-1.avif",
-//             "./assets/img/products/product-2/img-2.avif",
-//             "./assets/img/products/product-2/img-3.avif",
-//             "./assets/img/products/product-2/img-4.avif",
-//           ],
-//         },
-//       ],
-//       active: true,
-//       branding: "Gucci",
-//       categories: ["Men", "T-shirt"],
-//       tags: ["hot trend", "New Arrivals", "Hot Sales"],
-//     },
-//     {
-//       id: 6,
-//       name: "Piqué Biker Jacket",
-//       description:
-//         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
-//       price: 200,
-//       comparePrice: "",
-//       media: [
-//         "./assets/img/products/product-6/img-1.avif",
-//         "./assets/img/products/product-6/img-2.avif",
-//         "./assets/img/products/product-6/img-3.avif",
-//         "./assets/img/products/product-6/img-4.avif",
-//       ],
-//       sizing: ["XS", "S", "M"],
-//       colors: [
-//         {
-//           name: "Red",
-//           rgb: "#212222",
-//           colorMedia: [
-//             "./assets/img/products/product-2/img-1.avif",
-//             "./assets/img/products/product-2/img-2.avif",
-//             "./assets/img/products/product-2/img-3.avif",
-//             "./assets/img/products/product-2/img-4.avif",
-//           ],
-//         },
-//       ],
-//       active: true,
-//       branding: "Gucci",
-//       categories: ["women", "clothing"],
-//       tags: ["hot trend", "New Arrivals", "Hot Sales"],
-//     },
-//     {
-//       id: 7,
-//       name: "Piqué Biker Jacket",
-//       description:
-//         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
-//       price: 200,
-//       comparePrice: "",
-//       media: [
-//         "./assets/img/products/product-7/img-1.avif",
-//         "./assets/img/products/product-7/img-2.avif",
-//         "./assets/img/products/product-7/img-3.webp",
-//         "./assets/img/products/product-7/img-4.avif",
-//       ],
-//       sizing: ["XS", "S", "M"],
-//       colors: [
-//         {
-//           name: "Red",
-//           rgb: "#212222",
-//           colorMedia: [
-//             "./assets/img/products/product-2/img-1.avif",
-//             "./assets/img/products/product-2/img-2.avif",
-//             "./assets/img/products/product-2/img-3.avif",
-//             "./assets/img/products/product-2/img-4.avif",
-//           ],
-//         },
-//       ],
-//       active: true,
-//       branding: "Gucci",
-//       categories: ["women", "clothing"],
-//       tags: ["hot trend", "New Arrivals", "Hot Sales"],
-//     },
-//     {
-//       id: 8,
-//       name: "Piqué Biker Jacket",
-//       description:
-//         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
-//       price: 200,
-//       comparePrice: "",
-//       media: [
-//         "./assets/img/products/product-8/img-1.avif",
-//         "./assets/img/products/product-8/img-2.avif",
-//         "./assets/img/products/product-8/img-3.avif",
-//         "./assets/img/products/product-8/img-4.avif",
-//       ],
-//       sizing: ["XS", "S", "M"],
-//       colors: [
-//         {
-//           name: "Red",
-//           rgb: "#212222",
-//           colorMedia: [
-//             "./assets/img/products/product-2/img-1.avif",
-//             "./assets/img/products/product-2/img-2.avif",
-//             "./assets/img/products/product-2/img-3.avif",
-//             "./assets/img/products/product-2/img-4.avif",
-//           ],
-//         },
-//       ],
-//       active: true,
-//       branding: "Gucci",
-//       categories: ["women", "clothing"],
-//       tags: ["hot trend", "New Arrivals", "Hot Sales"],
-//     },
-//     {
-//       id: 9,
-//       name: "Piqué Biker Jacket",
-//       description:
-//         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
-//       price: 200,
-//       comparePrice: "",
-//       media: [
-//         "./assets/img/products/product-9/img-1.avif",
-//         "./assets/img/products/product-9/img-2.avif",
-//         "./assets/img/products/product-9/img-3.avif",
-//         "./assets/img/products/product-9/img-4.avif",
-//       ],
-//       sizing: ["XS", "S", "M"],
-//       colors: [
-//         {
-//           name: "Red",
-//           rgb: "#212222",
-//           colorMedia: [
-//             "./assets/img/products/product-2/img-1.avif",
-//             "./assets/img/products/product-2/img-2.avif",
-//             "./assets/img/products/product-2/img-3.avif",
-//             "./assets/img/products/product-2/img-4.avif",
-//           ],
-//         },
-//       ],
-//       active: true,
-//       branding: "Gucci",
-//       categories: ["women", "clothing"],
-//       tags: ["hot trend", "New Arrivals", "Hot Sales"],
-//     },
-//     {
-//       id: 10,
-//       name: "Piqué Biker Jacket",
-//       description:
-//         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
-//       price: 200,
-//       comparePrice: "",
-//       media: [
-//         "./assets/img/products/product-10/img-1.avif",
-//         "./assets/img/products/product-10/img-2.webp",
-//         "./assets/img/products/product-10/img-3.avif",
-//         "./assets/img/products/product-10/img-4.avif",
-//       ],
-//       sizing: ["XS", "S", "M"],
-//       colors: [
-//         {
-//           name: "Red",
-//           rgb: "#212222",
-//           colorMedia: [
-//             "./assets/img/products/product-2/img-1.avif",
-//             "./assets/img/products/product-2/img-2.avif",
-//             "./assets/img/products/product-2/img-3.avif",
-//             "./assets/img/products/product-2/img-4.avif",
-//           ],
-//         },
-//       ],
-//       active: true,
-//       branding: "Gucci",
-//       categories: ["women", "clothing"],
-//       tags: ["hot trend", "New Arrivals", "Hot Sales"],
-//     },
-//     {
-//       id: 11,
-//       name: "Piqué Biker Jacket",
-//       description:
-//         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
-//       price: 200,
-//       comparePrice: "",
-//       media: [
-//         "./assets/img/products/product-11/img-1.avif",
-//         "./assets/img/products/product-11/img-2.avif",
-//         "./assets/img/products/product-11/img-3.avif",
-//         "./assets/img/products/product-11/img-4.avif",
-//       ],
-//       sizing: ["XS", "S", "M"],
-//       colors: [
-//         {
-//           name: "Red",
-//           rgb: "#212222",
-//           colorMedia: [
-//             "./assets/img/products/product-2/img-1.avif",
-//             "./assets/img/products/product-2/img-2.avif",
-//             "./assets/img/products/product-2/img-3.avif",
-//             "./assets/img/products/product-2/img-4.avif",
-//           ],
-//         },
-//       ],
-//       active: true,
-//       branding: "Gucci",
-//       categories: ["women", "clothing"],
-//       tags: ["hot trend", "New Arrivals", "Hot Sales"],
-//     },
-//     {
-//       id: 12,
-//       name: "Piqué Biker Jacket",
-//       description:
-//         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
-//       price: 200,
-//       comparePrice: "",
-//       media: [
-//         "./assets/img/products/product-12/img-1.avif",
-//         "./assets/img/products/product-12/img-2.avif",
-//         "./assets/img/products/product-12/img-3.avif",
-//         "./assets/img/products/product-12/img-4.avif",
-//       ],
-//       sizing: ["XS", "S", "M"],
-//       colors: [],
-//       active: true,
-//       branding: "Gucci",
-//       categories: ["women", "clothing"],
-//       tags: ["hot trend", "New Arrivals", "Hot Sales"],
-//     },
-//   ],
-//   cart: [],
-//   orders: [],
-//   ordered: [],
-//   productDetail: null,
-// };
+const initData = {
+  initProducts: [
+    {
+      id: 1,
+      name: "Piqué Biker Jacket",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
+      price: "24",
+      comparePrice: "100",
+      media: [
+        "./assets/img/products/product-1/img-1.avif",
+        "./assets/img/products/product-1/img-2.avif",
+        "./assets/img/products/product-1/img-3.avif",
+        "./assets/img/products/product-1/img-4.avif",
+      ],
+      sizing: ["XS", "S", "M"],
+      colors: [
+        {
+          name: "Black",
+          rgb: "#212222",
+          colorMedia: [
+            "./assets/img/products/product-1/img-1.avif",
+            "./assets/img/products/product-1/img-2.avif",
+            "./assets/img/products/product-1/img-3.avif",
+            "./assets/img/products/product-1/img-4.avif",
+          ],
+        },
+        {
+          name: "Red",
+          rgb: "#eeeeee",
+          colorMedia: [
+            "./assets/img/products/product-2/img-1.avif",
+            "./assets/img/products/product-2/img-2.avif",
+            "./assets/img/products/product-2/img-3.avif",
+            "./assets/img/products/product-2/img-4.avif",
+          ],
+        },
+      ],
+      active: true,
+      branding: "Gucci",
+      categories: ["Men"],
+      tags: ["hot trend", "Best Sellers", "New Arrivals", "Hot Sales"],
+    },
+    {
+      id: 2,
+      name: "Multi-pocket Chest Bag",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
+      price: 50,
+      comparePrice: "",
+      media: [
+        "./assets/img/products/product-2/img-1.avif",
+        "./assets/img/products/product-2/img-2.avif",
+        "./assets/img/products/product-2/img-3.avif",
+        "./assets/img/products/product-2/img-4.avif",
+      ],
+      sizing: ["M"],
+      colors: [
+        {
+          name: "Red",
+          rgb: "#212222",
+          colorMedia: [
+            "./assets/img/products/product-2/img-1.avif",
+            "./assets/img/products/product-2/img-2.avif",
+            "./assets/img/products/product-2/img-3.avif",
+            "./assets/img/products/product-2/img-4.avif",
+          ],
+        },
+      ],
+      active: true,
+      branding: "Đôn trề",
+      categories: ["Men", "T-shirt"],
+      tags: ["bag", "Best Sellers"],
+    },
+    {
+      id: 3,
+      name: "Basic Flowing Scarf",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
+      price: 20,
+      comparePrice: "30",
+      media: [
+        "./assets/img/products/product-3/img-1.avif",
+        "./assets/img/products/product-3/img-2.avif",
+        "./assets/img/products/product-3/img-3.avif",
+        "./assets/img/products/product-3/img-4.avif",
+      ],
+      sizing: ["XS", "S", "M"],
+      colors: [
+        {
+          name: "Red",
+          rgb: "#212222",
+          colorMedia: [
+            "./assets/img/products/product-2/img-1.avif",
+            "./assets/img/products/product-2/img-2.avif",
+            "./assets/img/products/product-2/img-3.avif",
+            "./assets/img/products/product-2/img-4.avif",
+          ],
+        },
+      ],
+      active: true,
+      branding: "Gucci",
+      categories: ["Men", "T-shirt"],
+      tags: ["hot trend", "Best Sellers", "Hot Sales"],
+    },
+    {
+      id: 4,
+      name: "Piqué Biker Jacket",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
+      price: 200,
+      comparePrice: "",
+      media: [
+        "./assets/img/products/product-4/img-1.avif",
+        "./assets/img/products/product-4/img-2.avif",
+        "./assets/img/products/product-4/img-3.avif",
+        "./assets/img/products/product-4/img-4.avif",
+      ],
+      sizing: ["XS", "S", "M"],
+      colors: [
+        {
+          name: "Red",
+          rgb: "#212222",
+          colorMedia: [
+            "./assets/img/products/product-2/img-1.avif",
+            "./assets/img/products/product-2/img-2.avif",
+            "./assets/img/products/product-2/img-3.avif",
+            "./assets/img/products/product-2/img-4.avif",
+          ],
+        },
+      ],
+      active: true,
+      branding: "Gucci",
+      categories: ["Men", "T-shirt"],
+      tags: ["hot trend", "New Arrivals", "Hot Sales"],
+    },
+    {
+      id: 5,
+      name: "Piqué Biker Jacket",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
+      price: 200,
+      comparePrice: "",
+      media: [
+        "./assets/img/products/product-5/img-1.webp",
+        "./assets/img/products/product-5/img-2.avif",
+        "./assets/img/products/product-5/img-3.avif",
+        "./assets/img/products/product-5/img-4.avif",
+      ],
+      sizing: ["XS", "S", "M"],
+      colors: [
+        {
+          name: "Red",
+          rgb: "#212222",
+          colorMedia: [
+            "./assets/img/products/product-2/img-1.avif",
+            "./assets/img/products/product-2/img-2.avif",
+            "./assets/img/products/product-2/img-3.avif",
+            "./assets/img/products/product-2/img-4.avif",
+          ],
+        },
+      ],
+      active: true,
+      branding: "Gucci",
+      categories: ["Men", "T-shirt"],
+      tags: ["hot trend", "New Arrivals", "Hot Sales"],
+    },
+    {
+      id: 6,
+      name: "Piqué Biker Jacket",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
+      price: 200,
+      comparePrice: "",
+      media: [
+        "./assets/img/products/product-6/img-1.avif",
+        "./assets/img/products/product-6/img-2.avif",
+        "./assets/img/products/product-6/img-3.avif",
+        "./assets/img/products/product-6/img-4.avif",
+      ],
+      sizing: ["XS", "S", "M"],
+      colors: [
+        {
+          name: "Red",
+          rgb: "#212222",
+          colorMedia: [
+            "./assets/img/products/product-2/img-1.avif",
+            "./assets/img/products/product-2/img-2.avif",
+            "./assets/img/products/product-2/img-3.avif",
+            "./assets/img/products/product-2/img-4.avif",
+          ],
+        },
+      ],
+      active: true,
+      branding: "Gucci",
+      categories: ["women", "clothing"],
+      tags: ["hot trend", "New Arrivals", "Hot Sales"],
+    },
+    {
+      id: 7,
+      name: "Piqué Biker Jacket",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
+      price: 200,
+      comparePrice: "",
+      media: [
+        "./assets/img/products/product-7/img-1.avif",
+        "./assets/img/products/product-7/img-2.avif",
+        "./assets/img/products/product-7/img-3.webp",
+        "./assets/img/products/product-7/img-4.avif",
+      ],
+      sizing: ["XS", "S", "M"],
+      colors: [
+        {
+          name: "Red",
+          rgb: "#212222",
+          colorMedia: [
+            "./assets/img/products/product-2/img-1.avif",
+            "./assets/img/products/product-2/img-2.avif",
+            "./assets/img/products/product-2/img-3.avif",
+            "./assets/img/products/product-2/img-4.avif",
+          ],
+        },
+      ],
+      active: true,
+      branding: "Gucci",
+      categories: ["women", "clothing"],
+      tags: ["hot trend", "New Arrivals", "Hot Sales"],
+    },
+    {
+      id: 8,
+      name: "Piqué Biker Jacket",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
+      price: 200,
+      comparePrice: "",
+      media: [
+        "./assets/img/products/product-8/img-1.avif",
+        "./assets/img/products/product-8/img-2.avif",
+        "./assets/img/products/product-8/img-3.avif",
+        "./assets/img/products/product-8/img-4.avif",
+      ],
+      sizing: ["XS", "S", "M"],
+      colors: [
+        {
+          name: "Red",
+          rgb: "#212222",
+          colorMedia: [
+            "./assets/img/products/product-2/img-1.avif",
+            "./assets/img/products/product-2/img-2.avif",
+            "./assets/img/products/product-2/img-3.avif",
+            "./assets/img/products/product-2/img-4.avif",
+          ],
+        },
+      ],
+      active: true,
+      branding: "Gucci",
+      categories: ["women", "clothing"],
+      tags: ["hot trend", "New Arrivals", "Hot Sales"],
+    },
+    {
+      id: 9,
+      name: "Piqué Biker Jacket",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
+      price: 200,
+      comparePrice: "",
+      media: [
+        "./assets/img/products/product-9/img-1.avif",
+        "./assets/img/products/product-9/img-2.avif",
+        "./assets/img/products/product-9/img-3.avif",
+        "./assets/img/products/product-9/img-4.avif",
+      ],
+      sizing: ["XS", "S", "M"],
+      colors: [
+        {
+          name: "Red",
+          rgb: "#212222",
+          colorMedia: [
+            "./assets/img/products/product-2/img-1.avif",
+            "./assets/img/products/product-2/img-2.avif",
+            "./assets/img/products/product-2/img-3.avif",
+            "./assets/img/products/product-2/img-4.avif",
+          ],
+        },
+      ],
+      active: true,
+      branding: "Gucci",
+      categories: ["women", "clothing"],
+      tags: ["hot trend", "New Arrivals", "Hot Sales"],
+    },
+    {
+      id: 10,
+      name: "Piqué Biker Jacket",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
+      price: 200,
+      comparePrice: "",
+      media: [
+        "./assets/img/products/product-10/img-1.avif",
+        "./assets/img/products/product-10/img-2.webp",
+        "./assets/img/products/product-10/img-3.avif",
+        "./assets/img/products/product-10/img-4.avif",
+      ],
+      sizing: ["XS", "S", "M"],
+      colors: [
+        {
+          name: "Red",
+          rgb: "#212222",
+          colorMedia: [
+            "./assets/img/products/product-2/img-1.avif",
+            "./assets/img/products/product-2/img-2.avif",
+            "./assets/img/products/product-2/img-3.avif",
+            "./assets/img/products/product-2/img-4.avif",
+          ],
+        },
+      ],
+      active: true,
+      branding: "Gucci",
+      categories: ["women", "clothing"],
+      tags: ["hot trend", "New Arrivals", "Hot Sales"],
+    },
+    {
+      id: 11,
+      name: "Piqué Biker Jacket",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
+      price: 200,
+      comparePrice: "",
+      media: [
+        "./assets/img/products/product-11/img-1.avif",
+        "./assets/img/products/product-11/img-2.avif",
+        "./assets/img/products/product-11/img-3.avif",
+        "./assets/img/products/product-11/img-4.avif",
+      ],
+      sizing: ["XS", "S", "M"],
+      colors: [
+        {
+          name: "Red",
+          rgb: "#212222",
+          colorMedia: [
+            "./assets/img/products/product-2/img-1.avif",
+            "./assets/img/products/product-2/img-2.avif",
+            "./assets/img/products/product-2/img-3.avif",
+            "./assets/img/products/product-2/img-4.avif",
+          ],
+        },
+      ],
+      active: false,
+      branding: "Gucci",
+      categories: ["women", "clothing"],
+      tags: ["hot trend", "New Arrivals", "Hot Sales"],
+    },
+    {
+      id: 12,
+      name: "Piqué Biker Jacket",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint aliquid, sapiente, porro voluptate eum facilis unde ad, aperiam accusantium blanditiis velit mollitia reprehenderit voluptates iusto ducimus delectus adipisci. Recusandae, provident!",
+      price: 200,
+      comparePrice: "",
+      media: [
+        "./assets/img/products/product-12/img-1.avif",
+        "./assets/img/products/product-12/img-2.avif",
+        "./assets/img/products/product-12/img-3.avif",
+        "./assets/img/products/product-12/img-4.avif",
+      ],
+      sizing: ["XS", "S", "M"],
+      colors: [],
+      active: false,
+      branding: "Gucci",
+      categories: ["women", "clothing"],
+      tags: ["hot trend", "New Arrivals", "Hot Sales"],
+    },
+  ],
+  cart: [],
+  orders: [],
+  ordered: [],
+  productDetail: null,
+};
 
 // window.localStorage.setItem("data", JSON.stringify(initData));
-
 // ============ Base JS ===============
 
 const data = JSON.parse(window.localStorage.getItem("data"));
+data.products = data.initProducts.filter((e) => e.active === true);
 let productsQuanlity = document.querySelector(".products-quanlity");
 
 function alert(message, type) {
@@ -411,27 +411,34 @@ function alert(message, type) {
 
 let renderNavbarCart = function (cart) {
   let navbarCartContainer = document.querySelector(".navbar-cart-content");
+  if (data.cart.length === 0) {
+    navbarCartContainer.innerHTML = ` <p class="fs-3 h-100 text-center p-0 m-0 align-items-center d-flex justify-content-center">No Products Yet</p>`;
+  }
   if (data.cart.length != 0) {
     navbarCartContainer.innerHTML = "";
+    data.cart.forEach((cart) => {
+      let colorVariant = cart.color ? ` | Color: ${cart.color.name}` : "";
+      let product = data.products.find((e) => e.id === cart.id);
+      let cartImage = cart.color
+        ? `${cart.color.colorMedia[0]}`
+        : `${product.media[0]}`;
+      let navbarCartItem = document.createElement("div");
+      navbarCartContainer.appendChild(navbarCartItem);
+      navbarCartItem.outerHTML = `<div class="navbar-cart-item">
+                                  <img
+                                    src="${cartImage}"
+                                    alt=""
+                                    class="navbar-cart-img"
+                                  />
+                                  <p class="navbar-cart-desc">${product.name}</br>Size: ${cart.size}${colorVariant}</p>
+                                  <span class="navbar-cart-price">$ ${product.price}</span>
+                                </div>`;
+    });
   }
-  data.cart.forEach((cart) => {
-    let colorVariant =
-      cart.color ? ` | Color: ${cart.color.name}` : "";
-    let product = data.products.find((e) => e.id === cart.id);
-    let navbarCartItem = document.createElement("div");
-    navbarCartContainer.appendChild(navbarCartItem);
-    navbarCartItem.outerHTML = `<div class="navbar-cart-item">
-                                <img
-                                  src="${product.media[0]}"
-                                  alt=""
-                                  class="navbar-cart-img"
-                                />
-                                <p class="navbar-cart-desc">${product.name}</br>Size: ${cart.size}${colorVariant}</p>
-                                <span class="navbar-cart-price">$ ${product.price}</span>
-                              </div>`;
-  });
 };
 renderNavbarCart(data.cart);
+
+// ========== Render Products ===========
 
 let renderProducts = function (products, size) {
   let productsContainer = document.querySelector(".products-container");
