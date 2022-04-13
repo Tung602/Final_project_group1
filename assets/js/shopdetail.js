@@ -115,36 +115,39 @@ let renderProductInfor = (productId) => {
     });
   });
   shopDetailAddBtn.addEventListener("click", (event) => {
-    let isChecked = (size) => {
-      for (let i = 0, length = size.length; i < length; i++) {
-        if (size[i].checked) {
-          return true;
+    if(data.isUserLogIn){
+      event.preventDefault();
+      let isChecked = (size) => {
+        for (let i = 0, length = size.length; i < length; i++) {
+          if (size[i].checked) {
+            return true;
+          }
         }
-      }
-      return false;
-    };
-    if (!isChecked(productSize)) {
-      productSizeAlert.classList.add("active");
-    } else {
-      let cartItem = {
-        id: product.id,
-        size: document.querySelector(
-          'input[name="shopDetailSizeOptions"]:checked'
-        ).value,
-        color: product.colors.find(
-          (e) => e.rgb === productColorContainer.value
-        ),
+        return false;
       };
-      if (
-        data.cart.every((e) => JSON.stringify(e) !== JSON.stringify(cartItem))
-      ) {
-        data.cart.push(cartItem);
-        alert("Added to cart", "success");
+      if (!isChecked(productSize)) {
+        productSizeAlert.classList.add("active");
       } else {
-        alert("Already added!", "warning");
+        let cartItem = {
+          id: product.id,
+          size: document.querySelector(
+            'input[name="shopDetailSizeOptions"]:checked'
+          ).value,
+          color: product.colors.find(
+            (e) => e.rgb === productColorContainer.value
+          ),
+        };
+        if (
+          data.cart.every((e) => JSON.stringify(e) !== JSON.stringify(cartItem))
+        ) {
+          data.cart.push(cartItem);
+          alert("Added to cart", "success");
+        } else {
+          alert("Already added!", "warning");
+        }
+        window.localStorage.setItem("data", JSON.stringify(data));
+        renderNavbarCart(data.cart);
       }
-      window.localStorage.setItem("data", JSON.stringify(data));
-      renderNavbarCart(data.cart);
     }
   });
   // ================ Render Related Products =============

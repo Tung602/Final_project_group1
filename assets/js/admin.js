@@ -22,6 +22,41 @@ for (let i = 0; i < tabLinks.length; i++) {
 }
 tabLinks[0].click();
 
+// ================= Log in =================
+let adminLogInUsername = document.querySelector("#adminLogInUsername");
+let adminLogInPassword = document.querySelector("#adminLogInPassword");
+let adminLogInCheck = document.querySelector("#adminLogInCheck");
+let adminLogInBtn = document.querySelector("#adminLogInBtn");
+let adminMain = document.querySelector(".admin-main");
+let adminHeader = document.querySelector(".admin-header");
+let adminLogIn = document.querySelector(".admin-log-in");
+if (data.isAdminLogIn) {
+  adminMain.style.display = "block";
+  adminHeader.style.display = "block";
+  adminLogIn.style.display = "none";
+} else {
+  adminLogIn.style.display = "block";
+  adminMain.style.display = "none";
+  adminHeader.style.display = "none";
+}
+adminLogInBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  let admin = data.admin[0];
+  if (
+    adminLogInUsername.value !== admin.username &&
+    adminLogInPassword.value !== admin.password
+  ) {
+    adminLogInCheck.innerHTML = "Username or password incorrect";
+  } else {
+    adminLogInCheck.innerHTML = "";
+    data.isAdminLogIn = true;
+    window.localStorage.setItem("data", JSON.stringify(data));
+    adminMain.style.display = "block";
+    adminHeader.style.display = "block";
+    adminLogIn.style.display = "none";
+  }
+});
+
 // ============= add product =============
 let addProductButton = document.querySelector("#addProductButton");
 addProductButton.addEventListener("click", (event) => {
@@ -61,7 +96,7 @@ addProductButton.addEventListener("click", (event) => {
   }
   // Thêm sản phẩm vào localStorage
   data.initProducts.push({
-    id: data.initProducts.length + 1,
+    id: data.initProducts[data.initProducts.length - 1].id + 1,
     name: addProductTitleInput.value,
     description: addProductDescriptionInput.value,
     price: addProductPriceInput.value,
@@ -525,6 +560,10 @@ let renderProductAdmin = function (products) {
     );
     productDeleteBtn.addEventListener("click", () => {
       productDeleteComfirm.addEventListener("click", (event) => {
+        data.cart.splice(
+          data.cart.indexOf(data.cart.find((e) => e.id === product.id)),
+          1
+        );
         data.initProducts.splice(data.initProducts.indexOf(product), 1);
         data.products = data.initProducts.filter((e) => e.active === true);
         productsContainer.removeChild(
@@ -537,3 +576,88 @@ let renderProductAdmin = function (products) {
   });
 };
 renderProductAdmin(data.initProducts);
+
+// ====================== Render orders ===================
+
+let renderOrders = function (orders) {
+  let orderContainer = document.querySelector(".orders-admin-container-tbody");
+  orderContainer.innerHTML = "";
+  orders.forEach((order, index) => {
+    let orderItem = document.createElement("tr");
+    orderContainer.appendChild(orderItem);
+    orderItem.outerHTML = `<tr class="order-item fs-4" data-bs-toggle="modal" data-bs-target="#orderDetail" id="order-item-id${index}">
+                              <td>${order.name}</td>
+                              <td>${order.products.length} Products</td>
+                              <td>${order.date}</td>
+                            </tr>`;
+  });
+  orders.forEach((order, index) => {
+    let orderItem = document.querySelector(`#order-item-id${index}`);
+    orderItem.addEventListener("click", (event) => {
+      let orderDetailCustomerName = document.querySelector(
+        ".orderDetailCustomerName"
+      );
+      let orderDetailCustomerAddress = document.querySelector(
+        ".orderDetailCustomerAddress"
+      );
+      let orderDetailCustomerPhoneNumber = document.querySelector(
+        ".orderDetailCustomerPhoneNumber"
+      );
+      let orderDetailCustomerEmail = document.querySelector(
+        ".orderDetailCustomerEmail"
+      );
+      let orderDetailCustomerNote = document.querySelector(
+        ".orderDetailCustomerNote"
+      );
+      let orderProductsContainer = document.querySelector(
+        "#orderDetailProductInfor"
+      );
+      let orderDetailPayment = document.querySelector("#orderDetailPayment");
+      orderDetailPayment.innerHTML = `<p class="text-end">Phương thức thanh toán: ${order.paymentMethod}</p>
+      <p class="text-end">Thành tiền: ${order.totalPrice}đ</p>`;
+      orderProductsContainer.innerHTML = "";
+      orderDetailCustomerName.value = order.name;
+      orderDetailCustomerAddress.value = order.address;
+      orderDetailCustomerPhoneNumber.value = order.phoneNumber;
+      orderDetailCustomerEmail.value = order.email;
+      orderDetailCustomerNote.value = order.orderNotes;
+      order.products.forEach((product) => {
+        let productImg = data.initProducts.find((e) => e.id === product.id)
+          .media[0];
+        let productPrice = data.initProducts.find(
+          (e) => e.id === product.id
+        ).price;
+        let orderProductItem = document.createElement("div");
+        orderProductsContainer.appendChild(orderProductItem);
+        orderProductItem.outerHTML = `<div class="card mb-3" id="orderDetailProductItem">
+                                        <div class="row g-0">
+                                          <div class="col-md-4">
+                                            <img src="${productImg}" class="img-fluid rounded-start" alt="Image">
+                                          </div>
+                                          <div class="col-md-8">
+                                            <div class="card-body">
+                                              <h5 class="card-title fs-3 mb-5">${product.name}</h5>
+                                              <p class="card-text"><small class="text-muted">Đơn giá: ${productPrice}</small></p>
+                                              <p class="card-text"><small class="text-muted">Số lượng: ${product.quantity}</small></p>
+                                              <p class="card-text"><small class="text-muted">Tổng tiền: ${product.totalPrice}đ</small></p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>`;
+      });
+    });
+    let orderProduct = document.querySelector("#orderProduct");
+    orderProduct.addEventListener("click", (event) => {
+      orderContainer.removeChild(orderItem);
+      orders.splice(index, 1);
+      window.localStorage.setItem("data", JSON.stringify(data));
+    });
+    let cancelProduct = document.querySelector("#cancelProduct");
+    cancelProduct.addEventListener("click", (event) => {
+      orderContainer.removeChild(orderItem);
+      orders.splice(index, 1);
+      window.localStorage.setItem("data", JSON.stringify(data));
+    });
+  });
+};
+renderOrders(data.ordered);

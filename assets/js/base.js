@@ -378,6 +378,25 @@ const initData = {
   orders: [],
   ordered: [],
   productDetail: null,
+  users: [
+    {
+      id: 1,
+      username: "Dothanhtungnb602@gmail.com",
+      password: "Tung2001",
+      firstName: "Do",
+      lastName: "Tung",
+      phoneNumber: "0928986343",
+      avatar: "./assets/img/default-user.jpg",
+    },
+  ],
+  admin: [
+    {
+      username: "Admin",
+      password: "1234"
+    }
+  ],
+  isUserLogIn: false,
+  isAdminLogIn: false,
 };
 
 // window.localStorage.setItem("data", JSON.stringify(initData));
@@ -403,14 +422,15 @@ function alert(message, type) {
   document.querySelector("#liveAlertPlaceholder").append(wrapper);
   setTimeout(() => {
     wrapper.classList.add("alert-fadeout");
-  }, 4000);
+  }, 1000);
   setTimeout(() => {
     wrapper.style.display = "none";
-  }, 5000);
+  }, 2000);
 }
 
 let renderNavbarCart = function (cart) {
   let navbarCartContainer = document.querySelector(".navbar-cart-content");
+  let navbarCartLink = document.querySelector(".navbar-cart-btn");
   if (data.cart.length === 0) {
     navbarCartContainer.innerHTML = ` <p class="fs-3 h-100 text-center p-0 m-0 align-items-center d-flex justify-content-center">No Products Yet</p>`;
   }
@@ -434,6 +454,10 @@ let renderNavbarCart = function (cart) {
                                   <span class="navbar-cart-price">$ ${product.price}</span>
                                 </div>`;
     });
+  }
+  if (!data.isUserLogIn) {
+    navbarCartLink.href = "./account.html";
+    navbarCartContainer.innerHTML = "";
   }
 };
 renderNavbarCart(data.cart);
@@ -467,9 +491,9 @@ let renderProducts = function (products, size) {
                               </div>
                           </div>
                           <div class="product-item-text">
-                              <button class="product-add id-${
+                              <a href="./account.html" class="product-add id-${
                                 product.id
-                              }">+ Add To Cart</button>
+                              }">+ Add To Cart</a>
                               <p class="product-desc">${product.name}</p>
                               <div class="product-rate">
                                   <i class="fa-solid fa-star"></i
@@ -546,25 +570,42 @@ let renderProducts = function (products, size) {
     });
     // ============= Product add to cart ===============
     let addCartBtn = document.querySelector(`.product-add.id-${product.id}`);
-    addCartBtn.onclick = () => {
-      let cartItem = {
-        id: product.id,
-        size: product.sizing[0],
-        color: product.colors[0],
-      };
-      if (
-        data.cart.every((e) => JSON.stringify(e) !== JSON.stringify(cartItem))
-      ) {
-        data.cart.push(cartItem);
-        alert("Added to cart", "success");
-      } else {
-        alert("Already added!", "warning");
+    addCartBtn.addEventListener("click", (event) => {
+      if (data.isUserLogIn) {
+        event.preventDefault();
+        let cartItem = {
+          id: product.id,
+          size: product.sizing[0],
+          color: product.colors[0],
+        };
+        if (
+          data.cart.every((e) => JSON.stringify(e) !== JSON.stringify(cartItem))
+        ) {
+          data.cart.push(cartItem);
+          alert("Added to cart", "success");
+        } else {
+          alert("Already added!", "warning");
+        }
+        window.localStorage.setItem("data", JSON.stringify(data));
+        renderNavbarCart(data.cart);
       }
-      window.localStorage.setItem("data", JSON.stringify(data));
-      renderNavbarCart(data.cart);
-    };
+    });
   });
 };
+
+// =========== User action =============
+let userAction = document.querySelector(".user-action");
+if (!data.isUserLogIn) {
+  userAction.innerHTML = `<a href="./account.html" class="user-link">Log in</a>
+                          <a href="./account.html" class="user-link">Sign in</a>`;
+} else {
+  userAction.innerHTML = `<a href="./profile.html" class="user-link">My Profile</a>
+                          <a href="./index.html" class="user-link" id="logOutBtn">Log out</a>`;
+  document.querySelector("#logOutBtn").addEventListener("click", event => {
+    data.isUserLogIn = false;
+    window.localStorage.setItem("data", JSON.stringify(data));
+  })
+}
 
 // ============ Header ================
 

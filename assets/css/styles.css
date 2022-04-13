@@ -2417,6 +2417,63 @@ p {
   color: #B7B7B7;
 }
 
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.profile-header {
+  padding: 2rem 0;
+  position: relative;
+}
+.profile-header .profile-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.profile-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #eee;
+}
+
+.profile-img-preview {
+  margin: 0 auto;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-img-preview img {
+  width: 18rem;
+  height: 18rem;
+}
+
+.profile-change-password {
+  border: none;
+  color: #E53437;
+  text-decoration: underline;
+  background-color: transparent;
+  float: right;
+  font-size: 1.5rem;
+}
+
+.profile-save-change {
+  border: none;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.valid-input {
+  color: red;
+  margin-bottom: 0;
+}
+
 .admin-header-container {
   position: fixed;
   top: 0;
@@ -2674,6 +2731,49 @@ p {
   border-radius: 1.25rem;
 }
 
+.orders-table {
+  width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+}
+.orders-table table {
+  width: 100%;
+}
+.orders-table table button {
+  border: none;
+  font-size: 2rem;
+  background-color: transparent;
+}
+.orders-table table input {
+  cursor: pointer;
+}
+.orders-table th {
+  font-size: 2rem;
+  font-weight: 550;
+  text-align: start;
+}
+.orders-table th,
+.orders-table td {
+  padding: 1rem;
+  border: 1px solid #d4d5d5;
+}
+.orders-table .order-item {
+  cursor: pointer;
+}
+
+#orderDetailProductInfor {
+  padding: 3rem;
+}
+
+#orderDetailCustomerInfor {
+  margin-bottom: 4rem !important;
+  padding: 3rem;
+}
+
+#orderDetailPayment {
+  padding: 3rem;
+}
+
 .product-task {
   display: flex;
   justify-content: space-between;
@@ -2875,6 +2975,13 @@ p {
 .edit-current-color-item:hover > button {
   opacity: 1;
   visibility: visible;
+}
+
+.admin-log-in {
+  max-width: 50rem;
+  height: 100%;
+  margin: auto;
+  margin-top: 3rem;
 }
 
 @media screen and (max-width: 767px) {

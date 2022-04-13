@@ -2,11 +2,7 @@ let checkoutProductsContainer = document.querySelector(
   ".checkout-total-product"
 );
 let checkoutPlaceOrder = document.querySelector(".place-order-btn");
-let checkoutFirstName = document.querySelector(".checkout-input-firstname");
-let checkoutLastName = document.querySelector(".checkout-input-lastname");
 let checkoutAddress = document.querySelector(".checkout-input-address");
-let checkoutPhoneNumber = document.querySelector(".checkout-input-phonenumber");
-let checkoutEmail = document.querySelector(".checkout-input-email");
 let checkBoxOrderNotes = document.querySelector(".checkbox-order-notes");
 let checkoutOrderNotes = document.querySelector(".checkout-input-ordernotes");
 let checkoutTotalAll = document.querySelector(".checkout-total-all");
@@ -28,15 +24,17 @@ let renderCheckoutProducts = function (order) {
 };
 renderCheckoutProducts(data.orders[data.orders.length - 1]);
 checkoutPlaceOrder.addEventListener("click", (event) => {
+  let user = data.users.find(e => e.id === data.isUserLogIn);
   alert("Bạn đã đặt hàng thành công", "success");
   let order = {};
+  const today = new Date();
   order.products = data.orders[0].products;
-  order.firstName = checkoutFirstName.value;
-  order.lastName = checkoutLastName.value;
+  order.name = `${user.firstName} ${user.lastName}`
   order.address = checkoutAddress.value;
-  order.phoneNumber = checkoutPhoneNumber.value;
-  order.email = checkoutEmail.value;
+  order.phoneNumber = user.phoneNumber;
+  order.email = user.email;
   order.totalPrice = data.orders[0].totalPrice;
+  order.date = `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`
   if (checkoutPayment[0].checked) {
     order.paymentMethod = checkoutPayment[0].value;
   } else {
@@ -48,14 +46,7 @@ checkoutPlaceOrder.addEventListener("click", (event) => {
     order.orderNotes = "";
   }
   data.ordered.push(order);
-  window.localStorage.setItem("data", JSON.stringify(data));
-  setTimeout(() => {
-    event.target.href = "./index.html";
-    event.target.click();
-  }, 2000)
-});
-
-window.addEventListener("beforeunload", (event) => {
   data.orders = [];
+  data.cart = [];
   window.localStorage.setItem("data", JSON.stringify(data));
 });

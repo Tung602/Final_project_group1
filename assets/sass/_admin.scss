@@ -258,6 +258,47 @@
   }
 }
 
+// ================ Orders =================
+
+.orders-table {
+  width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+  table {
+    width: 100%;
+    button {
+      border: none;
+      font-size: 2rem;
+      background-color: transparent;
+    }
+    input {
+      cursor: pointer;
+    }
+  }
+  th {
+    font-size: 2rem;
+    font-weight: 550;
+    text-align: start;
+  }
+  th,
+  td {
+    padding: 1rem;
+    border: 1px solid #d4d5d5;
+  }
+  .order-item{
+    cursor: pointer;
+  }
+}
+#orderDetailProductInfor{
+  padding: 3rem;
+}
+#orderDetailCustomerInfor{
+  margin-bottom: 4rem !important;
+  padding: 3rem;
+}
+#orderDetailPayment{
+  padding: 3rem;
+}
 // ================ taskbar =================
 
 .product-task {
@@ -434,7 +475,7 @@
     outline: 3px solid #c1d7fb;
   }
 }
-.edit-product-current-color{
+.edit-product-current-color {
   padding: 1rem;
   border: #dddddd solid 2px;
   border-radius: 0.25rem;
@@ -446,7 +487,7 @@
 .edit-current-color-item {
   width: 20rem;
   position: relative;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   border: 1px solid #85b7fe;
   outline: 3px solid #c1d7fb;
   margin: 0 !important;
@@ -465,10 +506,16 @@
     opacity: 0;
     transition: 0.3s linear;
   }
-  &:hover>button {
+  &:hover > button {
     opacity: 1;
     visibility: visible;
   }
+}
+.admin-log-in{
+  max-width: 50rem;
+  height: 100%;
+  margin: auto;
+  margin-top: 3rem;
 }
 //  =================== Responsive ===============
 

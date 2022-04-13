@@ -165,8 +165,9 @@
               <div class="log-in-container">
                 <h2 class="log-in-title">Log in</h2>
                 <form action="#" class="log-in-form">
+                  <p class="valid-input mt-1" id="logInCheck"></p>
                   <div class="form-input-main">
-                    <input type="email" name="logInEmail" placeholder=" " />
+                    <input type="email" name="logInEmail" placeholder=" " id="logInEmail"/>
                     <label for="logInEmail">Email</label>
                   </div>
                   <div class="form-input-main">
@@ -174,12 +175,13 @@
                       type="password"
                       name="logInPasswrod"
                       placeholder=" "
+                      id="logInPassword"
                     />
                     <label for="logInPassword">Password</label>
                   </div>
-                  <button type="submit" class="main-btn log-in-btn">
+                  <a href="./index.html" class="main-btn text-center log-in-btn">
                     Log in
-                  </button>
+                  </a>
                 </form>
                 <a href="#" class="log-in-forgot-password">Forgot password</a>
               </div>
@@ -190,21 +192,22 @@
                 <h2 class="sign-up-title">Sign Up</h2>
                 <form action="#" class="sign-up-form">
                   <div class="form-input-main">
-                    <input type="text" name="signUpFirstName" placeholder=" " />
+                    <input type="text" name="signUpFirstName" id="signUpFirstName" placeholder=" " />
                     <label for="signUpFristName">First name</label>
                   </div>
                   <div class="form-input-main">
-                    <input type="text" name="signUpLastName" placeholder=" " />
+                    <input type="text" name="signUpLastName" id="signUpLastName" placeholder=" " />
                     <label for="signUpLastName">Last name</label>
                   </div>
                   <div class="form-input-main">
-                    <input type="email" name="signUpEmail" placeholder=" " />
+                    <input type="email" name="signUpEmail" id="signUpEmail" placeholder=" " />
                     <label for="signUpEmail">Email</label>
                   </div>
                   <div class="form-input-main">
                     <input
                       type="text"
                       name="signUpPhoneNumber"
+                      id="signUpPhoneNumber"
                       placeholder=" "
                     />
                     <label for="signUpPhoneNumber">Phone number</label>
@@ -213,18 +216,19 @@
                     <input
                       type="password"
                       name="signUpPassword"
+                      id="signUpPassword"
                       placeholder=" "
                     />
                     <label for="signUpPassword">Password</label>
                   </div>
                   <div class="verified-terms">
-                    <input class="terms-input" type="checkbox" />
+                    <input class="terms-input" id="signUpTerm" type="checkbox" />
                     <span
                       >I agree to Male Fashion Terms of Service & Privacy
                       Policy</span
                     >
                   </div>
-                  <button class="main-btn sign-up-btn">Sign Up</button>
+                  <a href="./index.html" class="main-btn sign-up-btn text-center" id="signUpBtn">Sign Up</a>
                 </form>
               </div>
             </div>

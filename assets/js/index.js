@@ -71,3 +71,18 @@ window.onload = () => {
   heroBtn[0].classList.add("active");
 };
 
+// Count Down
+
+var countDownDate = new Date("Apr 20, 2022 15:37:25").getTime();
+var x = setInterval(function () {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.querySelector(".countdown-time.days").innerHTML = days;
+  document.querySelector(".countdown-time.hours").innerHTML = hours;
+  document.querySelector(".countdown-time.minutes").innerHTML = minutes;
+  document.querySelector(".countdown-time.seconds").innerHTML = seconds;
+}, 1000);

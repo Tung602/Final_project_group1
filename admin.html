@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <title>Admin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -678,6 +678,54 @@
       </div>
     </div>
 
+    <!-- ============ Order Detail ============ -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="orderDetail" tabindex="-1" aria-labelledby="orderDeailLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title fs-3" id="orderDeailLabel">Thông tin đơn hàng</h5>
+            <button type="button" class="btn-close fs-4" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="orderDetailCustomerInfor">
+              <p class="text-center fs-3">Thông tin khách hàng</p>
+              <div class="input-group mb-3">
+                <span class="input-group-text fs-4" id="orderDetailCustomerName">Họ tên</span>
+                <input type="text" class="form-control fs-4 orderDetailCustomerName" id="basic-url" aria-describedby="orderDetailCustomerName" readonly disabled>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text fs-4" id="orderDetailCustomerAddress">Địa chỉ</span>
+                <input type="text" class="form-control fs-4 orderDetailCustomerAddress" id="basic-url" aria-describedby="orderDetailCustomerAddress" readonly disabled>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text fs-4" id="orderDetailCustomerPhoneNumber">Sđt</span>
+                <input type="text" class="form-control fs-4 orderDetailCustomerPhoneNumber" id="basic-url" aria-describedby="orderDetailCustomerPhoneNumber" readonly disabled>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text fs-4" id="orderDetailCustomerEmail">Email</span>
+                <input type="text" class="form-control fs-4 orderDetailCustomerEmail" id="basic-url" aria-describedby="orderDetailCustomerEmail" readonly disabled>
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text fs-4" id="orderDetailCustomerNote">Ghi chú khách hàng</span>
+                <input type="area" class="form-control fs-4 orderDetailCustomerNote" id="basic-url" aria-describedby="orderDetailCustomerNote" readonly disabled>
+              </div>
+            </div>
+            <div id="orderDetailProductInfor">
+              <p class="text-center fs-3">Sản phẩm</p>
+            </div>
+            <div id="orderDetailPayment">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary fs-4" data-bs-dismiss="modal" id="cancelProduct">Hủy đơn hàng</button>
+            <button type="button" class="btn btn-primary fs-4" data-bs-dismiss="modal" id="orderProduct">Duyệt đơn hàng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ============ Header ============= -->
     <header class="admin-header">
       <div class="admin-header-container">
@@ -724,12 +772,6 @@
             <button class="admin-nav-btn main-btn">
               <i class="fa-solid fa-cart-shopping"></i>
               Orders
-            </button>
-          </li>
-          <li class="nav-item">
-            <button class="admin-nav-btn main-btn">
-              <i class="fa-solid fa-users"></i>
-              Users
             </button>
           </li>
         </ul>
@@ -817,40 +859,79 @@
         </div>
       </div>
       <div class="main-content" id="orders">
-        <div id="liveAlertPlaceholder"></div>
-        <button type="button" class="btn btn-primary" id="liveAlertBtn">
-          Show live alert
-        </button>
-      </div>
-      <div class="main-content" id="users">
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et qui quod,
-          numquam voluptatem mollitia excepturi, vitae unde libero architecto
-          repudiandae temporibus nam accusamus ullam expedita minima commodi
-          necessitatibus blanditiis itaque? Velit quae nisi, officia quibusdam
-          explicabo consequuntur amet soluta esse dolorum, illo culpa facilis
-          itaque? Ipsum iure adipisci laborum, illo assumenda dolore enim
-          expedita deleniti quod, esse explicabo necessitatibus. Recusandae
-          obcaecati optio animi ullam! A, necessitatibus molestias. Commodi
-          ipsum tempora recusandae eum, dolorem nisi laborum aliquid praesentium
-          deleniti esse deserunt distinctio animi non nemo voluptatem impedit,
-          sapiente, est corporis a laudantium repellendus! Aliquid, consectetur
-          natus! Repudiandae consectetur placeat error quas harum facilis quod
-          quis nisi laboriosam accusantium. Reprehenderit nihil id dicta cumque?
-          Aperiam sed tempora excepturi minus sunt ea ducimus voluptas unde
-          suscipit beatae, blanditiis fugit et reprehenderit repudiandae
-          doloremque deserunt eius aliquam error iure culpa aspernatur
-          exercitationem praesentium! Rerum excepturi sequi facilis, labore
-          ducimus porro temporibus dicta dolorum cumque modi, accusamus id,
-          recusandae ut harum debitis repudiandae. Consectetur iste corrupti
-          nemo repudiandae eligendi quod aspernatur eaque perspiciatis autem
-          maiores, distinctio ullam praesentium consequatur sapiente earum
-          pariatur voluptate quo laboriosam. Quas deleniti aut cumque soluta
-          facilis expedita veritatis excepturi deserunt quasi qui impedit,
-          itaque laudantium suscipit adipisci unde, ad magni.
-        </h1>
-      </div>
+        <div class="container-fluid">
+          <div class="row p-2">
+            <div class="col">
+              <div class="orders-heading">
+                <h2 class="orders-title">Orders</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row p-0 p-sm-2">
+            <div class="col p-0 p-sm-2">
+              <div class="product-task">
+                <form action="#" class="product-search search-form-main">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    class="product-search-input search-input-main"
+                  />
+                  <button
+                    type="button"
+                    class="main-btn product-search-btn search-btn-main"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="row p-0 p-sm-2">
+            <div class="col p-0 p-sm-2">
+              <div class="orders-table">
+                <table class="orders-admin-container">
+                  <thead>
+                    <tr class="fs-3">
+                      <th>Customer Name</th> 
+                      <th>Products</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody class="orders-admin-container-tbody">
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
     </main>
+    <div class="container-fluid admin-log-in">
+      <div class="row">
+        <div class="col">
+          <h4 class="fs-1 text-center">Admin</h4>
+          <form action="#" class="log-in-form">
+            <p class="valid-input mt-1" id="adminLogInCheck"></p>
+            <div class="form-input-main">
+              <input type="email" name="adminLogInUsername" placeholder=" " id="adminLogInUsername"/>
+              <label for="adminLogInUsername">Username</label>
+            </div>
+            <div class="form-input-main">
+              <input
+                type="password"
+                name="adminLogInPassword"
+                placeholder=" "
+                id="adminLogInPassword"
+              />
+              <label for="adminLogInPassword">Password</label>
+            </div>
+            <a href="./index.html" class="main-btn text-center log-in-btn" id="adminLogInBtn">
+              Log in
+            </a>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
     <footer class="footer"></footer>
 
