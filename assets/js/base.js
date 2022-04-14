@@ -570,7 +570,7 @@ let renderProducts = function (products, size) {
 
 // Menu aside
 let navbarToggler = document.querySelector(".main-navbar-toggler");
-let menuAside = document.querySelector(".menu-wrapper");
+let menuAside = document.querySelector(".menu-wrapper");  
 let modal = document.querySelector(".main-modal");
 navbarToggler.onclick = () => {
   menuAside.classList.add("show-menu-aside");
