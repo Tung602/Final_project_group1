@@ -398,8 +398,9 @@ const initData = {
   isUserLogIn: false,
   isAdminLogIn: false,
 };
-
-// window.localStorage.setItem("data", JSON.stringify(initData));
+if(!window.localStorage.getItem("data")){
+  window.localStorage.setItem("data", JSON.stringify(initData));
+}
 // ================= Base JS ===================
 
 const data = JSON.parse(window.localStorage.getItem("data"));
