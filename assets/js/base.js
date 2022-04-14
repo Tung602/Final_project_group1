@@ -368,7 +368,7 @@ const initData = {
       ],
       sizing: ["XS", "S", "M"],
       colors: [],
-      active: false,
+      active: true,
       branding: "Gucci",
       categories: ["women", "clothing"],
       tags: ["hot trend", "New Arrivals", "Hot Sales"],
@@ -400,25 +400,20 @@ const initData = {
 };
 
 // window.localStorage.setItem("data", JSON.stringify(initData));
-// ============ Base JS ===============
+// ================= Base JS ===================
 
 const data = JSON.parse(window.localStorage.getItem("data"));
 data.products = data.initProducts.filter((e) => e.active === true);
 let productsQuanlity = document.querySelector(".products-quanlity");
-
 function alert(message, type) {
   var wrapper = document.createElement("div");
-  let href =
-    (type === "success" && "#check-circle-fill") ||
-    ((type === "warning" || type === "danger") && "#exclamation-triangle-fill");
+  let href = (type === "success" && "#check-circle-fill") || ((type === "warning" || type === "danger") && "#exclamation-triangle-fill");
   wrapper.innerHTML = `<div class="alert alert-${type} d-flex align-items-center" role="alert">
-  <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="${
-    type[0].toUpperCase() + type.slice(1)
-  }:"><use xlink:href="${href}"/></svg>
-  <div>
-    ${message}
-  </div>
-</div>`;
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="${type[0].toUpperCase() + type.slice(1)}:"><use xlink:href="${href}"/></svg>
+                        <div>
+                          ${message}
+                        </div>
+                      </div>`;
   document.querySelector("#liveAlertPlaceholder").append(wrapper);
   setTimeout(() => {
     wrapper.classList.add("alert-fadeout");
@@ -439,9 +434,7 @@ let renderNavbarCart = function (cart) {
     data.cart.forEach((cart) => {
       let colorVariant = cart.color ? ` | Color: ${cart.color.name}` : "";
       let product = data.products.find((e) => e.id === cart.id);
-      let cartImage = cart.color
-        ? `${cart.color.colorMedia[0]}`
-        : `${product.media[0]}`;
+      let cartImage = cart.color ? `${cart.color.colorMedia[0]}` : `${product.media[0]}`;
       let navbarCartItem = document.createElement("div");
       navbarCartContainer.appendChild(navbarCartItem);
       navbarCartItem.outerHTML = `<div class="navbar-cart-item">
@@ -466,7 +459,7 @@ renderNavbarCart(data.cart);
 
 let renderProducts = function (products, size) {
   let productsContainer = document.querySelector(".products-container");
-  // productsQuanlity.innerHTML = `Showing ${products.length} results`;
+  productsQuanlity.innerHTML = `Showing ${products.length} results`;
   productsContainer.innerHTML = "";
   products.forEach((product) => {
     let item = document.createElement("div");

@@ -583,17 +583,22 @@ let renderOrders = function (orders) {
   let orderContainer = document.querySelector(".orders-admin-container-tbody");
   orderContainer.innerHTML = "";
   orders.forEach((order, index) => {
+    let user = data.users.find((e) => e.id === order.userId);
     let orderItem = document.createElement("tr");
     orderContainer.appendChild(orderItem);
-    orderItem.outerHTML = `<tr class="order-item fs-4" data-bs-toggle="modal" data-bs-target="#orderDetail" id="order-item-id${index}">
-                              <td>${order.name}</td>
+    orderItem.outerHTML = `<tr class="order-item fs-4" data-bs-toggle="modal" data-bs-target="#orderDetail" id="order-item-id${order.orderId}">
+                              <td>${user.firstName} ${user.lastName}</td>
                               <td>${order.products.length} Products</td>
                               <td>${order.date}</td>
                             </tr>`;
   });
   orders.forEach((order, index) => {
-    let orderItem = document.querySelector(`#order-item-id${index}`);
+    let user = data.users.find((e) => e.id === order.userId);
+    let orderItem = document.querySelector(`#order-item-id${order.orderId}`);
     orderItem.addEventListener("click", (event) => {
+      let modalContainer = document.querySelector("#modal-order");
+      modalContainer.innerHTML = `<button type="button" class="btn btn-secondary fs-4" data-bs-dismiss="modal" id="cancelProductId${order.orderId}">Hủy đơn hàng</button>
+                                  <button type="button" class="btn btn-primary fs-4" data-bs-dismiss="modal" id="orderProductId${order.orderId}">Duyệt đơn hàng</button>`;
       let orderDetailCustomerName = document.querySelector(
         ".orderDetailCustomerName"
       );
@@ -616,10 +621,10 @@ let renderOrders = function (orders) {
       orderDetailPayment.innerHTML = `<p class="text-end">Phương thức thanh toán: ${order.paymentMethod}</p>
       <p class="text-end">Thành tiền: ${order.totalPrice}đ</p>`;
       orderProductsContainer.innerHTML = "";
-      orderDetailCustomerName.value = order.name;
+      orderDetailCustomerName.value = `${user.firstName} ${user.lastName}`;
       orderDetailCustomerAddress.value = order.address;
-      orderDetailCustomerPhoneNumber.value = order.phoneNumber;
-      orderDetailCustomerEmail.value = order.email;
+      orderDetailCustomerPhoneNumber.value = user.phoneNumber;
+      orderDetailCustomerEmail.value = user.username;
       orderDetailCustomerNote.value = order.orderNotes;
       order.products.forEach((product) => {
         let productImg = data.initProducts.find((e) => e.id === product.id)
@@ -645,18 +650,22 @@ let renderOrders = function (orders) {
                                         </div>
                                       </div>`;
       });
-    });
-    let orderProduct = document.querySelector("#orderProduct");
-    orderProduct.addEventListener("click", (event) => {
-      orderContainer.removeChild(orderItem);
-      orders.splice(index, 1);
-      window.localStorage.setItem("data", JSON.stringify(data));
-    });
-    let cancelProduct = document.querySelector("#cancelProduct");
-    cancelProduct.addEventListener("click", (event) => {
-      orderContainer.removeChild(orderItem);
-      orders.splice(index, 1);
-      window.localStorage.setItem("data", JSON.stringify(data));
+      let orderProduct = document.querySelector(
+        `#orderProductId${order.orderId}`
+      );
+      orderProduct.addEventListener("click", (event) => {
+        orderContainer.removeChild(orderItem);
+        orders.splice(index, 1);
+        window.localStorage.setItem("data", JSON.stringify(data));
+      });
+      let cancelProduct = document.querySelector(
+        `#cancelProductId${order.orderId}`
+      );
+      cancelProduct.addEventListener("click", (event) => {
+        orderContainer.removeChild(orderItem);
+        orders.splice(index, 1);
+        window.localStorage.setItem("data", JSON.stringify(data));
+      });
     });
   });
 };

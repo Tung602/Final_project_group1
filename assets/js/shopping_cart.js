@@ -205,6 +205,9 @@ let renderShoppingCart = function (carts) {
       let products = carts.map((cart) => {
         let colorId = cart.color ? `${cart.color.rgb.slice(1)}` : ``;
         let product = data.products.find((element) => element.id === cart.id);
+        console.log(cart.color);
+        let color = (cart.color) ? cart.color.name : "";
+        console.log(color);
         let productQuantity = document.querySelector(
           `.product-quantity.id-${product.id}-${cart.size}-${colorId}`
         );
@@ -215,7 +218,7 @@ let renderShoppingCart = function (carts) {
           id: product.id,
           name: product.name,
           size: cart.size,
-          color: cart.color.name,
+          color: color,
           quantity: productQuantity.value,
           totalPrice: Number.parseInt(
             cartPriceTotal.innerHTML.substring(

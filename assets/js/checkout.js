@@ -23,16 +23,20 @@ let renderCheckoutProducts = function (order) {
                                         </li>`;
 };
 renderCheckoutProducts(data.orders[data.orders.length - 1]);
+
 checkoutPlaceOrder.addEventListener("click", (event) => {
+  let orderId = Math.floor(Math.random() * 900) + 100;
+  while(data.ordered.map(e => e.orderId).includes(orderId)){
+    orderId = Math.floor(Math.random() * 900) + 100;
+  }
   let user = data.users.find(e => e.id === data.isUserLogIn);
   alert("Bạn đã đặt hàng thành công", "success");
   let order = {};
   const today = new Date();
   order.products = data.orders[0].products;
-  order.name = `${user.firstName} ${user.lastName}`
+  order.userId = user.id;
+  order.orderId = orderId
   order.address = checkoutAddress.value;
-  order.phoneNumber = user.phoneNumber;
-  order.email = user.email;
   order.totalPrice = data.orders[0].totalPrice;
   order.date = `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`
   if (checkoutPayment[0].checked) {
