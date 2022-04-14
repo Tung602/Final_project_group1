@@ -89,7 +89,7 @@ let filterProductsByPrice = function (products) {
 
 //  Hàm render categories filter và gắn sự kiện cho categories button
 let renderCategoriesFilter = function (products) {
-  categoriesContainer.innerHTML = "";
+  categoriesContainer.innerHTML =  "";
   let categoriesList = [];
   // Tìm kiếm categories trong localStorage
   products.forEach((e) => {
