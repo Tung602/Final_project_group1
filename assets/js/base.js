@@ -401,7 +401,7 @@ const initData = {
 if(!window.localStorage.getItem("data")){
   window.localStorage.setItem("data", JSON.stringify(initData));
 }
-// window.localStorage.clear();
+window.localStorage.clear();
 // ================= Base JS ===================
 
 const data = JSON.parse(window.localStorage.getItem("data"));
