@@ -10,7 +10,7 @@ const initData = {
       price: "24",
       comparePrice: "100",
       media: [
-        "./assets/img/products/product-1/img-1.avif",
+        "./assets/img/products/product-1/img-1.webp",
         "./assets/img/products/product-1/img-2.avif",
         "./assets/img/products/product-1/img-3.avif",
         "./assets/img/products/product-1/img-4.avif",
@@ -18,23 +18,23 @@ const initData = {
       sizing: ["XS", "S", "M"],
       colors: [
         {
-          name: "Black",
-          rgb: "#212222",
+          name: "Brown",
+          rgb: "#9B5931",
           colorMedia: [
-            "./assets/img/products/product-1/img-1.avif",
+            "./assets/img/products/product-1/img-1.webp",
             "./assets/img/products/product-1/img-2.avif",
             "./assets/img/products/product-1/img-3.avif",
             "./assets/img/products/product-1/img-4.avif",
           ],
         },
         {
-          name: "Red",
-          rgb: "#eeeeee",
+          name: "Yellow",
+          rgb: "#CFAB84",
           colorMedia: [
-            "./assets/img/products/product-2/img-1.avif",
-            "./assets/img/products/product-2/img-2.avif",
-            "./assets/img/products/product-2/img-3.avif",
-            "./assets/img/products/product-2/img-4.avif",
+            "./assets/img/products/product-1_color/img-1.avif",
+            "./assets/img/products/product-1_color/img-2.avif",
+            "./assets/img/products/product-1_color/img-3.avif",
+            "./assets/img/products/product-1_color/img-4.avif",
           ],
         },
       ],
@@ -401,6 +401,7 @@ const initData = {
 if(!window.localStorage.getItem("data")){
   window.localStorage.setItem("data", JSON.stringify(initData));
 }
+// window.localStorage.clear();
 // ================= Base JS ===================
 
 const data = JSON.parse(window.localStorage.getItem("data"));

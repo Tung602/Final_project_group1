@@ -269,6 +269,10 @@ let renderEditProductAdmin = function (product) {
   let editProductCurrentColor = document.querySelector(
     ".edit-product-current-color"
   );
+  let editProductActive = document.querySelector("#editProductActive");
+  if(product.active === true){
+    editProductActive.checked = true;
+  }
   editProductBrandInput.value = product.branding;
   editProductCategoriesInput.value = product.categories.join(", ");
   editProductTagsInput.value = product.tags.join(", ");
@@ -434,6 +438,7 @@ editProductUpdateBtn.addEventListener("click", (event) => {
   let editProductCurrentColor = document.querySelector(
     ".edit-product-current-color"
   );
+  let editProductActive = document.querySelector("#editProductActive");
   // Cập nhật màu cũ
   for (let e of editProductCurrentColor.children) {
     colors.push(
@@ -475,7 +480,7 @@ editProductUpdateBtn.addEventListener("click", (event) => {
     media: editProductMedia,
     sizing: [...sizes],
     colors: [...colors],
-    active: true,
+    active: editProductActive.checked,
     branding: editProductBrandInput.value.split(", "),
     categories: editProductCategoriesInput.value.split(", "),
     tags: editProductTagsInput.value.split(", "),
@@ -494,16 +499,6 @@ let renderProductAdmin = function (products) {
     productsContainer.appendChild(productItem);
     let productStatus = product.active ? `active` : `inactive`;
     productItem.outerHTML = `<tr id="product-admin-item-id-${product.id}">
-                              <td>
-                                <label class="checkbox checkbox-label">
-                                  <input type="checkbox" class="admin-product-select"/>
-                                  <svg viewBox="0 0 21 21">
-                                    <path
-                                      d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
-                                    ></path>
-                                  </svg>
-                                </label>
-                              </td>
                               <td>
                                 <div class="product-infor">
                                   <img
@@ -543,16 +538,6 @@ let renderProductAdmin = function (products) {
   });
   // Edit Button Click Event
   // Select all
-  let selectAll = document.querySelector(".admin-product-select-all");
-  selectAll.addEventListener("change", (event) => {
-    document.querySelectorAll(".admin-product-select").forEach((e) => {
-      if (event.target.checked === true) {
-        e.checked = true;
-      } else {
-        e.checked = false;
-      }
-    });
-  });
   let productDeleteComfirm = document.querySelector(".product-delete-comfirm");
   data.initProducts.forEach((product) => {
     let productDeleteBtn = document.querySelector(
@@ -575,6 +560,7 @@ let renderProductAdmin = function (products) {
     });
   });
 };
+
 renderProductAdmin(data.initProducts);
 
 // ====================== Render orders ===================

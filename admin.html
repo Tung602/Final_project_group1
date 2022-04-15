@@ -657,6 +657,20 @@
                     id="editProductTagsInput"
                   />
                 </div>
+                <div class="col-12 mt-5 d-flex justify-content-end">
+                  <label class="checkbox checkbox-label fs-4">
+                    <input
+                      type="checkbox"
+                      id="editProductActive"
+                    />
+                    ACTIVE
+                    <svg viewBox="0 0 21 21">
+                      <path
+                        d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
+                      ></path>
+                    </svg>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
@@ -732,22 +746,9 @@
           <i class="fa-solid fa-arrow-right-from-bracket"></i>
           Go to the website
         </a>
-        <div class="admin-infor">
-          <img src="./assets/img/admin.jpg" alt="" class="rounded-circle" />
-          <span class="admin-name">Đức Thiện</span>
-          <div class="dropdown-menu-admin">
-            <ul class="dropdown-list">
-              <li class="dropdown-item-admin">
-                <a href="#" class="dropdown-link">Settings</a>
-              </li>
-              <li class="dropdown-item-admin">
-                <a href="#" class="dropdown-link">Profile</a>
-              </li>
-              <li class="dropdown-item-admin">
-                <a href="#" class="dropdown-link">Log out</a>
-              </li>
-            </ul>
-          </div>
+        <div class="admin-log-out">
+          <i class="fa-solid fa-arrow-right-from-bracket fs-3"></i>
+          <a href="./index.html" class="log-out-admin fs-3">Log out</a>
         </div>
       </div>
     </header>
@@ -793,56 +794,10 @@
           </div>
           <div class="row p-0 p-sm-2">
             <div class="col p-0 p-sm-2">
-              <div class="product-task">
-                <form action="#" class="product-search search-form-main">
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    class="product-search-input search-input-main"
-                  />
-                  <button
-                    type="button"
-                    class="main-btn product-search-btn search-btn-main"
-                  >
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                </form>
-                <div class="product-multiple-action">
-                  <div class="product-multiple-active">
-                    <label class="checkbox checkbox-label">
-                      <input type="checkbox" />
-                      Active
-                      <svg viewBox="0 0 21 21">
-                        <path
-                          d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
-                        ></path>
-                      </svg>
-                    </label>
-                  </div>
-                  <button class="main-btn product-delete-all">Delete</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row p-0 p-sm-2">
-            <div class="col p-0 p-sm-2">
               <div class="products-table">
                 <table class="product-admin-container">
                   <thead>
                     <tr>
-                      <th>
-                        <label class="checkbox checkbox-label">
-                          <input
-                            type="checkbox"
-                            class="admin-product-select-all"
-                          />
-                          <svg viewBox="0 0 21 21">
-                            <path
-                              d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"
-                            ></path>
-                          </svg>
-                        </label>
-                      </th>
                       <th>Product</th>
                       <th>Status</th>
                       <th class="text-center">Action</th>
@@ -868,32 +823,13 @@
           </div>
           <div class="row p-0 p-sm-2">
             <div class="col p-0 p-sm-2">
-              <div class="product-task">
-                <form action="#" class="product-search search-form-main">
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    class="product-search-input search-input-main"
-                  />
-                  <button
-                    type="button"
-                    class="main-btn product-search-btn search-btn-main"
-                  >
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="row p-0 p-sm-2">
-            <div class="col p-0 p-sm-2">
               <div class="orders-table">
                 <table class="orders-admin-container">
                   <thead>
-                    <tr class="fs-3">
-                      <th>Customer Name</th> 
-                      <th>Products</th>
-                      <th>Date</th>
+                    <tr>
+                      <th class="fs-4">Customer Name</th> 
+                      <th class="fs-4">Products</th>
+                      <th class="fs-4">Date</th>
                     </tr>
                   </thead>
                   <tbody class="orders-admin-container-tbody">

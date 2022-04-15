@@ -2700,9 +2700,6 @@ p {
   padding: 1rem;
   border: 1px solid #d4d5d5;
 }
-#products .products-table th:first-of-type {
-  width: 3rem;
-}
 #products .products-table .product-img {
   width: 6rem;
 }
